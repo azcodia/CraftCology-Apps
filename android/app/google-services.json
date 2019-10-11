@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "203626662554",
+    "firebase_url": "https://craftcology-apps.firebaseio.com",
+    "project_id": "craftcology-apps",
+    "storage_bucket": "craftcology-apps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203626662554:android:fc269666769f975435ad23",
+        "android_client_info": {
+          "package_name": "com.cranium.craftcology"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203626662554-vfqa65ao56u65j4qm74fse76om9k9fne.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cranium.craftcology",
+            "certificate_hash": "a4b453234b57f9144691ae8e0d49ebc19243361b"
+          }
+        },
+        {
+          "client_id": "203626662554-7cbf3522cmq31vvvl43tstf5951jv3gu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7OT1OBprnmIRG_wF5zWiuC-YtsPawoqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203626662554-7cbf3522cmq31vvvl43tstf5951jv3gu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
