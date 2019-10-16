@@ -105,6 +105,12 @@ export default class Contact extends Component {
   onSubmit() {
     let errors = {};
 
+    console.log(this.state.name);
+    console.log(this.state.phone);
+    console.log(this.state.email);
+    console.log(this.state.topic);
+    console.log(this.state.comment);
+
     this.state.listForms
       .forEach((name) => {
         let value = this[name].value();
@@ -116,6 +122,24 @@ export default class Contact extends Component {
           delete errors[name];
         }
       });
+
+      if (!this.state.password) {
+        errors['password'] = 'Should not be empty';
+      } else if (this.state.password.length < 6) {
+        errors['password'] = 'Too short';
+      }
+  
+      var cekEmail = this.state.email;
+  
+      if(!cekEmail.includes("@")) {
+        errors['email'] = 'email not required';
+      }else if(!cekEmail) {
+        errors['email'] = 'email not required';
+      }
+  
+      if(this.state.phone.length < 10 || this.state.phone.length > 13) {
+        errors['phone'] = 'Number not required';
+      }
 
     if (Object.keys(errors).length > 0) {
       this.setState({ errors });

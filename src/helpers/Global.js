@@ -35,7 +35,7 @@ export class Global {
 
   static getBaseUrl() {
     if (this.TEST_MODE == true) {
-      return 'http://craftcology.cranium.id/';
+      return 'https://craftcology.cranium.id/';
     }
     return 'http://craftcology.com/';
   }

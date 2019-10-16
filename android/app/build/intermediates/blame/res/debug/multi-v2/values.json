@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/build/intermediates/res/merged/debug/values/values.xml",
+            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/1f5606d61f689a027199826cdd5808d7/res/values/values.xml",
@@ -76,6 +76,23 @@
                     }
                 },
                 {
+                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,102",
+                        "endColumns": "46,50",
+                        "endOffsets": "97,148"
+                    },
+                    "to": {
+                        "startLines": "85,100",
+                        "startColumns": "4,4",
+                        "startOffsets": "5998,7044",
+                        "endColumns": "46,50",
+                        "endOffsets": "6040,7090"
+                    }
+                },
+                {
                     "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-4.34.0.aar/680eb99b06b68bb83f0622feedf6eaef/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,36,37,38,39,40,41,42,43,44,45,46,47,71,76,82,93,104",
@@ -95,6 +112,23 @@
                     }
                 },
                 {
+                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "1,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "16,65",
+                        "endColumns": "48,59",
+                        "endOffsets": "60,120"
+                    },
+                    "to": {
+                        "startLines": "699,766",
+                        "startColumns": "4,4",
+                        "startOffsets": "56849,64313",
+                        "endColumns": "48,59",
+                        "endOffsets": "56893,64368"
+                    }
+                },
+                {
                     "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/fb3caeda6d9a7e2acd92d3cfd0aa8ad5/res/values/values.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10",
@@ -109,6 +143,25 @@
                         "startOffsets": "5909,159396,159572,159694,159956,160151",
                         "endColumns": "88,65,121,60,65,66",
                         "endOffsets": "5993,159457,159689,159750,160017,160213"
+                    }
+                },
+                {
+                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/node_modules/react-native-splash-screen/android/build/intermediates/packaged_res/debug/values/values.xml",
+                    "from": {
+                        "startLines": "6,9,12",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "193,341,481",
+                        "endLines": "8,11,14",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "336,476,663"
+                    },
+                    "to": {
+                        "startLines": "2151,2154,2157",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "152889,153037,153177",
+                        "endLines": "2153,2156,2159",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "153032,153172,153359"
                     }
                 },
                 {
@@ -131,7 +184,7 @@
                     }
                 },
                 {
-                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/src/main/res/values/themes.xml",
+                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/src/main/res/values/themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -147,23 +200,6 @@
                         "endLines": "1888",
                         "endColumns": "12",
                         "endOffsets": "136189"
-                    }
-                },
-                {
-                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,102",
-                        "endColumns": "46,50",
-                        "endOffsets": "97,148"
-                    },
-                    "to": {
-                        "startLines": "85,100",
-                        "startColumns": "4,4",
-                        "startOffsets": "5998,7044",
-                        "endColumns": "46,50",
-                        "endOffsets": "6040,7090"
                     }
                 },
                 {
@@ -186,7 +222,26 @@
                     }
                 },
                 {
-                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/build/generated/res/google-services/debug/values/values.xml",
+                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "54",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "177"
+                    },
+                    "to": {
+                        "startLines": "791",
+                        "startColumns": "4",
+                        "startOffsets": "66431",
+                        "endLines": "793",
+                        "endColumns": "12",
+                        "endOffsets": "66554"
+                    }
+                },
+                {
+                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/generated/res/google-services/debug/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -219,61 +274,6 @@
                         "endLines": "107,108,109,110,111,112,113,114,115,116,117,118,119,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,669,777,778,779,780,781,2486,2493,2501,2508,2514",
                         "endColumns": "58,64,65,62,60,65,55,53,57,49,59,60,54,66,65,60,84,77,64,66,57,74,60,58,74,59,55,50,60,63,58,72,67,125,61,57,48,185,12,12,12,12,12",
                         "endOffsets": "7556,7621,7687,7750,7811,7877,7933,7987,8045,8095,8155,8216,8271,52172,52238,52299,52384,52462,52527,52594,52652,52727,52788,52847,52922,52982,53038,53089,53150,53214,53273,53346,54725,65381,65443,65501,65550,65736,177753,178174,178667,179019,179395"
-                    }
-                },
-                {
-                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/node_modules/react-native-splash-screen/android/build/intermediates/packaged_res/debug/values/values.xml",
-                    "from": {
-                        "startLines": "6,9,12",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "193,341,481",
-                        "endLines": "8,11,14",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "336,476,663"
-                    },
-                    "to": {
-                        "startLines": "2151,2154,2157",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "152889,153037,153177",
-                        "endLines": "2153,2156,2159",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "153032,153172,153359"
-                    }
-                },
-                {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/6fedcdc79389937468b3d05ee32ad77d/res/values/values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,34,37,40,43,46,50,54,57,60,63,66,67,68,75,82,85,88,91,97",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "100,163,206,260,308,402,505,618,780,894,1001,1113,1216,1337,1463,1654,1762,1875,1988,2096,2208,2337,2448,2541,2673,2798,2896,2995,3109,3357,3560,3751,3946,4129,4331,4537,4738,4927,5126,5313,5339,5374,5792,6170,6347,6526,6709,7074",
-                        "endLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,33,36,39,42,45,49,53,56,59,62,65,66,67,74,81,84,87,90,96,106",
-                        "endColumns": "62,42,53,47,93,102,112,161,113,106,111,102,120,125,190,107,112,112,107,111,128,110,92,131,124,97,98,113,10,12,12,12,12,10,10,12,12,12,12,25,34,10,10,10,10,12,12,10",
-                        "endOffsets": "158,201,255,303,397,500,613,775,889,996,1108,1211,1332,1458,1649,1757,1870,1983,2091,2203,2332,2443,2536,2668,2793,2891,2990,3104,3352,3555,3746,3941,4124,4326,4532,4733,4922,5121,5308,5334,5369,5787,6165,6342,6521,6704,7069,7510"
-                    },
-                    "to": {
-                        "startLines": "33,654,661,662,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,787,1859,1862,1873,1876,1889,1893,2139,2142,2145,2148,2238,2268,2269,2276,2283,2286,2289,2292,2462",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2312,53904,54179,54233,56898,56992,57095,57208,57370,57484,57591,57703,57806,57927,58053,58244,58352,58465,58578,58686,58798,58927,59038,59131,59263,59388,59486,59585,66183,134713,134916,135425,135620,136194,136396,152113,152314,152503,152702,160646,162828,162863,163281,163659,163836,164015,164198,176580",
-                        "endLines": "33,654,661,662,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,790,1861,1864,1875,1878,1892,1896,2141,2144,2147,2150,2238,2268,2275,2282,2285,2288,2291,2297,2471",
-                        "endColumns": "62,42,53,47,93,102,112,161,113,106,111,102,120,125,190,107,112,112,107,111,128,110,92,131,124,97,98,113,10,12,12,12,12,10,10,12,12,12,12,25,34,10,10,10,10,12,12,10",
-                        "endOffsets": "2370,53942,54228,54276,56987,57090,57203,57365,57479,57586,57698,57801,57922,58048,58239,58347,58460,58573,58681,58793,58922,59033,59126,59258,59383,59481,59580,59694,66426,134911,135102,135615,135798,136391,136597,152309,152498,152697,152884,160667,162858,163276,163654,163831,164010,164193,164558,177016"
-                    }
-                },
-                {
-                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "1,2",
-                        "startColumns": "4,4",
-                        "startOffsets": "16,65",
-                        "endColumns": "48,59",
-                        "endOffsets": "60,120"
-                    },
-                    "to": {
-                        "startLines": "699,766",
-                        "startColumns": "4,4",
-                        "startOffsets": "56849,64313",
-                        "endColumns": "48,59",
-                        "endOffsets": "56893,64368"
                     }
                 },
                 {
@@ -334,28 +334,28 @@
                     }
                 },
                 {
-                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/src/main/res/values/styles.xml",
+                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/c091b5e9938c2d78bbf17765599b2923/res/values/values.xml",
                     "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "54",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "177"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,34,37,40,43,46,50,54,57,60,63,66,67,68,75,82,85,88,91,97",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "100,163,206,260,308,402,505,618,780,894,1001,1113,1216,1337,1463,1654,1762,1875,1988,2096,2208,2337,2448,2541,2673,2798,2896,2995,3109,3357,3560,3751,3946,4129,4331,4537,4738,4927,5126,5313,5339,5374,5792,6170,6347,6526,6709,7074",
+                        "endLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,33,36,39,42,45,49,53,56,59,62,65,66,67,74,81,84,87,90,96,106",
+                        "endColumns": "62,42,53,47,93,102,112,161,113,106,111,102,120,125,190,107,112,112,107,111,128,110,92,131,124,97,98,113,10,12,12,12,12,10,10,12,12,12,12,25,34,10,10,10,10,12,12,10",
+                        "endOffsets": "158,201,255,303,397,500,613,775,889,996,1108,1211,1332,1458,1649,1757,1870,1983,2091,2203,2332,2443,2536,2668,2793,2891,2990,3104,3352,3555,3746,3941,4124,4326,4532,4733,4922,5121,5308,5334,5369,5787,6165,6342,6521,6704,7069,7510"
                     },
                     "to": {
-                        "startLines": "791",
-                        "startColumns": "4",
-                        "startOffsets": "66431",
-                        "endLines": "793",
-                        "endColumns": "12",
-                        "endOffsets": "66554"
+                        "startLines": "33,654,661,662,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,787,1859,1862,1873,1876,1889,1893,2139,2142,2145,2148,2238,2268,2269,2276,2283,2286,2289,2292,2462",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2312,53904,54179,54233,56898,56992,57095,57208,57370,57484,57591,57703,57806,57927,58053,58244,58352,58465,58578,58686,58798,58927,59038,59131,59263,59388,59486,59585,66183,134713,134916,135425,135620,136194,136396,152113,152314,152503,152702,160646,162828,162863,163281,163659,163836,164015,164198,176580",
+                        "endLines": "33,654,661,662,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,790,1861,1864,1875,1878,1892,1896,2141,2144,2147,2150,2238,2268,2275,2282,2285,2288,2291,2297,2471",
+                        "endColumns": "62,42,53,47,93,102,112,161,113,106,111,102,120,125,190,107,112,112,107,111,128,110,92,131,124,97,98,113,10,12,12,12,12,10,10,12,12,12,12,25,34,10,10,10,10,12,12,10",
+                        "endOffsets": "2370,53942,54228,54276,56987,57090,57203,57365,57479,57586,57698,57801,57922,58048,58239,58347,58460,58573,58681,58793,58922,59033,59126,59258,59383,59481,59580,59694,66426,134911,135102,135615,135798,136391,136597,152309,152498,152697,152884,160667,162858,163276,163654,163831,164010,164193,164558,177016"
                     }
                 }
             ]
         },
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/values/values.xml",
             "map": [
                 {
                     "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/1f5606d61f689a027199826cdd5808d7/res/values/values.xml",
@@ -430,6 +430,23 @@
                     }
                 },
                 {
+                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,102",
+                        "endColumns": "46,50",
+                        "endOffsets": "97,148"
+                    },
+                    "to": {
+                        "startLines": "85,100",
+                        "startColumns": "4,4",
+                        "startOffsets": "5998,7044",
+                        "endColumns": "46,50",
+                        "endOffsets": "6040,7090"
+                    }
+                },
+                {
                     "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-4.34.0.aar/680eb99b06b68bb83f0622feedf6eaef/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,36,37,38,39,40,41,42,43,44,45,46,47,71,76,82,93,104",
@@ -449,6 +466,23 @@
                     }
                 },
                 {
+                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "1,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "16,65",
+                        "endColumns": "48,59",
+                        "endOffsets": "60,120"
+                    },
+                    "to": {
+                        "startLines": "699,766",
+                        "startColumns": "4,4",
+                        "startOffsets": "56849,64313",
+                        "endColumns": "48,59",
+                        "endOffsets": "56893,64368"
+                    }
+                },
+                {
                     "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/fb3caeda6d9a7e2acd92d3cfd0aa8ad5/res/values/values.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10",
@@ -463,6 +497,25 @@
                         "startOffsets": "5909,159396,159572,159694,159956,160151",
                         "endColumns": "88,65,121,60,65,66",
                         "endOffsets": "5993,159457,159689,159750,160017,160213"
+                    }
+                },
+                {
+                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/node_modules/react-native-splash-screen/android/build/intermediates/packaged_res/debug/values/values.xml",
+                    "from": {
+                        "startLines": "6,9,12",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "193,341,481",
+                        "endLines": "8,11,14",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "336,476,663"
+                    },
+                    "to": {
+                        "startLines": "2151,2154,2157",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "152889,153037,153177",
+                        "endLines": "2153,2156,2159",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "153032,153172,153359"
                     }
                 },
                 {
@@ -485,7 +538,7 @@
                     }
                 },
                 {
-                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/src/main/res/values/themes.xml",
+                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/src/main/res/values/themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -501,23 +554,6 @@
                         "endLines": "1888",
                         "endColumns": "12",
                         "endOffsets": "136189"
-                    }
-                },
-                {
-                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,102",
-                        "endColumns": "46,50",
-                        "endOffsets": "97,148"
-                    },
-                    "to": {
-                        "startLines": "85,100",
-                        "startColumns": "4,4",
-                        "startOffsets": "5998,7044",
-                        "endColumns": "46,50",
-                        "endOffsets": "6040,7090"
                     }
                 },
                 {
@@ -540,7 +576,26 @@
                     }
                 },
                 {
-                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/build/generated/res/google-services/debug/values/values.xml",
+                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "54",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "177"
+                    },
+                    "to": {
+                        "startLines": "791",
+                        "startColumns": "4",
+                        "startOffsets": "66431",
+                        "endLines": "793",
+                        "endColumns": "12",
+                        "endOffsets": "66554"
+                    }
+                },
+                {
+                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/generated/res/google-services/debug/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -573,61 +628,6 @@
                         "endLines": "107,108,109,110,111,112,113,114,115,116,117,118,119,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,669,777,778,779,780,781,2486,2493,2501,2508,2514",
                         "endColumns": "58,64,65,62,60,65,55,53,57,49,59,60,54,66,65,60,84,77,64,66,57,74,60,58,74,59,55,50,60,63,58,72,67,125,61,57,48,185,12,12,12,12,12",
                         "endOffsets": "7556,7621,7687,7750,7811,7877,7933,7987,8045,8095,8155,8216,8271,52172,52238,52299,52384,52462,52527,52594,52652,52727,52788,52847,52922,52982,53038,53089,53150,53214,53273,53346,54725,65381,65443,65501,65550,65736,177753,178174,178667,179019,179395"
-                    }
-                },
-                {
-                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/node_modules/react-native-splash-screen/android/build/intermediates/packaged_res/debug/values/values.xml",
-                    "from": {
-                        "startLines": "6,9,12",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "193,341,481",
-                        "endLines": "8,11,14",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "336,476,663"
-                    },
-                    "to": {
-                        "startLines": "2151,2154,2157",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "152889,153037,153177",
-                        "endLines": "2153,2156,2159",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "153032,153172,153359"
-                    }
-                },
-                {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/6fedcdc79389937468b3d05ee32ad77d/res/values/values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,34,37,40,43,46,50,54,57,60,63,66,67,68,75,82,85,88,91,97",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "100,163,206,260,308,402,505,618,780,894,1001,1113,1216,1337,1463,1654,1762,1875,1988,2096,2208,2337,2448,2541,2673,2798,2896,2995,3109,3357,3560,3751,3946,4129,4331,4537,4738,4927,5126,5313,5339,5374,5792,6170,6347,6526,6709,7074",
-                        "endLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,33,36,39,42,45,49,53,56,59,62,65,66,67,74,81,84,87,90,96,106",
-                        "endColumns": "62,42,53,47,93,102,112,161,113,106,111,102,120,125,190,107,112,112,107,111,128,110,92,131,124,97,98,113,10,12,12,12,12,10,10,12,12,12,12,25,34,10,10,10,10,12,12,10",
-                        "endOffsets": "158,201,255,303,397,500,613,775,889,996,1108,1211,1332,1458,1649,1757,1870,1983,2091,2203,2332,2443,2536,2668,2793,2891,2990,3104,3352,3555,3746,3941,4124,4326,4532,4733,4922,5121,5308,5334,5369,5787,6165,6342,6521,6704,7069,7510"
-                    },
-                    "to": {
-                        "startLines": "33,654,661,662,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,787,1859,1862,1873,1876,1889,1893,2139,2142,2145,2148,2238,2268,2269,2276,2283,2286,2289,2292,2462",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2312,53904,54179,54233,56898,56992,57095,57208,57370,57484,57591,57703,57806,57927,58053,58244,58352,58465,58578,58686,58798,58927,59038,59131,59263,59388,59486,59585,66183,134713,134916,135425,135620,136194,136396,152113,152314,152503,152702,160646,162828,162863,163281,163659,163836,164015,164198,176580",
-                        "endLines": "33,654,661,662,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,790,1861,1864,1875,1878,1892,1896,2141,2144,2147,2150,2238,2268,2275,2282,2285,2288,2291,2297,2471",
-                        "endColumns": "62,42,53,47,93,102,112,161,113,106,111,102,120,125,190,107,112,112,107,111,128,110,92,131,124,97,98,113,10,12,12,12,12,10,10,12,12,12,12,25,34,10,10,10,10,12,12,10",
-                        "endOffsets": "2370,53942,54228,54276,56987,57090,57203,57365,57479,57586,57698,57801,57922,58048,58239,58347,58460,58573,58681,58793,58922,59033,59126,59258,59383,59481,59580,59694,66426,134911,135102,135615,135798,136391,136597,152309,152498,152697,152884,160667,162858,163276,163654,163831,164010,164193,164558,177016"
-                    }
-                },
-                {
-                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "1,2",
-                        "startColumns": "4,4",
-                        "startOffsets": "16,65",
-                        "endColumns": "48,59",
-                        "endOffsets": "60,120"
-                    },
-                    "to": {
-                        "startLines": "699,766",
-                        "startColumns": "4,4",
-                        "startOffsets": "56849,64313",
-                        "endColumns": "48,59",
-                        "endOffsets": "56893,64368"
                     }
                 },
                 {
@@ -688,22 +688,22 @@
                     }
                 },
                 {
-                    "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/src/main/res/values/styles.xml",
+                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/c091b5e9938c2d78bbf17765599b2923/res/values/values.xml",
                     "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "54",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "177"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,34,37,40,43,46,50,54,57,60,63,66,67,68,75,82,85,88,91,97",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "100,163,206,260,308,402,505,618,780,894,1001,1113,1216,1337,1463,1654,1762,1875,1988,2096,2208,2337,2448,2541,2673,2798,2896,2995,3109,3357,3560,3751,3946,4129,4331,4537,4738,4927,5126,5313,5339,5374,5792,6170,6347,6526,6709,7074",
+                        "endLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,33,36,39,42,45,49,53,56,59,62,65,66,67,74,81,84,87,90,96,106",
+                        "endColumns": "62,42,53,47,93,102,112,161,113,106,111,102,120,125,190,107,112,112,107,111,128,110,92,131,124,97,98,113,10,12,12,12,12,10,10,12,12,12,12,25,34,10,10,10,10,12,12,10",
+                        "endOffsets": "158,201,255,303,397,500,613,775,889,996,1108,1211,1332,1458,1649,1757,1870,1983,2091,2203,2332,2443,2536,2668,2793,2891,2990,3104,3352,3555,3746,3941,4124,4326,4532,4733,4922,5121,5308,5334,5369,5787,6165,6342,6521,6704,7069,7510"
                     },
                     "to": {
-                        "startLines": "791",
-                        "startColumns": "4",
-                        "startOffsets": "66431",
-                        "endLines": "793",
-                        "endColumns": "12",
-                        "endOffsets": "66554"
+                        "startLines": "33,654,661,662,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,787,1859,1862,1873,1876,1889,1893,2139,2142,2145,2148,2238,2268,2269,2276,2283,2286,2289,2292,2462",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2312,53904,54179,54233,56898,56992,57095,57208,57370,57484,57591,57703,57806,57927,58053,58244,58352,58465,58578,58686,58798,58927,59038,59131,59263,59388,59486,59585,66183,134713,134916,135425,135620,136194,136396,152113,152314,152503,152702,160646,162828,162863,163281,163659,163836,164015,164198,176580",
+                        "endLines": "33,654,661,662,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,790,1861,1864,1875,1878,1892,1896,2141,2144,2147,2150,2238,2268,2275,2282,2285,2288,2291,2297,2471",
+                        "endColumns": "62,42,53,47,93,102,112,161,113,106,111,102,120,125,190,107,112,112,107,111,128,110,92,131,124,97,98,113,10,12,12,12,12,10,10,12,12,12,12,25,34,10,10,10,10,12,12,10",
+                        "endOffsets": "2370,53942,54228,54276,56987,57090,57203,57365,57479,57586,57698,57801,57922,58048,58239,58347,58460,58573,58681,58793,58922,59033,59126,59258,59383,59481,59580,59694,66426,134911,135102,135615,135798,136391,136597,152309,152498,152697,152884,160667,162858,163276,163654,163831,164010,164193,164558,177016"
                     }
                 }
             ]

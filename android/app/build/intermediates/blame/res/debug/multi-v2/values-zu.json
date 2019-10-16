@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zu/values-zu.xml",
+            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/values-zu/values-zu.xml",
             "map": [
                 {
                     "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/79856e4475dcd11898cdd2043c98f6ba/res/values-zu/values-zu.xml",
@@ -74,7 +74,7 @@
             ]
         },
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/build/intermediates/res/merged/debug/values-zu/values-zu.xml",
+            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zu/values-zu.xml",
             "map": [
                 {
                     "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/79856e4475dcd11898cdd2043c98f6ba/res/values-zu/values-zu.xml",

@@ -1,7 +1,7 @@
-#Fri Oct 11 15:57:08 WIB 2019
-base.0=/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/build/intermediates/transforms/dexMerger/debug/0
+#Wed Oct 16 09:39:08 WIB 2019
+base.0=/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.1=classes2.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/build/intermediates/transforms/dexMerger/debug/0
+base.1=/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/transforms/dexMerger/debug/0

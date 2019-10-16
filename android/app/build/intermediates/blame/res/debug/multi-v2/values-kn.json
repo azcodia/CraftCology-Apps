@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml",
+            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/values-kn/values-kn.xml",
             "map": [
                 {
                     "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-4.34.0.aar/09e62fa9c3c1bb069d86b2619898f223/res/values-kn/values-kn.xml",
@@ -91,7 +91,7 @@
             ]
         },
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/craftcology-mobile/android/app/build/intermediates/res/merged/debug/values-kn/values-kn.xml",
+            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml",
             "map": [
                 {
                     "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-4.34.0.aar/09e62fa9c3c1bb069d86b2619898f223/res/values-kn/values-kn.xml",

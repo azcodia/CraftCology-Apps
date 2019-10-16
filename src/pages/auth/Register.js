@@ -122,14 +122,18 @@ class Register extends Component {
 
   onSubmit() {
     let errors = {};
+
+    if(this.state.email.includes("@gmail")) {
+      this.onPressGoogleSignIn()
+    }
     
     // Check
-    console.log(this.state.firstname)
-    console.log(this.state.lastname)
-    console.log(this.state.phone)
-    console.log(this.state.email)
-    console.log(this.state.password)
-    // firebase_token: 'xxx'
+    // console.log(this.state.firstname)
+    // console.log(this.state.lastname)
+    // console.log(this.state.phone)
+    // console.log(this.state.email)
+    // console.log(this.state.password)
+    // // firebase_token: 'xxx'
     // Check Tutup
 
     this.state.listForms
@@ -151,6 +155,19 @@ class Register extends Component {
       errors['password'] = 'Too short';
     }
 
+    var cekEmail = this.state.email;
+
+    if(!cekEmail.includes("@")) {
+      errors['email'] = 'email not required';
+    }else if(!cekEmail) {
+      errors['email'] = 'email not required';
+    }
+
+    if(this.state.phone.length < 10 || this.state.phone.length > 13) {
+      errors['phone'] = 'Number not required';
+    }
+
+
     if (Object.keys(errors).length > 0) {
       this.setState({ errors });
       return;
@@ -165,7 +182,7 @@ class Register extends Component {
       fetch(Global.getBaseUrl() + 'api/v1/auth/register', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           firstname: this.state.firstname,
@@ -174,7 +191,7 @@ class Register extends Component {
           email: this.state.email,
           password: this.state.password,
           confirm_password: this.state.password,
-          firebase_token: 'xxx'
+          // firebase_token: 'xxx'
         })
       })
       .then((response) => response.json())
@@ -190,6 +207,7 @@ class Register extends Component {
       }
       })
       .catch((error) => {
+        console.log("Error: ");
         console.log(error);
       })
     });
@@ -230,6 +248,7 @@ class Register extends Component {
   }
 
   async onPressGoogleSignIn() {
+    console.log("Terdeteksi @gmail")
     try {
       console.log("Click")
       this.setState({spinnerVisible:true});
@@ -408,7 +427,7 @@ class Register extends Component {
                     title='Google'
                     style={{borderRadius: 5, margin: 0, marginRight: 5, backgroundColor: '#4285f4'}}
                     button
-                    onPress={() => this.onPressGoogleSignIn()}
+                    onPress={() => this.onPressGoogleSignIn()()}
                     type='google'
                   />
                 </View>

@@ -128,6 +128,10 @@ class OrderForm extends Component {
         }
       });
 
+    if(this.state.phone.length < 10 || this.state.phone.length > 13) {
+      errors['phone'] = 'Number not required';
+    }
+
     if (Object.keys(errors).length > 0) {
       this.setState({ errors });
       return;
@@ -463,6 +467,7 @@ class OrderForm extends Component {
                 renderItem={({item, index}) => this.renderItem(item, index)}
               />
               <TextField
+                disabled="true"
                 ref={this.emailRef}
                 value={data.email}
                 keyboardType='email-address'
