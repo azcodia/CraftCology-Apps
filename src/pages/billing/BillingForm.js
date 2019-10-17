@@ -9,6 +9,7 @@ import {
 import { Button } from 'react-native-elements';
 import { Global, Session } from '../../helpers/Global';
 import { TextField } from 'react-native-material-textfield';
+import { showMessage } from 'react-native-flash-message';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
 import {
@@ -135,17 +136,19 @@ class BillingForm extends Component {
             type: "success",
             icon: { icon: "success", position: "left" },
           });
-          this.props.onSetUser(response.data.data);
-          this.props.onSetListUserAddresses(response.data.data.customer_addresses);
+          console.log("Cek User : " + response.data.data)
+          // this.props.onSetUser(response.data.data);
+          // this.props.onSetListUserAddresses(response.data.data.customer_addresses);
           Actions.pop();
+          Actions.billingInfo({user:this.props.user});
           return;
-        }
+        }else
 
-        showMessage({
-          message: response.data.message,
-          type: "danger",
-          icon: { icon: "danger", position: "left" },
-        });
+        // showMessage({
+        //   message: response.data.message,
+        //   type: "danger",
+        //   icon: { icon: "danger", position: "left" },
+        // });
         if (response.status == 401) {
           this.props.onUnsetUser();
           Actions.login();
@@ -199,7 +202,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onUnsetUser: () => dispatch(unsetUser()),
+    // onUnsetUser: () => dispatch(unsetUser()),
+    // onSetUser: user => dispatch(setUser(user))
   };
 };
 

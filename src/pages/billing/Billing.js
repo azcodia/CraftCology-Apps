@@ -36,6 +36,8 @@ class Billing extends Component {
   }
 
   componentDidMount() {
+    console.log("cek token biling: ");
+    console.log(this.props.user.token);
     this.getData();
   }
 

@@ -113,71 +113,72 @@ class Profile extends Component {
       return;
     }
 
-    // this.setState({
-    //     buttonIsLoading: true,
-    // }, function(){
+    this.setState({
+        buttonIsLoading: true,
+    }, function(){
 
-    //   let uri = 'customer/update';
-    //   let params = {
-    //     firstname: this.state.firstname,
-    //     lastname: this.state.lastname,
-    //     phone: this.state.phone,
-    //     email: this.state.email
-    //   };
-    //   let headers = {
-    //     'Content-Type': 'application/json',
-    //     'Authorization': 'Bearer ' + this.props.user.token
-    //   };
+      let uri = 'customer/update';
+      let params = {
+        firstname: this.state.firstname,
+        lastname: this.state.lastname,
+        phone: this.state.phone,
+        email: this.state.email
+      };
+      let headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.props.user.token
+      };
 
-    //   patchPublic(uri, params, headers).then(responseJson => {
-    //     console.log(responseJson);
-    //     this.setState({
-    //       buttonIsLoading: false,
-    //     });
-    //     if (responseJson.status == 200) {
-    //       showMessage({
-    //         message: responseJson.data.message,
-    //         type: 'success'
-    //       });
-    //       let session = new Session();
-    //       session.setUser(responseJson.data.data);
-    //       this.props.onSetUser(responseJson.data.data);
-    //       Actions.pop({refresh: {user: responseJson.data.data, profile: true}});
-    //       return;
-    //     }
+      patchPublic(uri, params, headers).then(responseJson => {
+        console.log("responseJson UPDATE PROFILE");
+        console.log(responseJson);
+        this.setState({
+          buttonIsLoading: false,
+        });
+        if (responseJson.status == 200) {
+          showMessage({
+            message: responseJson.data.message,
+            type: 'success'
+          });
+          let session = new Session();
+          session.setUser(responseJson.data.data);
+          this.props.onSetUser(responseJson.data.data);
+          Actions.pop({refresh: {user: responseJson.data.data, profile: true}});
+          return;
+        }
 
-    //     if (responseJson.status == 400) {
+        if (responseJson.status == 400) {
 
-    //       if (responseJson.data.validators.email != null) {
-    //         showMessage({
-    //           message: responseJson.data.validators.email,
-    //           type: 'warning'
-    //         });
-    //         return;
-    //       }
+          if (responseJson.data.validators.email != null) {
+            showMessage({
+              message: responseJson.data.validators.email,
+              type: 'warning'
+            });
+            return;
+          }
 
-    //       showMessage({
-    //         message: responseJson.data.message,
-    //         type: 'info'
-    //       });
-    //     }
-    //     showMessage({
-    //       message: responseJson.data.message,
-    //       type: 'danger'
-    //     });
-    //     // unauthorized
-    //     if (responseJson.status == 401) {
-    //       this.props.onUnsetUser();
-    //       Actions.login();
-    //     }
-    //   }).catch(error => {
-    //     this.props.onUnsetUser();
-    //     this.setState({
-    //       buttonIsLoading: false,
-    //     });
-    //     Actions.login();
-    //   });
-    // });
+          showMessage({
+            message: responseJson.data.message,
+            type: 'info'
+          });
+        }
+        showMessage({
+          message: responseJson.data.message,
+          type: 'danger'
+        });
+        // unauthorized
+        if (responseJson.status == 401) {
+          this.props.onUnsetUser();
+          Actions.login();
+        }
+      }).catch(error => {
+        this.props.onUnsetUser();
+        this.setState({
+          buttonIsLoading: false,
+        });
+        Actions.login();
+      });
+    });
   }
 
   onFocus() {

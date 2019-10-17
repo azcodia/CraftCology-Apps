@@ -172,6 +172,14 @@ export async function postFilePublic(uri, data=null, headers = {'Content-Type': 
 };
 
 export async function requestPublic(method, uri, data = null, headers = { 'Content-Type': 'application/json' }) {
+
+  console.log("Cek URL Keseluruhan")
+  console.log(method)
+  console.log(uri)
+  console.log(data)
+  console.log(headers)
+  console.log("Cek URL Keseluruhan TUTUP")
+
   try {
     let response = await axios({
       method: method,

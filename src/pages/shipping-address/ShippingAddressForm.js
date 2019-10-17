@@ -143,6 +143,10 @@ class ShippingAddressForm extends React.Component {
         }
       });
 
+    if(this.state.phone.length < 10 || this.state.phone.length > 13) {
+      errors['phone'] = 'Number not required';
+    }
+
     if (Object.keys(errors).length > 0) {
       this.setState({ errors });
       return;
