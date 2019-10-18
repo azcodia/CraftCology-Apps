@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   View,
   StyleSheet,
+  Picker,
   ScrollView
 } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
@@ -268,6 +269,19 @@ class ShippingAddressForm extends React.Component {
       <KeyboardAwareScrollView>
         <ScrollView style={styles.scrollView}>
           <View style={{paddingLeft: 10, paddingRight: 10}}>
+
+            {/*  */}
+            <Picker
+              selectedValue={this.state.language}
+              style={{height: 50, width: 100}}
+              onValueChange={(itemValue, itemIndex) =>
+                this.setState({language: itemValue})
+              }>
+              <Picker.Item label="Java" value="java" />
+              <Picker.Item label="JavaScript" value="js" />
+            </Picker>
+            {/*  */}
+
             <TextField
               ref={this.nameRef}
               value={data.name}
