@@ -27,7 +27,6 @@ class Billing extends Component {
 
   constructor(props){
     super(props);
-
     this.state = {
       models: [],
       refreshing: true,
@@ -40,6 +39,10 @@ class Billing extends Component {
     console.log(this.props.user.token);
     this.getData();
   }
+
+  componentDidUpdate() {
+    this.getData();
+  }  
 
   getData() {
     let uri = 'customer-billing';

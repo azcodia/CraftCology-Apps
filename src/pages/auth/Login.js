@@ -103,69 +103,81 @@ class Login extends Component {
   onSubmit() {
     let errors = {};
 
-    ['email']
-      .forEach((name) => {
-        let value = this[name].value();
+    if(this.state.email.includes("@gmail")) {
+      this.onPressGoogleSignIn()
+    }else {
+        ['email']
+        .forEach((name) => {
+          let value = this[name].value();
 
-        if (!value) {
-          errors[name] = 'Should not be empty';
-        } else {
-          if ('password' === name && value.length < 6) {
-            errors[name] = 'Too short';
+          if (!value) {
+            errors[name] = 'Should not be empty';
+          } else {
+            if ('password' === name && value.length < 6) {
+              errors[name] = 'Too short';
+            }
           }
-        }
-      });
-
-    if (!this.state.password) {
-      errors['password'] = 'Should not be empty';
-    } else if (this.state.password.length < 6) {
-      errors['password'] = 'Too short';
-    }
-
-    if (Object.keys(errors).length > 0) {
-      this.setState({ errors });
-      return;
-    }
-
-    Keyboard.dismiss();
-
-    this.setState({
-        buttonIsLoading: true,
-    });
-
-    var uri = 'auth/login';
-    var body = {
-      email: this.state.email,
-      password: this.state.password,
-      firebase_token: 'xxx',
-      login_device_id: 'xxx'
-    };
-    postPublic(uri, body).then(response => {
-      this.setState({
-        buttonIsLoading: false,
-      });
-      if (response.status == 200) {
-        const session = new Session();
-        session.setUser(response.data.data);
-        this.props.onSetUser(response.data.data);
-        this.props.onSetListUserAddresses(response.data.data.customer_addresses);
-        console.log(response);
-        showMessage({
-          message: response.data.message,
-          type: "success",
-          icon: { icon: "success", position: "left" },
         });
-        Actions.pop();
-      } else {
-        showMessage({
-          message: response.data.message,
-          type: "danger",
-          icon: { icon: "danger", position: "left" },
-        });
+
+      if (!this.state.password) {
+        errors['password'] = 'Should not be empty';
+      } else if (this.state.password.length < 6) {
+        errors['password'] = 'Too short';
       }
-    }).catch(error => {
-      console.log(error);
-    });
+
+
+      var cekEmail = this.state.email;
+      if (!cekEmail.includes("@")) {
+        errors['email'] = 'Please enter a valid email address';
+      } else if (!cekEmail) {
+        errors['email'] = 'Should not be empty';
+      }
+
+      if (Object.keys(errors).length > 0) {
+        this.setState({ errors });
+        return;
+      }
+
+      Keyboard.dismiss();
+
+      this.setState({
+          buttonIsLoading: true,
+      });
+
+      var uri = 'auth/login';
+      var body = {
+        email: this.state.email,
+        password: this.state.password,
+        firebase_token: 'xxx',
+        login_device_id: 'xxx'
+      };
+      postPublic(uri, body).then(response => {
+        this.setState({
+          buttonIsLoading: false,
+        });
+        if (response.status == 200) {
+          const session = new Session();
+          session.setUser(response.data.data);
+          this.props.onSetUser(response.data.data);
+          this.props.onSetListUserAddresses(response.data.data.customer_addresses);
+          console.log(response);
+          showMessage({
+            message: response.data.message,
+            type: "success",
+            icon: { icon: "success", position: "left" },
+          });
+          Actions.pop();
+        } else {
+          showMessage({
+            message: response.data.message,
+            type: "danger",
+            icon: { icon: "danger", position: "left" },
+          });
+        }
+      }).catch(error => {
+        console.log(error);
+      });
+    }
   }
 
   updateRef(name, ref) {

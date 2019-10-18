@@ -140,7 +140,7 @@ class BillingForm extends Component {
           // this.props.onSetUser(response.data.data);
           // this.props.onSetListUserAddresses(response.data.data.customer_addresses);
           Actions.pop();
-          Actions.billingInfo({user:this.props.user});
+          // Actions.billingInfo({user:this.props.user});
           return;
         }else
 

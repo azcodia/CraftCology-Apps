@@ -105,80 +105,84 @@ export default class Contact extends Component {
   onSubmit() {
     let errors = {};
 
-    console.log(this.state.name);
-    console.log(this.state.phone);
-    console.log(this.state.email);
-    console.log(this.state.topic);
-    console.log(this.state.comment);
-
     this.state.listForms
       .forEach((name) => {
         let value = this[name].value();
 
         if (!value) {
           errors[name] = 'Should not be empty';
-        }
-        if (name === 'phone') {
-          delete errors[name];
+        } else {
+          if ('password' === name && value.length < 6) {
+            errors[name] = 'Too short';
+          }
         }
       });
+    
+    if (!this.state.password) {
+      errors['password'] = 'Should not be empty';
+    } else if (this.state.password.length < 6) {
+      errors['password'] = 'Too short';
+    }
 
-      if (!this.state.password) {
-        errors['password'] = 'Should not be empty';
-      } else if (this.state.password.length < 6) {
-        errors['password'] = 'Too short';
-      }
-  
-      var cekEmail = this.state.email;
-  
-      if(!cekEmail.includes("@")) {
-        errors['email'] = 'email not required';
-      }else if(!cekEmail) {
-        errors['email'] = 'email not required';
-      }
-  
-      if(this.state.phone.length < 10 || this.state.phone.length > 13) {
-        errors['phone'] = 'Number not required';
-      }
+    var cekEmail = this.state.email;
+
+    if(!cekEmail.includes("@")) {
+      errors['email'] = 'Please enter a valid email address';
+    }else {
+        this.setState({
+          buttonIsLoading: true,
+      }, function(){
+        
+
+        console.log("Masuk Ke Api")
+        fetch(Global.getBaseUrl() + 'api/v1/submit-contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: this.state.name,
+            phone: this.state.phone,
+            email: this.state.email,
+            topic: this.state.topic,
+            comment: this.state.comment
+          })
+        })
+        .then((response) => response.json())
+        .then((responseJson) => {
+        console.log(responseJson);
+        Global.presentToast(responseJson.message);
+        this.setState({
+          buttonIsLoading: false,
+        });
+        if (responseJson.status == 200) {
+          Global.presentToast(responseJson.message);
+          Actions.pop();
+        }
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+      });
+    }
+
+    if(this.state.phone.length < 10 || this.state.phone.length > 13) {
+      errors['phone'] = 'Number not required';
+    }else if(this.state.phone == null) {
+      errors['phone'] = 'Should not be empty';
+    }
+
 
     if (Object.keys(errors).length > 0) {
       this.setState({ errors });
       return;
     }
 
-    this.setState({
-        buttonIsLoading: true,
-    }, function(){
-
-      fetch(Global.getBaseUrl() + 'api/v1/submit-contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          name: this.state.name,
-          phone: this.state.phone,
-          email: this.state.email,
-          topic: this.state.topic,
-          comment: this.state.comment
-        })
-      })
-      .then((response) => response.json())
-      .then((responseJson) => {
-      console.log(responseJson);
-      Global.presentToast(responseJson.message);
-      this.setState({
-        buttonIsLoading: false,
-      });
-      if (responseJson.status == 200) {
-        Global.presentToast(responseJson.message);
-        Actions.pop();
-      }
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-    });
+    // console.log(this.state.name);
+    // console.log(this.state.phone);
+    // console.log(this.state.email);
+    // console.log(this.state.topic);
+    // console.log(this.state.comment);
   }
 
   updateRef(name, ref) {

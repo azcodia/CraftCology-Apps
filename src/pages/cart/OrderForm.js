@@ -132,6 +132,13 @@ class OrderForm extends Component {
       errors['phone'] = 'Number not required';
     }
 
+    var cekEmail = this.state.email;
+    if(!cekEmail.includes("@")) {
+      errors['email'] = 'Please enter a valid email address';
+    }else if(!cekEmail) {
+      errors['email'] = 'Should not be empty';
+    }
+
     if (Object.keys(errors).length > 0) {
       this.setState({ errors });
       return;
@@ -467,7 +474,6 @@ class OrderForm extends Component {
                 renderItem={({item, index}) => this.renderItem(item, index)}
               />
               <TextField
-                disabled="true"
                 ref={this.emailRef}
                 value={data.email}
                 keyboardType='email-address'

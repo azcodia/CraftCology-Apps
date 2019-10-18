@@ -158,13 +158,15 @@ class Register extends Component {
     var cekEmail = this.state.email;
 
     if(!cekEmail.includes("@")) {
-      errors['email'] = 'email not required';
+      errors['email'] = 'Please enter a valid email address';
     }else if(!cekEmail) {
-      errors['email'] = 'email not required';
+      errors['email'] = 'Should not be empty';
     }
 
     if(this.state.phone.length < 10 || this.state.phone.length > 13) {
       errors['phone'] = 'Number not required';
+    }else if(this.state.phone == null) {
+      errors['phone'] = 'Should not be empty';
     }
 
 
