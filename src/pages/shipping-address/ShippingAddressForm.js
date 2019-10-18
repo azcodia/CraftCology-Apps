@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   View,
   StyleSheet,
-  Picker,
+  Text,
   ScrollView
 } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
@@ -16,6 +16,7 @@ import { Actions } from 'react-native-router-flux';
 import { TextField } from 'react-native-material-textfield';
 import { Dropdown } from 'react-native-material-dropdown';
 import { showMessage } from 'react-native-flash-message';
+import RadioGroup from 'react-native-radio-button-group';
 import { connect } from 'react-redux';
 import { 
   setListUserAddress, unsetUser 
@@ -32,6 +33,7 @@ class ShippingAddressForm extends React.Component {
       formMethod: 'POST',
       provinces: [],
       cities: [],
+      statusAddressValue: null,
       name: '',
       address: '',
       address2: '',
@@ -129,6 +131,15 @@ class ShippingAddressForm extends React.Component {
   onSubmit() {
     let errors = {};
 
+    console.log("Buuton D Click :"+typeof this.state.statusAddressValue)
+    if(this.state.statusAddressValue == null) {
+      showMessage({
+        message: 'Status Address is required',
+        type: 'warning'
+      });
+      return;
+    }
+
      console.log(this.state.provinceId);
      console.log(this.state.cityId);
      console.log(this.state.relationship);
@@ -181,13 +192,15 @@ class ShippingAddressForm extends React.Component {
         province_id: this.state.provinceId,
         city_id: this.state.cityId,
         postal_code: this.state.postalcode,
-        phone: this.state.phone
+        phone: this.state.phone,
+        address_to: this.state.statusAddressValue
       };
       let headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + this.props.user.token
       };
       requestPublic(this.state.formMethod, this.state.formUrl, params, headers).then(response => {
+        // console.log("result Api: "+response)
         this.setState({
           buttonIsLoading: false,
         });
@@ -197,6 +210,7 @@ class ShippingAddressForm extends React.Component {
             type: "success"
           });
           this.props.onSetListUserAddress(response.data.data);
+          console.log("result Api: "+response.data.data)
           Actions.pop({ refresh: { models: response.data.data, isFromOrderForm: this.props.isFromOrderForm } });
           return;
         }
@@ -265,21 +279,27 @@ class ShippingAddressForm extends React.Component {
   render() {
     let { errors = {}, ...data } = this.state;
 
+    var radiogroup_options = [
+      {id: 1, label: 'My address' },
+      {id: 2, label: 'My customers' },
+    ];
+
     return (
       <KeyboardAwareScrollView>
         <ScrollView style={styles.scrollView}>
           <View style={{paddingLeft: 10, paddingRight: 10}}>
 
             {/*  */}
-            <Picker
-              selectedValue={this.state.language}
-              style={{height: 50, width: 100}}
-              onValueChange={(itemValue, itemIndex) =>
-                this.setState({language: itemValue})
-              }>
-              <Picker.Item label="Java" value="java" />
-              <Picker.Item label="JavaScript" value="js" />
-            </Picker>
+            <Text style={{paddingTop: 10, paddingBottom: 10, fontWeight: "300" }}>
+              Status Address
+            </Text>
+            <RadioGroup
+              horizontal
+              options={radiogroup_options}
+              // statusAddressValue
+              // onChange={(option) => console.log("Selected " + option.id)}
+              onChange={(option) => this.setState({ statusAddressValue:option.id })}
+            />
             {/*  */}
 
             <TextField

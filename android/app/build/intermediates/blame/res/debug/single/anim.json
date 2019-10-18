@@ -1,82 +1,82 @@
 [
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_tooltip_exit.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_tooltip_exit.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_slide_out_bottom.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/ucrop_loader_circle_path.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.2-native.aar/024d275cc971e4aa4336398a0796a428/res/anim/ucrop_loader_circle_path.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_popup_exit.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_up.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/c091b5e9938c2d78bbf17765599b2923/res/anim/catalyst_slide_up.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_out.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/c091b5e9938c2d78bbf17765599b2923/res/anim/catalyst_fade_out.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_in.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/c091b5e9938c2d78bbf17765599b2923/res/anim/catalyst_fade_in.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_fade_in.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_in.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/c091b5e9938c2d78bbf17765599b2923/res/anim/catalyst_push_up_in.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_slide_out_top.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_tooltip_enter.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_tooltip_enter.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_out.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/c091b5e9938c2d78bbf17765599b2923/res/anim/catalyst_push_up_out.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/ucrop_loader_circle_scale.xml",
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/ucrop_loader_circle_scale.xml",
         "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.2-native.aar/024d275cc971e4aa4336398a0796a428/res/anim/ucrop_loader_circle_scale.xml"
     },
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_shrink_fade_out_from_bottom.xml"
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_in.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/b3f2d33dda1b1b10405941f1e0f09314/res/anim/catalyst_push_up_in.xml"
     },
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_fade_out.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_grow_fade_in_from_bottom.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
         "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_popup_enter.xml"
     },
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_in.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/b3f2d33dda1b1b10405941f1e0f09314/res/anim/catalyst_fade_in.xml"
+    },
+    {
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_tooltip_exit.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_tooltip_exit.xml"
+    },
+    {
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
         "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_slide_in_top.xml"
     },
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_down.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/c091b5e9938c2d78bbf17765599b2923/res/anim/catalyst_slide_down.xml"
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_popup_exit.xml"
     },
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_out.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/b3f2d33dda1b1b10405941f1e0f09314/res/anim/catalyst_fade_out.xml"
+    },
+    {
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/ucrop_loader_circle_path.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.2-native.aar/024d275cc971e4aa4336398a0796a428/res/anim/ucrop_loader_circle_path.xml"
+    },
+    {
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_tooltip_enter.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_tooltip_enter.xml"
+    },
+    {
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_down.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/b3f2d33dda1b1b10405941f1e0f09314/res/anim/catalyst_slide_down.xml"
+    },
+    {
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
         "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_out.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/b3f2d33dda1b1b10405941f1e0f09314/res/anim/catalyst_push_up_out.xml"
+    },
+    {
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_up.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/b3f2d33dda1b1b10405941f1e0f09314/res/anim/catalyst_slide_up.xml"
     }
 ]

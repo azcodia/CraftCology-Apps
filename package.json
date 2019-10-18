@@ -38,6 +38,7 @@
     "react-native-numeric-input": "^1.6.5",
     "react-native-permissions": "^1.1.1",
     "react-native-popup-dialog": "^0.15.1",
+    "react-native-radio-button-group": "^1.0.2",
     "react-native-render-html": "^3.10.0",
     "react-native-router-flux": "^4.0.6",
     "react-native-search-box": "0.0.19",
