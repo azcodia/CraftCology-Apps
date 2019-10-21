@@ -33,7 +33,7 @@ class ShippingAddressForm extends React.Component {
       formMethod: 'POST',
       provinces: [],
       cities: [],
-      statusAddressValue: null,
+      statusAddressValue: 1,
       name: '',
       address: '',
       address2: '',
@@ -77,8 +77,14 @@ class ShippingAddressForm extends React.Component {
       this.state.relationship = this.props.item.addressrelationship_id;
       this.state.postalcode = this.props.item.postal_code;
       this.state.phone = this.props.item.phone;
+      this.state.statusAddressValue = this.props.item.address_to == null ? 1 : parseInt(this.props.item.address_to)
     }
+    console.log("Hasil Props");
     console.log(this.props.item);
+    console.log("StatusAddressValue: ")
+    console.log(this.state.statusAddressValue)
+    console.log("Type Data")
+    console.log(typeof this.state.statusAddressValue)
   }
 
   componentWillMount() {
@@ -155,8 +161,12 @@ class ShippingAddressForm extends React.Component {
         }
       });
 
-    if(this.state.phone.length < 10 || this.state.phone.length > 13) {
-      errors['phone'] = 'Number not required';
+    if(this.state.phone.length < 10) {
+      errors['phone'] = 'Phone Number is Too Short';
+    }else if(this.state.phone.length > 13) {
+      errors['phone'] = 'Phone Number is Too Long';
+    }else if(this.state.phone == null) {
+      errors['phone'] = 'Should not be empty';
     }
 
     if (Object.keys(errors).length > 0) {
@@ -291,7 +301,7 @@ class ShippingAddressForm extends React.Component {
 
             {/*  */}
             <Text style={{paddingTop: 10, paddingBottom: 10, fontWeight: "300" }}>
-              Status Address
+              Shipping To
             </Text>
             <RadioGroup
               horizontal
@@ -299,6 +309,8 @@ class ShippingAddressForm extends React.Component {
               // statusAddressValue
               // onChange={(option) => console.log("Selected " + option.id)}
               onChange={(option) => this.setState({ statusAddressValue:option.id })}
+              activeButtonId={this.state.statusAddressValue}
+              // activeButtonId={2}
             />
             {/*  */}
 

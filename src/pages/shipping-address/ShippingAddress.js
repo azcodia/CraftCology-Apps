@@ -36,6 +36,7 @@ class ShippingAddress extends Component {
   }
 
   componentDidMount() {
+    console.log("Props: "+this.props.isFromOrderForm)
     this.getData();
   }
 
@@ -124,7 +125,8 @@ class ShippingAddress extends Component {
             user: this.props.user, 
             title: 'Update Address #' + item.address_name,
             item: item,
-            isFromOrderForm: false
+            isFromOrderForm: false,
+
           })}
         />
       </Swipeout>
@@ -144,7 +146,7 @@ class ShippingAddress extends Component {
             title={"Create New Address"}
             // subtitle={item.billing_code}
             rightIcon={{name: 'add-to-list', type: 'entypo'}}
-            onPress={() => Actions.shippingAddressForm({user: this.props.user, title: 'Create New Address', item: null, isFromOrderForm: false})}
+            onPress={() => Actions.shippingAddressForm({user: this.props.user, title: 'Create New Address', item: null, isFromOrderForm: false, })}
           />
         <FlatList
           data={this.props.listUserAddresses}

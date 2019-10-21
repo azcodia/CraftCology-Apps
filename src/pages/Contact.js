@@ -166,8 +166,10 @@ export default class Contact extends Component {
       });
     }
 
-    if(this.state.phone.length < 10 || this.state.phone.length > 13) {
-      errors['phone'] = 'Number not required';
+    if(this.state.phone.length < 10) {
+      errors['phone'] = 'Phone Number is Too Short';
+    }else if(this.state.phone.length > 13) {
+      errors['phone'] = 'Phone Number is Too Long';
     }else if(this.state.phone == null) {
       errors['phone'] = 'Should not be empty';
     }

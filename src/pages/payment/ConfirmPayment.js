@@ -53,6 +53,8 @@ class ConfirmPayment extends Component {
     }
 
     console.log(this.state.paymenttotal);
+    console.log("Cek Status Pembayaran: ")
+    console.log(this.props.orderSelected)
 
     this.onFocus = this.onFocus.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -133,55 +135,55 @@ class ConfirmPayment extends Component {
       return;
     }
 
-    this.setState({
-        buttonIsLoading: true,
-    }, function(){
+    // this.setState({
+    //     buttonIsLoading: true,
+    // }, function(){
 
-      let uri = 'order/confirm-payment';
-      let params = {
-        order_code: this.state.ordercode,
-        payment_date: this.state.paymentdate,
-        shopping_total: this.state.paymenttotal,
-        payment_to: this.state.paymentto,
-        account_name: this.state.accountname,
-        bank_name: this.state.bankname
-      };
-      let headers = {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + this.props.user.token
-      };
+    //   let uri = 'order/confirm-payment';
+    //   let params = {
+    //     order_code: this.state.ordercode,
+    //     payment_date: this.state.paymentdate,
+    //     shopping_total: this.state.paymenttotal,
+    //     payment_to: this.state.paymentto,
+    //     account_name: this.state.accountname,
+    //     bank_name: this.state.bankname
+    //   };
+    //   let headers = {
+    //     'Content-Type': 'application/json',
+    //     'Authorization': 'Bearer ' + this.props.user.token
+    //   };
 
-      postPublic(uri, params, headers).then(response => {
-        console.log(response);
-        this.setState({
-          buttonIsLoading: false,
-        });
-        if (response.status == 200) {
-          showMessage({
-            message: response.data.message,
-            type: 'success'
-          });
-          this.props.onUpdateOrder(response.data.data);
-          Actions.pop();
-          return;
-        }
-        showMessage({
-          message: response.data.message,
-          type: 'danger'
-        });
-        if (response.status == 401) {
-          this.props.onUnsetUser();
-          Actions.login();
-          return;
-        }
-      }).catch(error => {
-        this.props.onUnsetUser();
-        this.setState({
-          refreshing: false,
-        });
-        Actions.login();
-      });
-    });
+    //   postPublic(uri, params, headers).then(response => {
+    //     console.log(response);
+    //     this.setState({
+    //       buttonIsLoading: false,
+    //     });
+    //     if (response.status == 200) {
+    //       showMessage({
+    //         message: response.data.message,
+    //         type: 'success'
+    //       });
+    //       this.props.onUpdateOrder(response.data.data);
+    //       Actions.pop();
+    //       return;
+    //     }
+    //     showMessage({
+    //       message: response.data.message,
+    //       type: 'danger'
+    //     });
+    //     if (response.status == 401) {
+    //       this.props.onUnsetUser();
+    //       Actions.login();
+    //       return;
+    //     }
+    //   }).catch(error => {
+    //     this.props.onUnsetUser();
+    //     this.setState({
+    //       refreshing: false,
+    //     });
+    //     Actions.login();
+    //   });
+    // });
   }
 
   updateRef(name, ref) {
@@ -285,7 +287,11 @@ class ConfirmPayment extends Component {
               }}
               onDateChange={(date) => {this.setState({paymentdate: date})}}
             />
+            {/* Disabled */}
             <TextField
+              disabled={
+                this.props.orderSelected.status == 'INVOICE_1' ? false : true
+              }
               ref={this.paymenttotalRef}
               value={data.paymenttotal}
               keyboardType='number-pad'
@@ -301,6 +307,35 @@ class ConfirmPayment extends Component {
               tintColor={'#000'}
               lineWidth={1}
             />
+            {/* Disabled Tutup */}
+
+            {/* Enabled */}
+            {
+              this.props.orderSelected.status == 'INVOICE_1'
+              ?
+                <View>
+
+                </View>
+              :
+                <TextField
+                  ref={this.paymenttotalRef1}
+                  value={data.paymenttotal1}
+                  keyboardType='number-pad'
+                  autoCapitalize='none'
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onFocus={this.onFocus}
+                  onChangeText={this.onChangeText}
+                  onSubmitEditing={this.onSubmitPaymenttotal1}
+                  returnKeyType='next'
+                  label='Payment Total'
+                  error={errors.paymenttotal1}
+                  tintColor={'#000'}
+                  lineWidth={1}
+                />
+            }
+            {/* Enabled Tutup */}
+
             <PaymentToDropdown
               selectedValue={this.state.paymentto}
               onSelect={this.onSelectPaymentTo}

@@ -39,13 +39,32 @@ class OrderStatusDetail extends Component {
       downloadProgress: false,
       modalVisible: false,
       wips: [],
-      deliveryOrderName: 'Delivery Order'
+      deliveryOrderName: 'Delivery Order',
+      cekFileValue: null,
     };
   }
 
   componentWillMount() {
     this.props.navigation.setParams({ onPressCopy: this.onPressCopy });
+    console.log("Cek Props: ")
+    console.log(this.props.orderSelected)
+
+    // Cek File Pdf
+    if(this.props.orderSelected.file_po_admin == null) {
+      this.setState({
+        cekFileValue: this.props.orderSelected.file_po
+      })
+    }else {
+      this.setState({
+        cekFileValue: this.props.orderSelected.file_po_admin
+      })
+    }
+
   }
+
+  // componentDidUpdate() {
+  //   this.onRefresh();
+  // }
 
   async onPressCopy(copy) {
     await Clipboard.setString(copy);
@@ -65,7 +84,20 @@ class OrderStatusDetail extends Component {
   }
 
   onRefresh() {
+    // Cek File Pdf
+    if(this.props.orderSelected.file_po_admin == null) {
+      this.setState({
+        cekFileValue: this.props.orderSelected.file_po
+      })
+    }else {
+      this.setState({
+        cekFileValue: this.props.orderSelected.file_po_admin
+      })
+    }
+    // Cek File Pdf End
     this.setState({ refreshing: true });
+    console.log("Testing Cek Data: ")
+    // console.log(this.props.orderSelected.code_order);
 
     let uri = 'order/show?code_order=' + this.props.orderSelected.code_order;
     let headers = {
@@ -102,6 +134,8 @@ class OrderStatusDetail extends Component {
     DocumentPicker.show({
       filetype: [DocumentPickerUtil.pdf()],
     }, (error, response) => {
+      // console.log("Cek File Pdf: ")
+      // console.log(response)
       if (error) {
         showMessage({
           message: "Upload canceled",
@@ -134,6 +168,9 @@ class OrderStatusDetail extends Component {
       type: 'info'
     });
 
+    console.log("Cek File Pdf: ")
+    console.log(params)
+
     let url = 'order/upload-purchase-order';
     let formdata = new FormData();
     formdata.append("order_id", this.props.orderSelected.id);
@@ -155,6 +192,8 @@ class OrderStatusDetail extends Component {
           type: 'success'
         });
         this.props.onUpdateOrder(response.data.data);
+        console.log("cek upload Data: ")
+        console.log(response)
       } else {
         showMessage({
           message: response.data.message,
@@ -389,7 +428,12 @@ class OrderStatusDetail extends Component {
           });
           setTimeout(() => {
             Global.presentToast("Downloading ..");
-            Global.downloadFile(Global.getBaseUrl() + "backend/uploads/PO/" + this.props.orderSelected.file_po).then(res => {
+            
+
+
+            Global.downloadFile(Global.getBaseUrl() + "backend/uploads/PO/" + this.state.cekFileValue).then(res => {
+              console.log("Url Download PO: "+Global.getBaseUrl() + "backend/uploads/PO/" + this.state.cekFileValue)
+              console.log("File PDF: "+ this.state.cekFileValue)
               this.setState({
                 downloadPo: false
               });
@@ -707,7 +751,7 @@ const mapStateToProps = state => {
   return {
     user: state.user.user,
     isLoggedIn: state.user.isLoggedIn,
-    orderSelected: state.orders.orderSelected
+    orderSelected: state.orders.orderSelected,
   };
 };
 

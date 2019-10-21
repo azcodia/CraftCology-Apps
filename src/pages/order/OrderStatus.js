@@ -53,10 +53,14 @@ class OrderStatus extends Component {
     getPublic(uri, headers).then(response => {
       this.setState({refreshing:false});
       if (response.status == 200) {
+        console.log("check List Order Url Api: ");
+        console.log()
+        console.log("Cek List Order: ");
+        console.log(response.data.data);
         this.props.onSetListOrder(response.data.data);
         return;
       }
-      console.log(response);
+      console.log("Cek List Order: "+response);
       showMessage({
         message: response.data.message,
         type: 'danger'
