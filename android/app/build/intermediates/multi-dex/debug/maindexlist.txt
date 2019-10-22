@@ -178,7 +178,6 @@ com/facebook/infer/annotation/ThreadSafe.class
 com/facebook/infer/annotation/TrueOnNull.class
 com/facebook/infer/annotation/Verify.class
 com/facebook/internal/CallbackManagerImpl$Callback.class
-com/facebook/internal/CallbackManagerImpl$RequestCodeOffset.class
 com/facebook/internal/CallbackManagerImpl.class
 com/facebook/internal/Validate.class
 com/facebook/proguard/annotations/DoNotStrip.class

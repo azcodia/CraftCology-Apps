@@ -296,17 +296,27 @@ class Register extends Component {
       }
       console.log(`Login success with permissions: ${loginPermission.grantedPermissions.toString()}`);
       const data = await AccessToken.getCurrentAccessToken();
+      console.log("AccessToken.getCurrentAccessToken(): ")
+      console.log(AccessToken.getCurrentAccessToken())
       if (!data) {
         throw new Error('Something went wrong obtaining the users access token');
       }
       const credential = firebase.auth.FacebookAuthProvider.credential(data.accessToken);
+      console.log("Credential: ")
+      console.log(credential)
       const currentUser = await firebase.auth().signInAndRetrieveDataWithCredential(credential);
+      console.log("CurrentUser: ")
+      console.log(currentUser)
       if (currentUser) {
         // access to api login with social media
         this.processSocialMediaSignIn(currentUser, 'facebook');
-        console.log(currentUser);
+        console.log("currentUser 1")
+        console.log(currentUser)
+        ;
       }
     } catch (error) {
+      console.log("Error Data");
+      console.log(error.message)
               // onSubmitEditing={this.onSubmitPassword}
       Global.presentToast(error.message);
               // onSubmitEditing={this.onSubmitPassword}

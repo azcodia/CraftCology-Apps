@@ -4,16 +4,12 @@
         "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/drawable/abc_ic_menu_overflow_material.xml"
     },
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_login_silver_background.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-4.34.0.aar/09e62fa9c3c1bb069d86b2619898f223/res/drawable/com_facebook_button_login_silver_background.xml"
-    },
-    {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/messenger_button_blue_bg_round.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.34.0.aar/741460badcdbbd2e807bb8d086506c39/res/drawable/messenger_button_blue_bg_round.xml"
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.8.0.aar/8d4b2da7a824ec726a16205454d0b51f/res/drawable/messenger_button_blue_bg_round.xml"
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_cancel_background.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-4.34.0.aar/680eb99b06b68bb83f0622feedf6eaef/res/drawable/com_facebook_auth_dialog_cancel_background.xml"
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/res/drawable/com_facebook_auth_dialog_cancel_background.xml"
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
@@ -21,7 +17,7 @@
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/messenger_button_white_bg_round.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.34.0.aar/741460badcdbbd2e807bb8d086506c39/res/drawable/messenger_button_white_bg_round.xml"
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.8.0.aar/8d4b2da7a824ec726a16205454d0b51f/res/drawable/messenger_button_white_bg_round.xml"
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_disabled.xml",
@@ -33,7 +29,7 @@
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_background.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-4.34.0.aar/680eb99b06b68bb83f0622feedf6eaef/res/drawable/com_facebook_auth_dialog_background.xml"
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/res/drawable/com_facebook_auth_dialog_background.xml"
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
@@ -65,7 +61,7 @@
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/com_facebook_send_button_icon.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-share-4.34.0.aar/46607f1c3430512b5b5160fb480483ae/res/drawable/com_facebook_send_button_icon.xml"
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-share-5.8.0.aar/585042efe701fd17c1485642e0082170/res/drawable/com_facebook_send_button_icon.xml"
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_disabled.xml",
@@ -77,15 +73,11 @@
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_like_background.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-4.34.0.aar/680eb99b06b68bb83f0622feedf6eaef/res/drawable/com_facebook_button_like_background.xml"
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/res/drawable/com_facebook_button_like_background.xml"
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
         "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_login_logo.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-4.34.0.aar/09e62fa9c3c1bb069d86b2619898f223/res/drawable/com_facebook_button_login_logo.xml"
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml",
@@ -93,7 +85,7 @@
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/messenger_button_blue_bg_selector.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.34.0.aar/741460badcdbbd2e807bb8d086506c39/res/drawable/messenger_button_blue_bg_selector.xml"
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.8.0.aar/8d4b2da7a824ec726a16205454d0b51f/res/drawable/messenger_button_blue_bg_selector.xml"
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_normal.xml",
@@ -141,7 +133,7 @@
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_send_background.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-share-4.34.0.aar/46607f1c3430512b5b5160fb480483ae/res/drawable/com_facebook_button_send_background.xml"
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-share-5.8.0.aar/585042efe701fd17c1485642e0082170/res/drawable/com_facebook_button_send_background.xml"
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
@@ -157,7 +149,7 @@
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/com_facebook_favicon_blue.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-4.34.0.aar/680eb99b06b68bb83f0622feedf6eaef/res/drawable/com_facebook_favicon_blue.xml"
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/res/drawable/com_facebook_favicon_blue.xml"
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/ucrop_vector_loader_animated.xml",
@@ -181,7 +173,7 @@
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_icon.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-4.34.0.aar/680eb99b06b68bb83f0622feedf6eaef/res/drawable/com_facebook_button_icon.xml"
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/res/drawable/com_facebook_button_icon.xml"
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml",
@@ -196,12 +188,12 @@
         "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_background.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-4.34.0.aar/680eb99b06b68bb83f0622feedf6eaef/res/drawable/com_facebook_button_background.xml"
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/messenger_button_white_bg_selector.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.8.0.aar/8d4b2da7a824ec726a16205454d0b51f/res/drawable/messenger_button_white_bg_selector.xml"
     },
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/messenger_button_white_bg_selector.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.34.0.aar/741460badcdbbd2e807bb8d086506c39/res/drawable/messenger_button_white_bg_selector.xml"
+        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_background.xml",
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/res/drawable/com_facebook_button_background.xml"
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
@@ -225,7 +217,7 @@
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_header_background.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-4.34.0.aar/680eb99b06b68bb83f0622feedf6eaef/res/drawable/com_facebook_auth_dialog_header_background.xml"
+        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/res/drawable/com_facebook_auth_dialog_header_background.xml"
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/ucrop_vector_loader.xml",
@@ -294,10 +286,6 @@
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
         "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/drawable/abc_list_selector_holo_dark.xml"
-    },
-    {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_login_background.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-4.34.0.aar/09e62fa9c3c1bb069d86b2619898f223/res/drawable/com_facebook_button_login_background.xml"
     },
     {
         "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
