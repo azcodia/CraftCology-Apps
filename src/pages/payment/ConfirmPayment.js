@@ -34,12 +34,14 @@ class ConfirmPayment extends Component {
       visibleDatepicker: false,
       paymentdate: new Date(),
       paymenttotal: '',
+      paymenttotal1: '',
       accountname: '',
       bankname: '',
       paymentto: '',
       listForms: [
         'ordercode',
         'paymenttotal',
+        'paymenttotal1',
         'accountname',
         'bankname'
       ]
@@ -61,11 +63,13 @@ class ConfirmPayment extends Component {
     this.onChangeText = this.onChangeText.bind(this);
     this.onSubmitOrdercode = this.onSubmitOrdercode.bind(this);
     this.onSubmitPaymenttotal = this.onSubmitPaymenttotal.bind(this);
+    this.onSubmitPaymenttotal1 = this.onSubmitPaymenttotal1.bind(this);
     this.onSubmitAccountname = this.onSubmitAccountname.bind(this);
     this.onSubmitBankname = this.onSubmitBankname.bind(this);
 
     this.ordercodeRef = this.updateRef.bind(this, 'ordercode');
     this.paymenttotalRef = this.updateRef.bind(this, 'paymenttotal');
+    this.paymenttotalRef1 = this.updateRef.bind(this, 'paymenttotal1');
     this.accountnameRef = this.updateRef.bind(this, 'accountname');
     this.banknameRef = this.updateRef.bind(this, 'bankname');
   }
@@ -106,6 +110,12 @@ class ConfirmPayment extends Component {
     this.paymenttotal.focus();
   }
 
+  onSubmitPaymenttotal1() {
+    if(this.props.orderSelected.status == 'INVOICE_2') {
+      this.paymenttotal1.focus();
+    }
+  }
+
   onSubmitAccountname() {
     this.accountname.focus();
   }
@@ -116,7 +126,7 @@ class ConfirmPayment extends Component {
 
   onSubmit() {
     let errors = {};
-
+    console.log("Total Bayar: "+this.state.paymenttotal)
     this.state.listForms
       .forEach((name) => {
         let value = this[name].value();
@@ -130,60 +140,66 @@ class ConfirmPayment extends Component {
         }
       });
 
+    if(this.props.orderSelected.status == 'INVOICE_2') {
+      if(this.state.paymenttotal !== this.state.paymenttotal1) {
+        errors['paymenttotal1'] = 'Your total payment does not match';
+      }
+    }
+
     if (Object.keys(errors).length > 0) {
       this.setState({ errors });
       return;
     }
 
-    // this.setState({
-    //     buttonIsLoading: true,
-    // }, function(){
+    this.setState({
+        buttonIsLoading: true,
+    }, function(){
 
-    //   let uri = 'order/confirm-payment';
-    //   let params = {
-    //     order_code: this.state.ordercode,
-    //     payment_date: this.state.paymentdate,
-    //     shopping_total: this.state.paymenttotal,
-    //     payment_to: this.state.paymentto,
-    //     account_name: this.state.accountname,
-    //     bank_name: this.state.bankname
-    //   };
-    //   let headers = {
-    //     'Content-Type': 'application/json',
-    //     'Authorization': 'Bearer ' + this.props.user.token
-    //   };
+      let uri = 'order/confirm-payment';
+      let params = {
+        order_code: this.state.ordercode,
+        payment_date: this.state.paymentdate,
+        shopping_total: this.state.paymenttotal,
+        payment_to: this.state.paymentto,
+        account_name: this.state.accountname,
+        bank_name: this.state.bankname
+      };
+      let headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.props.user.token
+      };
 
-    //   postPublic(uri, params, headers).then(response => {
-    //     console.log(response);
-    //     this.setState({
-    //       buttonIsLoading: false,
-    //     });
-    //     if (response.status == 200) {
-    //       showMessage({
-    //         message: response.data.message,
-    //         type: 'success'
-    //       });
-    //       this.props.onUpdateOrder(response.data.data);
-    //       Actions.pop();
-    //       return;
-    //     }
-    //     showMessage({
-    //       message: response.data.message,
-    //       type: 'danger'
-    //     });
-    //     if (response.status == 401) {
-    //       this.props.onUnsetUser();
-    //       Actions.login();
-    //       return;
-    //     }
-    //   }).catch(error => {
-    //     this.props.onUnsetUser();
-    //     this.setState({
-    //       refreshing: false,
-    //     });
-    //     Actions.login();
-    //   });
-    // });
+      postPublic(uri, params, headers).then(response => {
+        console.log(response);
+        this.setState({
+          buttonIsLoading: false,
+        });
+        if (response.status == 200) {
+          showMessage({
+            message: response.data.message,
+            type: 'success'
+          });
+          this.props.onUpdateOrder(response.data.data);
+          Actions.pop();
+          return;
+        }
+        showMessage({
+          message: response.data.message,
+          type: 'danger'
+        });
+        if (response.status == 401) {
+          this.props.onUnsetUser();
+          Actions.login();
+          return;
+        }
+      }).catch(error => {
+        this.props.onUnsetUser();
+        this.setState({
+          refreshing: false,
+        });
+        Actions.login();
+      });
+    });
   }
 
   updateRef(name, ref) {
@@ -232,7 +248,7 @@ class ConfirmPayment extends Component {
     let { errors = {}, ...data } = this.state;
 
     return(
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, backgroundColor: '#d5d5d5'}}>
         <ScrollView style={styles.scrollView}>
           <View style={{paddingLeft: 10, paddingRight: 10, paddingBottom: 10}}>
             <TextField
@@ -289,8 +305,8 @@ class ConfirmPayment extends Component {
             />
             {/* Disabled */}
             <TextField
-              disabled={
-                this.props.orderSelected.status == 'INVOICE_1' ? false : true
+              editable={
+                this.props.orderSelected.status == 'INVOICE_1' ? true : false
               }
               ref={this.paymenttotalRef}
               value={data.paymenttotal}
@@ -313,9 +329,27 @@ class ConfirmPayment extends Component {
             {
               this.props.orderSelected.status == 'INVOICE_1'
               ?
-                <View>
-
-                </View>
+              <View style={{width: 0, height:0, zIndex: -10}}>
+                <TextField
+                  ref={this.paymenttotalRef1}
+                  // value={data.paymenttotal1}
+                  value={this.props.orderSelected.status == 'INVOICE_1' ? data.paymenttotal : data.paymenttotal}
+                  keyboardType='number-pad'
+                  autoCapitalize='none'
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onFocus={this.onFocus}
+                  onChangeText={this.onChangeText}
+                  onSubmitEditing={this.onSubmitPaymenttotal1}
+                  returnKeyType='next'
+                  label='Payment Total'
+                  error={errors.paymenttotal1}
+                  tintColor={'#d5d5d5'}
+                  lineWidth={1}
+                  errorColor={"#d5d5d5"}
+                  baseColor={"#d5d5d5"}
+                />
+              </View>
               :
                 <TextField
                   ref={this.paymenttotalRef1}

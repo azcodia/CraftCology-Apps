@@ -41,7 +41,7 @@ export class Global {
   }
 
   static getAppVersion() {
-    return '1.2.25';
+    return '1.2.30';
   }
 
   static presentToast(message) {  
