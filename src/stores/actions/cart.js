@@ -6,6 +6,8 @@ import {
 } from './actionTypes';
 
 export const addCart = (cart) => {
+  console.log("Add Cart")
+  console.log(cart)
   return {
     type: ADD_CART,
     payload: cart
@@ -13,6 +15,8 @@ export const addCart = (cart) => {
 };
 
 export const updateCart = (cart) => {
+  console.log("Update Cart")
+  console.log(cart)
   return {
     type: UPDATE_CART,
     payload: cart

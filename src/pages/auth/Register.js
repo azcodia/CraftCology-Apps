@@ -121,103 +121,114 @@ class Register extends Component {
   }
 
   onSubmit() {
-    let errors = {};
 
-    if(this.state.email.includes("@gmail")) {
-      this.onPressGoogleSignIn()
-    }
-    
-    // Check
-    // console.log(this.state.firstname)
-    // console.log(this.state.lastname)
-    // console.log(this.state.phone)
-    // console.log(this.state.email)
-    // console.log(this.state.password)
-    // // firebase_token: 'xxx'
-    // Check Tutup
-
-    this.state.listForms
-      .forEach((name) => {
-        let value = this[name].value();
-
-        if (!value) {
-          errors[name] = 'Should not be empty';
-        } else {
-          if ('password' === name && value.length < 6) {
-            errors[name] = 'Too short';
-          }
+    result = [];
+    console.log("Cek Props Keranjang: ")
+    console.log(this.props.carts.cart)
+      for(let i=0; i<this.props.carts.cart.length; i++) {
+        let cartResponse = this.props.carts.cart[i]
+        let cartDataFilter = {
+          product_id: cartResponse.id,
+          qty: cartResponse.qty,
+          customize_image: cartResponse.customize_image_name == null ? null : cartResponse.customize_image_name.name,
+          // notes_image:   cartResponse.customize_image_name.note
+          notes_image: cartResponse.customize_image_name == null ? null : cartResponse.customize_image_name.note 
         }
-      });
-    
-    if (!this.state.password) {
-      errors['password'] = 'Should not be empty';
-    } else if (this.state.password.length < 6) {
-      errors['password'] = 'Too short';
-    }
-
-    var cekEmail = this.state.email;
-
-    if(!cekEmail.includes("@")) {
-      errors['email'] = 'Please enter a valid email address';
-    }else if(!cekEmail) {
-      errors['email'] = 'Should not be empty';
-    }
-
-    if(this.state.phone.length < 10) {
-      errors['phone'] = 'Phone Number is Too Short';
-    }else if(this.state.phone.length > 13) {
-      errors['phone'] = 'Phone Number is Too Long';
-    }else if(this.state.phone == null) {
-      errors['phone'] = 'Should not be empty';
-    }
-
-
-    if (Object.keys(errors).length > 0) {
-      this.setState({ errors });
-      return;
-    }
-
-    Keyboard.dismiss();
-
-    this.setState({
-        buttonIsLoading: true,
-    }, function(){
-
-      fetch(Global.getBaseUrl() + 'api/v1/auth/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          firstname: this.state.firstname,
-          lastname: this.state.lastname,
-          phone: this.state.phone,
-          email: this.state.email,
-          password: this.state.password,
-          confirm_password: this.state.password,
-          // firebase_token: 'xxx'
-        })
-      })
-      .then((response) => response.json())
-      .then((responseJson) => {
-      console.log(responseJson);
-      Global.presentToast(responseJson.message);
-      this.setState({
-        buttonIsLoading: false,
-      });
-      if (responseJson.status == 201) {
-        Global.presentToast(responseJson.message);
-        Actions.reset('maintab');
+        result.push(cartDataFilter)
       }
-      })
-      .catch((error) => {
-        console.log("Error: ");
-        console.log(error);
-      })
-    });
+    console.log("cek Result :")
+    console.log(result)
+
+
+    // let errors = {};
+
+    // if(this.state.email.includes("@gmail")) {
+    //   this.onPressGoogleSignIn()
+    // }
+
+    // this.state.listForms
+    //   .forEach((name) => {
+    //     let value = this[name].value();
+
+    //     if (!value) {
+    //       errors[name] = 'Should not be empty';
+    //     } else {
+    //       if ('password' === name && value.length < 6) {
+    //         errors[name] = 'Too short';
+    //       }
+    //     }
+    //   });
+    
+    // if (!this.state.password) {
+    //   errors['password'] = 'Should not be empty';
+    // } else if (this.state.password.length < 6) {
+    //   errors['password'] = 'Too short';
+    // }
+
+    // var cekEmail = this.state.email;
+
+    // if(!cekEmail.includes("@")) {
+    //   errors['email'] = 'Please enter a valid email address';
+    // }else if(!cekEmail) {
+    //   errors['email'] = 'Should not be empty';
+    // }
+
+    // if(this.state.phone.length < 10) {
+    //   errors['phone'] = 'Phone Number is Too Short';
+    // }else if(this.state.phone.length > 13) {
+    //   errors['phone'] = 'Phone Number is Too Long';
+    // }else if(this.state.phone == null) {
+    //   errors['phone'] = 'Should not be empty';
+    // }
+
+
+    // if (Object.keys(errors).length > 0) {
+    //   this.setState({ errors });
+    //   return;
+    // }
+
+    // Keyboard.dismiss();
+
+    // this.setState({
+    //     buttonIsLoading: true,
+    // }, function(){
+
+    //   fetch(Global.getBaseUrl() + 'api/v1/auth/register', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //       firstname: this.state.firstname,
+    //       lastname: this.state.lastname,
+    //       phone: this.state.phone,
+    //       email: this.state.email,
+    //       password: this.state.password,
+    //       confirm_password: this.state.password,
+    //       // firebase_token: 'xxx'
+    //     })
+    //   })
+    //   .then((response) => response.json())
+    //   .then((responseJson) => {
+    //   console.log(responseJson);
+    //   Global.presentToast(responseJson.message);
+    //   this.setState({
+    //     buttonIsLoading: false,
+    //   });
+    //   if (responseJson.status == 201) {
+    //     Global.presentToast(responseJson.message);
+    //     Actions.reset('maintab');
+    //   }
+    //   })
+    //   .catch((error) => {
+    //     console.log("Error: ");
+    //     console.log(error);
+    //   })
+    // });
   }
 
   processSocialMediaSignIn(firebaseUserParams, social) {
+
     var uri = 'auth/social-media-login';
     var body = {
       email: firebaseUserParams.additionalUserInfo.profile.email,
@@ -533,7 +544,8 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => {
   return {
     user: state.user.user,
-    isLoggedIn: state.user.isLoggedIn
+    isLoggedIn: state.user.isLoggedIn,
+    carts: state.carts
   };
 };
 

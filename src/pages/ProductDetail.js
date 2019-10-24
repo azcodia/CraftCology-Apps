@@ -10,7 +10,8 @@ import {
   TextInput
 } from 'react-native';
 import {
-  addCart
+  addCart,
+  updateCart
 } from './../stores/actions/index';
 import { Text, Button } from 'react-native-elements';
 import { Global, Session, currencyIndonesianFormat } from '../helpers/Global';
@@ -79,9 +80,45 @@ class ProductDetail extends Component {
         is_customize: false,
         referances: []
       }
-      this.state.session.cartAdd(item);
-      this.props.onAddCart(item);
-      console.log(this.props.carts);
+      if(this.props.carts.cart.length == 0) {
+        this.state.session.cartAdd(item);
+        this.props.onAddCart(item);
+      }else {
+        console.log("Ceck Props Carts: ");
+        console.log(this.props.carts.cart);
+        let i = 0;
+        let exist = 0;
+        do {
+          let cartResponse = this.props.carts.cart[i];
+          
+          if(cartResponse.id == this.state.item.id) {
+            console.log("id Sama: " + cartResponse.id)
+            // Update
+            let itemUpdate = {
+              unique_number: cartResponse.unique_number,
+              id: cartResponse.id,
+              name: cartResponse.name,
+              qty: cartResponse.qty+this.state.quantity,
+              price: "0",
+              image_name: this.state.item.image_name,
+              customize_image_name: null,
+              note: null,
+              is_customize: false,
+              referances: []
+            }
+            this.state.session.cartUpdate(itemUpdate);
+            this.props.onUpdateCart(itemUpdate);
+            exist = 1;
+          }
+          i++;
+        } while(i < this.props.carts.cart.length);
+
+        if(exist == 0) {
+          console.log("Id Tidak Sama: ")
+          this.state.session.cartAdd(item);
+          this.props.onAddCart(item);
+        }
+      }
       showMessage({
         message: 'The product was successfully inserted to shopping cart',
         type: 'success',
@@ -301,7 +338,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onAddCart: cart => dispatch(addCart(cart))
+    onAddCart: cart => dispatch(addCart(cart)),
+    onUpdateCart: cart => dispatch(updateCart(cart))
   };
 };
 

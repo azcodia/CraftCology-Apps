@@ -129,7 +129,7 @@ export class Session {
         let isItemAdded = false;
         for (let i=0; i<response.length; i++) {
           let cartResponse = response[i];
-          if (cartResponse.unique_number == item.unique_number) {
+          if (cartResponse.id == item.id) {
             cartResponse.qty += item.qty;
             cartResponse.price = item.price;
             cartResponse.total = cartResponse.qty * cartResponse.price;
@@ -141,7 +141,7 @@ export class Session {
           }
           result.push(cartResponse);
         }
-        console.log("Ini");
+        console.log("Add Cart Ke Session");
         console.log(result);
         if (isItemAdded == false) {
           result.push(item);
@@ -187,6 +187,8 @@ export class Session {
           }
           result.push(cartResponse);
         }
+        console.log("Update Cart Ke Session");
+        console.log(result);
         AsyncStorage.setItem("cart", JSON.stringify(result));
         return this.cartGet();
       });
