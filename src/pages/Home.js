@@ -55,10 +55,9 @@ class Home extends Component {
 
   _getData() {
     var uri = 'product?search=&category=&tag=&page=1&perpage=60';
-    getPublic(uri).then(response => {
-      console.log('public');
-      console.log("Cek Url: ");
-      console.log(getPublic);
+
+    getPublic(uri)
+    .then(response => {
       this.setState({
         refreshing: false
       });

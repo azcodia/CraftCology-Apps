@@ -27,74 +27,50 @@ export function getProducts(
 
 }
 
-export async function getPublic(uri, headers = {'Content-Type':'application/json'}) {
-  var method = 'GET';
+export async function getPublic(uri, options=null) 
+{
+  var config;
 
-  try {
-    let response = await axios({
-      method: method,
-      url: getBaseApiUrl() + '/v1/' + uri,
-      headers: headers,
-      timeout: REQUEST_TIMEOUT
-    });
-
-    return response
-  } catch (error) {
-    console.log(error);
-    if(error.response) {
-      console.log(`ERROR API response ${uri}`, error.response)
-      showMessage({
-        message: `Error get ${uri}, ${error.response.data.message} (code ${error.response.data.status})`,
-        type: "danger",
-        icon: { icon: "danger", position: "left" },
-      })
-    } else if(error.request) {
-      console.log(`ERROR API request ${uri}`, error.request)
-      showMessage({
-        message: `${error.message}`,
-        type: "danger",
-        icon: { icon: "danger", position: "left" },
-      })
-    } else {
-      console.log(`ERROR API ${uri}`, error)
-    }
-    console.log(`ERROR MESSAGE ${uri}`, error.message)
+  if(options != "" && options != null)
+  {
+    config = options;
+    console.log(options)
   }
+  else
+  {
+    config = { 
+      headers: {
+        accept: 'application/json',
+      },
+      data: {},
+    };
+  }
+
+  return await axios.get(getBaseApiUrl() + '/v1/' + uri, config)
+  .then(response => 
+  {
+    return response;
+  })
+  .catch(err => 
+  {
+    console.log(err)
+  });
 }
 
-export async function postPublic(uri, data=null, headers = {'Content-Type':'application/json'}) {
-  var method = 'POST';
- 
-  try {
-    let response = await axios({
-      method: method,
-      url: getBaseApiUrl() + '/v1/' + uri,
-      headers: headers,
-      data: data,
-      timeout: REQUEST_TIMEOUT
-    });
-    return response
-  } catch(error) {
-    if(error.response) {
-      console.log(`ERROR API response ${uri}`, error.response)
-      showMessage({
-        message: `${error.response.data.message}`,
-        type: "danger",
-        icon: { icon: "danger", position: "left" },
-      })
-      return error.response
-    } else if(error.request) {
-      console.log(`ERROR API request ${uri}`, error.request)
-      showMessage({
-        message: `${error.message}`,
-        type: "danger",
-        icon: { icon: "danger", position: "left" },
-      })
-    } else {
-      console.log(`ERROR API ${uri}`, error)
-    }
-    console.log(`ERROR MESSAGE ${uri}`, error)
+export async function postPublic(uri, data=null) {
+  const headers = {
+    'Content-Type': 'application/json'
   }
+
+  return await axios.post(getBaseApiUrl() + '/v1/' + uri, data, {headers: headers})
+  .then(response => 
+  {
+    return response;
+  })
+  .catch(err => 
+  {
+    console.log(err)
+  });
 };
 
 export async function patchPublic(uri, data=null, headers = {'Content-Type':'application/json'}) {

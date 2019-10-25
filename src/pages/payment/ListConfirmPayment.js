@@ -46,9 +46,13 @@ class ListConfirmPayment extends Component {
   getModels() {
 
     let url = 'order/must-payment';
+    
     let headers = {
+      headers:{
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + this.props.user.token
+      },
+      data: {},
     };
     getPublic(url, headers).then(response => {
       console.log(response);

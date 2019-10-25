@@ -206,9 +206,15 @@ class Login extends Component {
         session.setUser(response.data.data);
         this.props.onSetUser(response.data.data);
         this.props.onSetListUserAddresses(response.data.data.customer_addresses);
+        this.postCart()
         Actions.pop();
+        console.log("Balikan API: ");
         console.log(response);
         console.log(this.props.userAddresses);
+        console.log("Cek Props User: ")
+        console.log(this.props.user.id)
+        console.log("Cek Props Cart")
+        console.log(this.props.carts.cart)
       } else {
         GoogleSignin.revokeAccess();
         GoogleSignin.signOut();
@@ -220,6 +226,53 @@ class Login extends Component {
       }
     });
   }
+
+  // Post Cart Ke API
+  postCart() {
+
+    var uri = "cart/"+this.props.user.id
+    result = [];
+    console.log("Cek Props Keranjang: ")
+    console.log(this.props.carts.cart)
+      for(let i=0; i<this.props.carts.cart.length; i++) {
+        let cartResponse = this.props.carts.cart[i]
+        // let cartDataFilter = {
+        //   product_id: cartResponse.id,
+        //   qty: cartResponse.qty,
+        //   customize_image: cartResponse.customize_image_name == null ? null : cartResponse.customize_image_name.name,
+        //   // notes_image:   cartResponse.customize_image_name.note
+        //   notes_image: cartResponse.customize_image_name == null ? null : cartResponse.customize_image_name.note 
+        // }
+        // result.push(cartDataFilter)
+        var uri = "cart/"+this.props.user.id
+        var body = {
+          cart: {
+            product_id: cartResponse.id,
+            qty: cartResponse.qty,
+            customize_image: cartResponse.customize_image_name == null ? null : cartResponse.customize_image_name.name,
+            notes_image: cartResponse.customize_image_name == null ? null : cartResponse.customize_image_name.note
+          }
+        }
+        postPublic(uri, body).then(res => {
+          if(res.status == 200) {
+            console.log("Kembalian Api Cart")
+            console.log(res)
+          }else {
+    
+          }
+        })
+      }
+    // console.log("cek Result :")
+    // console.log(JSON.parse(result))
+
+    // var uri = "cart/"+this.props.user.id
+    // var body = {
+    //   cart: result
+    // }
+
+  }
+  // Post Cart Ke API END
+
 
   async onPressGoogleSignIn() {
     try {
@@ -436,6 +489,7 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => {
   return {
     user: state.user.user,
+    carts: state.carts,
     isLoggedIn: state.user.isLoggedIn,
     userAddresses: state.userAddresses
   };
