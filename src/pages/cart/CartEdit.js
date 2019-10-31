@@ -17,6 +17,8 @@ import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view
 import { Text, Button, ListItem, ButtonGroup, FormInput, Icon, Avatar } from 'react-native-elements';
 import {
   updateCart,
+  totalCartQty,
+  removeCartQty
 } from "./../../stores/actions/index";
 import { Global, Session } from '../../helpers/Global';
 import { Actions } from 'react-native-router-flux';
@@ -24,7 +26,7 @@ import { TextField } from 'react-native-material-textfield';
 import Modal from "react-native-modal";
 import { connect } from 'react-redux';
 import { showMessage } from 'react-native-flash-message';
-import { postFilePublic } from '../../providers/Api';
+import { postFilePublic, postPublic } from '../../providers/Api';
 import ActionSheet from "react-native-actionsheet";
 
 var ImagePicker = NativeModules.ImageCropPicker;
@@ -40,7 +42,7 @@ class CartEdit extends Component {
       refreshing: true,
       modal: false,
       note: "",
-      item: this.props.carts.find(
+      item: this.props.carts.cart.find(
         x => x.unique_number == this.props.item.unique_number
       ),
       loadingRequest: false
@@ -60,6 +62,7 @@ class CartEdit extends Component {
   }
 
   _onUpdateCart() {
+    console.log("Update Cart:+++")
     Keyboard.dismiss();
     this.setState({
       loadingRequest: true
@@ -86,7 +89,8 @@ class CartEdit extends Component {
       formdata.append("files[]", image);
     }
     console.log(formdata);
-    postFilePublic(uri, formdata)
+    let header = {'Content-Type':'application/json'};
+    postPublic(uri, formdata, header)
       .then(response => {
         if (response.status == 200) {
           this.onUpdateSuccess();
@@ -128,6 +132,9 @@ class CartEdit extends Component {
       this.setState({
         loadingRequest: false
       });
+
+      this.countQty()
+
       showMessage({
         message: "Update Cart Success",
         type: "success"
@@ -135,6 +142,30 @@ class CartEdit extends Component {
       Actions.pop({ refresh: { is_refresh: true } });
     }, 100);
   }
+
+  countQty() {
+    this.props.onRemoveQtyCart();
+    let countDataQty = 0
+    let i = 0
+
+    do {
+      console.log("test")
+      console.log(this.props.carts.cart.length)
+      let cartResponse = this.props.carts.cart[i];
+      console.log(cartResponse)
+      console.log("jng jng")
+      countDataQty += this.props.carts.cart[i].qty
+      console.log(countDataQty)
+    i++
+    } while(i < this.props.carts.cart.length)
+
+    let qtyCart = {
+      qtyCart: countDataQty
+    }
+
+    this.props.onCountQtyCart(qtyCart);
+  }
+  // Check Jumlah Qty Cart End
 
   componentWillMount() {
     this.props.navigation.setParams({ pressSave: this._onUpdateCart });
@@ -563,13 +594,16 @@ const mapStateToProps = state => {
   return {
     user: state.user.user,
     isLoggedIn: state.user.isLoggedIn,
-    carts: state.carts.cart
+    carts: state.carts,
+    qtyCart: state.qtyCart
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onUpdateCart: cart => dispatch(updateCart(cart))
+    onUpdateCart: cart => dispatch(updateCart(cart)),
+    onCountQtyCart: (qtyCart) => dispatch(totalCartQty(qtyCart)),
+    onRemoveQtyCart: ()=> dispatch(removeCartQty())
   };
 };
 

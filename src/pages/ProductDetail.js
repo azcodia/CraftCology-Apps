@@ -11,7 +11,8 @@ import {
 } from 'react-native';
 import {
   addCart,
-  updateCart
+  updateCart,
+  totalCartQty
 } from './../stores/actions/index';
 import { Text, Button } from 'react-native-elements';
 import { Global, Session, currencyIndonesianFormat } from '../helpers/Global';
@@ -28,6 +29,7 @@ class ProductDetail extends Component {
   constructor(props){
     super(props);
     this.state = {
+      countQty: 0,
       images: [],
       session: new Session(),
       quantity: 1,
@@ -119,6 +121,7 @@ class ProductDetail extends Component {
           this.props.onAddCart(item);
         }
       }
+      this.countQty()
       showMessage({
         message: 'The product was successfully inserted to shopping cart',
         type: 'success',
@@ -130,6 +133,32 @@ class ProductDetail extends Component {
       }, 500);
     }, 100);
   }
+
+
+
+  // Check Jumlah Qty Cart
+  countQty() {
+    let countDataQty = 0
+    let i = 0
+
+    do {
+      console.log("test")
+      console.log(this.props.carts.cart.length)
+      let cartResponse = this.props.carts.cart[i];
+      console.log(cartResponse)
+      console.log("jng jng")
+      countDataQty += this.props.carts.cart[i].qty
+      console.log(countDataQty)
+    i++
+    } while(i < this.props.carts.cart.length)
+
+    let qtyCart = {
+      qtyCart: countDataQty
+    }
+
+    this.props.onCountQtyCart(qtyCart);
+  }
+  // Check Jumlah Qty Cart End
 
   openGallery(position) {
     let images = [];
@@ -332,14 +361,16 @@ const mapStateToProps = state => {
   return {
     user: state.user.user,
     isLoggedIn: state.user.isLoggedIn,
-    carts: state.carts
+    carts: state.carts,
+    qtyCart: state.qtyCart
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     onAddCart: cart => dispatch(addCart(cart)),
-    onUpdateCart: cart => dispatch(updateCart(cart))
+    onUpdateCart: cart => dispatch(updateCart(cart)),
+    onCountQtyCart: (qtyCart) => dispatch(totalCartQty(qtyCart))
   };
 };
 

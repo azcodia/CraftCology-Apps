@@ -2,7 +2,8 @@ import {
   ADD_CART,
   UPDATE_CART,
   REMOVE_CART,
-  REMOVE_ALL_CART
+  REMOVE_ALL_CART,
+  TOTAL_QTY_CART
 } from "../actions/actionTypes";
 
 const initialState = {

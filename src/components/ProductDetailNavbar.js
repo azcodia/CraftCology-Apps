@@ -61,7 +61,8 @@ class ProductDetailNavbar extends React.Component {
         containerStyle={styles.cartBadgeContainer}
         textStyle={styles.cartBadgeTextStyle}
         onPress={() => this.onPressCart()}
-        value={this.props.carts.length} />
+        value={this.props.qtyCart.qtyCart}
+      />
     )
   }
 
@@ -166,7 +167,8 @@ const mapStateToProps = state => {
   return {
     user: state.user.user,
     isLoggedIn: state.user.isLoggedIn,
-    carts: state.carts.cart
+    carts: state.carts.cart,
+    qtyCart: state.qtyCart
   };
 };
 

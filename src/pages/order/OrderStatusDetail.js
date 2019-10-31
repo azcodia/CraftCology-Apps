@@ -101,8 +101,11 @@ class OrderStatusDetail extends Component {
 
     let uri = 'order/show?code_order=' + this.props.orderSelected.code_order;
     let headers = {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + this.props.user.token
+      headers:{
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.props.user.token
+      },
+      data: {},
     };
 
     getPublic(uri, headers).then(response => {

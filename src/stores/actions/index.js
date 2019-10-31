@@ -7,8 +7,13 @@ export {
   addCart, 
   updateCart, 
   removeCart, 
-  removeAllCart
+  removeAllCart,
 } from "./cart";
+
+export {
+  totalCartQty,
+  removeCartQty
+} from "./qtyCart";
 
 export { 
   setListUserAddress

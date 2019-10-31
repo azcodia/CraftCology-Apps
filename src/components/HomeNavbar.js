@@ -11,11 +11,49 @@ import {
   Icon, 
   Badge 
 } from 'react-native-elements';
+import {
+  totalCartQty
+} from './../stores/actions/index';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 
 class HomeNavbar extends React.Component {
+
+  componentDidMount() {
+    this.postCart()
+  }
+
+  // Post Cart To API
+  postCart() {
+    // let cart;
+    // let i = 0;
+    // if(this.props.carts.cart.length == 0) {
+    
+    //   console.log("Cart Empty")
+    //   cart = [];
+    //   console.log(cart)
+    
+    // }else {
+    
+    //   console.log("Cart UnEmpty")
+    //   do {
+    //     let cartData = this.props.carts.cart[i]
+    //     console.log("Cek Props Cart")
+    //     console.log([cartData])
+    //     cart = {
+    //       "cart":[
+    //         this.props.carts.cart[i]
+    //       ]
+    //     } 
+    //     console.log(cart)
+    //     i++;
+    //   } while(i < this.props.carts.cart.length)
+    
+    // }
+
+  }
+  // Post Cart To API End
 
   renderLeft() {
     return (
@@ -45,16 +83,14 @@ class HomeNavbar extends React.Component {
   }
 
   renderCartBadge() {
-    if (this.props.carts.length <= 0) {
-      return;
-    }
-
     return (
       <Badge 
         containerStyle={styles.cartBadgeContainer}
         textStyle={styles.cartBadgeTextStyle}
         onPress={() => this.onPressCart()}
-        value={this.props.carts.length} />
+        // value={this.props.qtyCart.qtyCart}
+        value={this.props.qtyCart.qtyCart == null ? 0 : this.props.qtyCart.qtyCart}
+        />
     )
   }
 
@@ -157,15 +193,19 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => {
+  console.log("check state : ")
+  console.log(state)
   return {
     user: state.user.user,
     isLoggedIn: state.user.isLoggedIn,
-    carts: state.carts.cart
+    carts: state.carts,
+    qtyCart: state.qtyCart
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
+    onCountQtyCart: (qtyCart) => dispatch(totalCartQty(qtyCart))
   };
 };
 

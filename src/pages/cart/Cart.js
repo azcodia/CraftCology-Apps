@@ -21,6 +21,8 @@ import {
 } from '../../helpers/Global';
 import {
   removeCart,
+  totalCartQty,
+  removeCartQty
 } from "./../../stores/actions/index";
 
 import { Actions } from 'react-native-router-flux';
@@ -109,6 +111,17 @@ class Cart extends Component {
   }
 
   _onPressRemoveCart(item) {
+    console.log("remove cart")
+    console.log(item.qty)
+    let qtyCartKal = this.props.qtyCart.qtyCart - item.qty
+    console.log("Setelah Di Remove Cart")
+    console.log(qtyCartKal)
+    let qtyCart = {
+      qtyCart: qtyCartKal
+    }
+    this.props.onRemoveQtyCart();
+    this.props.onCountQtyCart(qtyCart);
+
     this.setState({refreshing: true});
     this.props.onRemoveCart(item.unique_number);
     this.state.session.cartRemove(item).then(() => {
@@ -265,13 +278,16 @@ const mapStateToProps = state => {
   return {
     user: state.user.user,
     isLoggedIn: state.user.isLoggedIn,
-    carts: state.carts.cart
+    carts: state.carts.cart,
+    qtyCart: state.qtyCart
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onRemoveCart: cartId => dispatch(removeCart(cartId))
+    onRemoveCart: cartId => dispatch(removeCart(cartId)),
+    onCountQtyCart: (qtyCart) => dispatch(totalCartQty(qtyCart)),
+    onRemoveQtyCart: ()=> dispatch(removeCartQty())
   };
 };
 

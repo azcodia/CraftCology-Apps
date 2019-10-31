@@ -15,10 +15,10 @@ MERGED from [:react-native-splash-screen] /home/cran/Documents/PROJEK IQBAL/Reac
 MERGED from [:react-native-vector-icons] /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-google-signin] /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/node_modules/react-native-google-signin/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.yalantis:ucrop:2.2.2-native] /home/cran/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.2-native.aar/024d275cc971e4aa4336398a0796a428/AndroidManifest.xml:2:1-11:12
-MERGED from [com.facebook.android:facebook-android-sdk:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-5.8.0.aar/b9fe4b73f3f87cf86ef8bab6145a1e2d/AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-login:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-5.8.0.aar/55a2087594a522d97ab0dfe14b1ece9e/AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-share:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-share-5.8.0.aar/585042efe701fd17c1485642e0082170/AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-common:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/AndroidManifest.xml:21:1-37:12
+MERGED from [com.facebook.android:facebook-android-sdk:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-5.9.0.aar/374a30f349e707ce5e76dd2779da7b0c/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-login:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-5.9.0.aar/d603a78a16e05b9d523f8eb78da99d82/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-share:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-share-5.9.0.aar/978f0fbfd22042f3419d238baaec51c8/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-common:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.9.0.aar/e45b36da1f92056444e9105676068c85/AndroidManifest.xml:21:1-37:12
 MERGED from [com.facebook.react:react-native:0.56.1] /home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/b35e4985522d9da7dd9e385a6ff77030/AndroidManifest.xml:2:1-15:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth:16.0.3] /home/cran/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.3.aar/4a25e555479330912fb1142f3c93e1e9/AndroidManifest.xml:17:1-38:12
@@ -44,10 +44,11 @@ MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/cran/.grad
 MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/cran/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/1f5606d61f689a027199826cdd5808d7/AndroidManifest.xml:17:1-28:12
 MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.9.0.aar/a11f33065f515634759ed0f6a93e309e/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.2] /home/cran/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.2.aar/0006ff5ea7fc37fdcdb63d86d0896f04/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.android:facebook-places:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-places-5.8.0.aar/fa6a2a49999f17208a066fd4d4374886/AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-applinks:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-applinks-5.8.0.aar/72d6fd4e840053b426fd92009b40dc5f/AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-messenger:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.8.0.aar/8d4b2da7a824ec726a16205454d0b51f/AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:21:1-61:12
+MERGED from [com.facebook.android:facebook-places:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-places-5.9.0.aar/8c77cef205268e98f729cd27e679ee05/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-applinks:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-applinks-5.9.0.aar/e950d4545727ac453ce88f12c8342cb8/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-messenger:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.9.0.aar/e1e952ba1ae6d20ea4c3fd280d49c230/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-marketing:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-marketing-5.9.0.aar/74cddf0cbfdbd518c5c5da9fa7815db2/AndroidManifest.xml:21:1-35:12
+MERGED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:21:1-61:12
 MERGED from [com.android.support:cardview-v7:27.0.2] /home/cran/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/7928805ccc3be383ceccb16b49e422a4/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:customtabs:27.0.2] /home/cran/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/7930a758bdde2e5c36428ed324c40bbb/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/cran/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/c43b14d5c204670271a5f13bdf70c8b8/AndroidManifest.xml:17:1-22:12
@@ -163,14 +164,14 @@ MERGED from [:react-native-google-signin] /home/cran/Documents/PROJEK IQBAL/Reac
 MERGED from [:react-native-google-signin] /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/node_modules/react-native-google-signin/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.yalantis:ucrop:2.2.2-native] /home/cran/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.2-native.aar/024d275cc971e4aa4336398a0796a428/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.yalantis:ucrop:2.2.2-native] /home/cran/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.2-native.aar/024d275cc971e4aa4336398a0796a428/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.android:facebook-android-sdk:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-5.8.0.aar/b9fe4b73f3f87cf86ef8bab6145a1e2d/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-android-sdk:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-5.8.0.aar/b9fe4b73f3f87cf86ef8bab6145a1e2d/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-login:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-5.8.0.aar/55a2087594a522d97ab0dfe14b1ece9e/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-login:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-5.8.0.aar/55a2087594a522d97ab0dfe14b1ece9e/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-share:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-share-5.8.0.aar/585042efe701fd17c1485642e0082170/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-share:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-share-5.8.0.aar/585042efe701fd17c1485642e0082170/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-common:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-common:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-android-sdk:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-5.9.0.aar/374a30f349e707ce5e76dd2779da7b0c/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-android-sdk:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-5.9.0.aar/374a30f349e707ce5e76dd2779da7b0c/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-5.9.0.aar/d603a78a16e05b9d523f8eb78da99d82/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-5.9.0.aar/d603a78a16e05b9d523f8eb78da99d82/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-share:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-share-5.9.0.aar/978f0fbfd22042f3419d238baaec51c8/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-share:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-share-5.9.0.aar/978f0fbfd22042f3419d238baaec51c8/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.9.0.aar/e45b36da1f92056444e9105676068c85/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.9.0.aar/e45b36da1f92056444e9105676068c85/AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.react:react-native:0.56.1] /home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/b35e4985522d9da7dd9e385a6ff77030/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.56.1] /home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/b35e4985522d9da7dd9e385a6ff77030/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:27.1.1] /home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/AndroidManifest.xml:20:5-44
@@ -221,14 +222,16 @@ MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.9.0] /home/cran/.gradle
 MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.9.0.aar/a11f33065f515634759ed0f6a93e309e/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.2] /home/cran/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.2.aar/0006ff5ea7fc37fdcdb63d86d0896f04/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.2] /home/cran/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.2.aar/0006ff5ea7fc37fdcdb63d86d0896f04/AndroidManifest.xml:5:5-44
-MERGED from [com.facebook.android:facebook-places:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-places-5.8.0.aar/fa6a2a49999f17208a066fd4d4374886/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-places:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-places-5.8.0.aar/fa6a2a49999f17208a066fd4d4374886/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-applinks:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-applinks-5.8.0.aar/72d6fd4e840053b426fd92009b40dc5f/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-applinks:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-applinks-5.8.0.aar/72d6fd4e840053b426fd92009b40dc5f/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-messenger:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.8.0.aar/8d4b2da7a824ec726a16205454d0b51f/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-messenger:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.8.0.aar/8d4b2da7a824ec726a16205454d0b51f/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-places:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-places-5.9.0.aar/8c77cef205268e98f729cd27e679ee05/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-places:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-places-5.9.0.aar/8c77cef205268e98f729cd27e679ee05/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-applinks:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-applinks-5.9.0.aar/e950d4545727ac453ce88f12c8342cb8/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-applinks:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-applinks-5.9.0.aar/e950d4545727ac453ce88f12c8342cb8/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-messenger:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.9.0.aar/e1e952ba1ae6d20ea4c3fd280d49c230/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-messenger:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.9.0.aar/e1e952ba1ae6d20ea4c3fd280d49c230/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-marketing:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-marketing-5.9.0.aar/74cddf0cbfdbd518c5c5da9fa7815db2/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-marketing:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-marketing-5.9.0.aar/74cddf0cbfdbd518c5c5da9fa7815db2/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:24:5-26:41
 MERGED from [com.android.support:cardview-v7:27.0.2] /home/cran/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/7928805ccc3be383ceccb16b49e422a4/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:cardview-v7:27.0.2] /home/cran/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/7928805ccc3be383ceccb16b49e422a4/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:customtabs:27.0.2] /home/cran/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/7930a758bdde2e5c36428ed324c40bbb/AndroidManifest.xml:20:5-44
@@ -291,14 +294,14 @@ MERGED from [:rn-fetch-blob] /home/cran/Documents/PROJEK IQBAL/React-Native/Craf
 MERGED from [:rn-fetch-blob] /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/node_modules/rn-fetch-blob/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:35:5-45:19
 MERGED from [:react-native-splash-screen] /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/node_modules/react-native-splash-screen/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-12:19
 MERGED from [:react-native-splash-screen] /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/node_modules/react-native-splash-screen/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-12:19
-MERGED from [com.facebook.android:facebook-android-sdk:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-5.8.0.aar/b9fe4b73f3f87cf86ef8bab6145a1e2d/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-android-sdk:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-5.8.0.aar/b9fe4b73f3f87cf86ef8bab6145a1e2d/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-login:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-5.8.0.aar/55a2087594a522d97ab0dfe14b1ece9e/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-login:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-5.8.0.aar/55a2087594a522d97ab0dfe14b1ece9e/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-share:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-share-5.8.0.aar/585042efe701fd17c1485642e0082170/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-share:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-share-5.8.0.aar/585042efe701fd17c1485642e0082170/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-common:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/AndroidManifest.xml:28:5-35:19
-MERGED from [com.facebook.android:facebook-common:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/AndroidManifest.xml:28:5-35:19
+MERGED from [com.facebook.android:facebook-android-sdk:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-5.9.0.aar/374a30f349e707ce5e76dd2779da7b0c/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-android-sdk:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-5.9.0.aar/374a30f349e707ce5e76dd2779da7b0c/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-5.9.0.aar/d603a78a16e05b9d523f8eb78da99d82/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-5.9.0.aar/d603a78a16e05b9d523f8eb78da99d82/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-share:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-share-5.9.0.aar/978f0fbfd22042f3419d238baaec51c8/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-share:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-share-5.9.0.aar/978f0fbfd22042f3419d238baaec51c8/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-common:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.9.0.aar/e45b36da1f92056444e9105676068c85/AndroidManifest.xml:28:5-35:19
+MERGED from [com.facebook.android:facebook-common:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.9.0.aar/e45b36da1f92056444e9105676068c85/AndroidManifest.xml:28:5-35:19
 MERGED from [com.facebook.react:react-native:0.56.1] /home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/b35e4985522d9da7dd9e385a6ff77030/AndroidManifest.xml:13:5-20
 MERGED from [com.facebook.react:react-native:0.56.1] /home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/b35e4985522d9da7dd9e385a6ff77030/AndroidManifest.xml:13:5-20
 MERGED from [com.google.firebase:firebase-auth:16.0.3] /home/cran/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.3.aar/4a25e555479330912fb1142f3c93e1e9/AndroidManifest.xml:22:5-36:19
@@ -337,14 +340,16 @@ MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/cran/.g
 MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/cran/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/1f5606d61f689a027199826cdd5808d7/AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.2] /home/cran/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.2.aar/0006ff5ea7fc37fdcdb63d86d0896f04/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.2] /home/cran/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.2.aar/0006ff5ea7fc37fdcdb63d86d0896f04/AndroidManifest.xml:7:5-20
-MERGED from [com.facebook.android:facebook-places:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-places-5.8.0.aar/fa6a2a49999f17208a066fd4d4374886/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-places:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-places-5.8.0.aar/fa6a2a49999f17208a066fd4d4374886/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-applinks:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-applinks-5.8.0.aar/72d6fd4e840053b426fd92009b40dc5f/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-applinks:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-applinks-5.8.0.aar/72d6fd4e840053b426fd92009b40dc5f/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-messenger:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.8.0.aar/8d4b2da7a824ec726a16205454d0b51f/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-messenger:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.8.0.aar/8d4b2da7a824ec726a16205454d0b51f/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:28:5-59:19
-MERGED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:28:5-59:19
+MERGED from [com.facebook.android:facebook-places:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-places-5.9.0.aar/8c77cef205268e98f729cd27e679ee05/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-places:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-places-5.9.0.aar/8c77cef205268e98f729cd27e679ee05/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-applinks:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-applinks-5.9.0.aar/e950d4545727ac453ce88f12c8342cb8/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-applinks:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-applinks-5.9.0.aar/e950d4545727ac453ce88f12c8342cb8/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-messenger:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.9.0.aar/e1e952ba1ae6d20ea4c3fd280d49c230/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-messenger:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-messenger-5.9.0.aar/e1e952ba1ae6d20ea4c3fd280d49c230/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-marketing:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-marketing-5.9.0.aar/74cddf0cbfdbd518c5c5da9fa7815db2/AndroidManifest.xml:28:5-33:19
+MERGED from [com.facebook.android:facebook-marketing:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-marketing-5.9.0.aar/74cddf0cbfdbd518c5c5da9fa7815db2/AndroidManifest.xml:28:5-33:19
+MERGED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:28:5-59:19
+MERGED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:28:5-59:19
 MERGED from [com.facebook.soloader:soloader:0.3.0] /home/cran/.gradle/caches/transforms-1/files-1.1/soloader-0.3.0.aar/28dcc4ee592d61879959dc3f6f06f929/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.3.0] /home/cran/.gradle/caches/transforms-1/files-1.1/soloader-0.3.0.aar/28dcc4ee592d61879959dc3f6f06f929/AndroidManifest.xml:11:5-20
 MERGED from [org.webkit:android-jsc:r174650] /home/cran/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/f5a4e6c2305b881770fed37f46b4112e/AndroidManifest.xml:2:3-17
@@ -352,7 +357,7 @@ MERGED from [org.webkit:android-jsc:r174650] /home/cran/.gradle/caches/transform
 	android:screenOrientation
 		ADDED from /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/src/main/AndroidManifest.xml:22:9-45
 	android:supportsRtl
-		ADDED from [com.facebook.android:facebook-android-sdk:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-5.8.0.aar/b9fe4b73f3f87cf86ef8bab6145a1e2d/AndroidManifest.xml:28:18-44
+		ADDED from [com.facebook.android:facebook-android-sdk:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-5.9.0.aar/374a30f349e707ce5e76dd2779da7b0c/AndroidManifest.xml:28:18-44
 	android:label
 		ADDED from /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/src/main/AndroidManifest.xml:19:9-41
 	android:icon
@@ -371,20 +376,20 @@ ADDED from /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/
 		ADDED from /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/src/main/AndroidManifest.xml:27:20-65
 activity#com.facebook.FacebookActivity
 ADDED from /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/src/main/AndroidManifest.xml:27:108-283
-MERGED from [com.facebook.android:facebook-common:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/AndroidManifest.xml:29:9-32:66
-MERGED from [com.facebook.android:facebook-common:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/AndroidManifest.xml:29:9-32:66
+MERGED from [com.facebook.android:facebook-common:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.9.0.aar/e45b36da1f92056444e9105676068c85/AndroidManifest.xml:29:9-32:66
+MERGED from [com.facebook.android:facebook-common:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.9.0.aar/e45b36da1f92056444e9105676068c85/AndroidManifest.xml:29:9-32:66
 	android:label
 		ADDED from /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/src/main/AndroidManifest.xml:27:248-280
 	android:configChanges
 		ADDED from /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/src/main/AndroidManifest.xml:27:163-247
 	android:theme
-		ADDED from [com.facebook.android:facebook-common:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/AndroidManifest.xml:32:13-63
+		ADDED from [com.facebook.android:facebook-common:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.9.0.aar/e45b36da1f92056444e9105676068c85/AndroidManifest.xml:32:13-63
 	android:name
 		ADDED from /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/src/main/AndroidManifest.xml:27:118-162
 activity#com.facebook.CustomTabActivity
 ADDED from /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/src/main/AndroidManifest.xml:27:284-643
-MERGED from [com.facebook.android:facebook-common:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/AndroidManifest.xml:34:9-67
-MERGED from [com.facebook.android:facebook-common:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/AndroidManifest.xml:34:9-67
+MERGED from [com.facebook.android:facebook-common:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.9.0.aar/e45b36da1f92056444e9105676068c85/AndroidManifest.xml:34:9-67
+MERGED from [com.facebook.android:facebook-common:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.9.0.aar/e45b36da1f92056444e9105676068c85/AndroidManifest.xml:34:9-67
 	android:exported
 		ADDED from /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/src/main/AndroidManifest.xml:27:340-363
 	android:name
@@ -502,9 +507,9 @@ ADDED from [:rn-fetch-blob] /home/cran/Documents/PROJEK IQBAL/React-Native/CrafC
 	android:name
 		ADDED from [:rn-fetch-blob] /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/node_modules/rn-fetch-blob/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:30:22-73
 activity#com.facebook.CustomTabMainActivity
-ADDED from [com.facebook.android:facebook-common:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/AndroidManifest.xml:33:9-71
+ADDED from [com.facebook.android:facebook-common:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.9.0.aar/e45b36da1f92056444e9105676068c85/AndroidManifest.xml:33:9-71
 	android:name
-		ADDED from [com.facebook.android:facebook-common:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.8.0.aar/97ab17cb409cf6a2ce569eec2652ddc4/AndroidManifest.xml:33:19-68
+		ADDED from [com.facebook.android:facebook-common:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.9.0.aar/e45b36da1f92056444e9105676068c85/AndroidManifest.xml:33:19-68
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
 ADDED from [com.google.firebase:firebase-auth:16.0.3] /home/cran/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.3.aar/4a25e555479330912fb1142f3c93e1e9/AndroidManifest.xml:23:9-29:75
 	android:excludeFromRecents
@@ -699,33 +704,41 @@ ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/cran/.gr
 		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/cran/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/1f5606d61f689a027199826cdd5808d7/AndroidManifest.xml:25:13-66
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/cran/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/1f5606d61f689a027199826cdd5808d7/AndroidManifest.xml:24:13-58
-provider#com.facebook.internal.FacebookInitProvider
-ADDED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:39:9-42:40
+provider#com.facebook.marketing.internal.MarketingInitProvider
+ADDED from [com.facebook.android:facebook-marketing:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-marketing-5.9.0.aar/74cddf0cbfdbd518c5c5da9fa7815db2/AndroidManifest.xml:29:9-32:40
 	android:authorities
-		ADDED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:41:13-72
+		ADDED from [com.facebook.android:facebook-marketing:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-marketing-5.9.0.aar/74cddf0cbfdbd518c5c5da9fa7815db2/AndroidManifest.xml:31:13-73
 	android:exported
-		ADDED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:42:13-37
+		ADDED from [com.facebook.android:facebook-marketing:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-marketing-5.9.0.aar/74cddf0cbfdbd518c5c5da9fa7815db2/AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:40:13-70
+		ADDED from [com.facebook.android:facebook-marketing:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-marketing-5.9.0.aar/74cddf0cbfdbd518c5c5da9fa7815db2/AndroidManifest.xml:30:13-81
+provider#com.facebook.internal.FacebookInitProvider
+ADDED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:39:9-42:40
+	android:authorities
+		ADDED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:41:13-72
+	android:exported
+		ADDED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:42:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:40:13-70
 receiver#com.facebook.CurrentAccessTokenExpirationBroadcastReceiver
-ADDED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:44:9-50:20
+ADDED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:44:9-50:20
 	android:exported
-		ADDED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:46:13-37
+		ADDED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:46:13-37
 	android:name
-		ADDED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:45:13-86
+		ADDED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:45:13-86
 intent-filter#action:name:com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
-ADDED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:47:13-49:29
+ADDED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:47:13-49:29
 action#com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
-ADDED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:48:17-95
+ADDED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:48:17-95
 	android:name
-		ADDED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:48:25-92
+		ADDED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:48:25-92
 receiver#com.facebook.CampaignTrackingReceiver
-ADDED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:51:9-58:20
+ADDED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:51:9-58:20
 	android:exported
-		ADDED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:53:13-36
+		ADDED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:53:13-36
 	android:permission
-		ADDED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:54:13-69
+		ADDED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:54:13-69
 	android:name
-		ADDED from [com.facebook.android:facebook-core:5.8.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.8.0.aar/818b2bfe346983df415293f85de2a853/AndroidManifest.xml:52:13-65
+		ADDED from [com.facebook.android:facebook-core:5.9.0] /home/cran/.gradle/caches/transforms-1/files-1.1/facebook-core-5.9.0.aar/9e9657d9e59569f91a6e514fb5fa8f91/AndroidManifest.xml:52:13-65
 uses-permission#android.permission.READ_PHONE_STATE
 IMPLIED from /home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/src/main/AndroidManifest.xml:1:1-47:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4

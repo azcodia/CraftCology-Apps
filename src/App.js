@@ -96,7 +96,7 @@ export default class App extends Component {
             <Tabs key="maintab" tabs={true} tabBarPosition="bottom" swipeEnabled={false} hideNavBar tabBarStyle={{backgroundColor: '#fff'}} showLabel={false} lazy={true}>
               <Scene key={"home"} component={Home} title="CRAFTCOLOGY" navBar={HomeNavbar} drawerLockMode={'locked-closed'} icon={TabIcon} iconName="home" iconTitle="Home" />
               <Scene key={'category'} component={CategoryAndFilter} title="Categories" drawerLockMode={'locked-closed'} icon={TabIcon} iconName="filter" iconTitle="Categories" />
-              <Scene key={'customize'} component={Customize} title="Customize" drawerLockMode={'locked-closed'} icon={TabIcon} iconName="maximize" iconTitle="Customize" />
+              <Scene key={'customize'} component={Customize} title="Customize" drawerLockMode={'locked-closed'} icon={TabIcon} iconName="book" iconTitle="Customize" />
               <Scene key={'account'} component={Account} drawerLockMode={'locked-closed'} icon={TabIcon} iconName="user" iconTitle="Account" hideNavBar/>
             </Tabs>
 

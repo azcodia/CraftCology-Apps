@@ -315,8 +315,11 @@ class OrderForm extends Component {
   getAddresses() {
     let uri = 'customer-address';
     let headers = {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + this.props.user.token
+      headers:{
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.props.user.token
+      },
+      data: {}
     };
     getPublic(uri, headers).then(response => {
       this.props.onSetListUserAddresses(response.data.data);

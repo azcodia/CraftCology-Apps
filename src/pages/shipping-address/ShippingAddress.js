@@ -44,8 +44,11 @@ class ShippingAddress extends Component {
     console.log(this.props.user);
     let uri = 'customer-address';
     let headers = {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + this.props.user.token
+      headers:{
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.props.user.token
+      },
+      data:{}
     };
     getPublic(uri, headers).then(response => {
       this.setState({

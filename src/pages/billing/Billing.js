@@ -47,8 +47,11 @@ class Billing extends Component {
   getData() {
     let uri = 'customer-billing';
     let headers = {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + this.props.user.token
+      headers:{
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.props.user.token
+      },
+      data: {}
     };
 
     getPublic(uri, headers).then(response => {

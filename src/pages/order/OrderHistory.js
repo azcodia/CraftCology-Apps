@@ -35,6 +35,7 @@ class OrderHistory extends Component {
   }
 
   componentWillMount() {
+    console.log("Order Status")
     this.getModels();
     console.log(moment().endOf('day').fromNow());
   }
@@ -47,8 +48,11 @@ class OrderHistory extends Component {
 
     let url = 'customer/order-histories';
     let headers = {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + this.props.user.token
+      headers:{
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.props.user.token
+      },
+      data: {}
     };
     getPublic(url, headers).then(response => {
       this.setState({refreshing:false});

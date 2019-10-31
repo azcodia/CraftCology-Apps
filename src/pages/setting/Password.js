@@ -82,8 +82,11 @@ class Password extends Component {
         confirm_password: this.state.confirmpassword
       };
       let headers = {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + this.props.user.token
+        headers:{
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + this.props.user.token
+        },
+        data: {}
       };
 
       postPublic(uri, params, headers).then(response => {

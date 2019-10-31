@@ -47,8 +47,11 @@ class OrderStatus extends Component {
   getModels() {
     let uri = 'customer/track-your-order';
     let headers = {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + this.props.user.token
+      headers:{
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.props.user.token
+      },
+      data: {},
     };
     getPublic(uri, headers).then(response => {
       this.setState({refreshing:false});

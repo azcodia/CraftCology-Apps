@@ -15,7 +15,9 @@ import { Global, Session } from '../helpers/Global';
 import { Actions } from 'react-native-router-flux';
 import { TextField } from 'react-native-material-textfield';
 import {
-  addCart
+  addCart,
+  totalCartQty,
+  removeCartQty
 } from "./../stores/actions/index";
 // var ImagePicker = NativeModules.ImageCropPicker;
 import ImagePicker from 'react-native-image-crop-picker';
@@ -23,7 +25,7 @@ import ImagePicker from 'react-native-image-crop-picker';
 import Modal from "react-native-modal";
 import { connect } from 'react-redux';
 import { showMessage } from 'react-native-flash-message';
-import { postFilePublic } from '../providers/Api';
+import { postFilePublic, postPublic } from '../providers/Api';
 import Permissions from 'react-native-permissions';
 import ActionSheet from "react-native-actionsheet";
 
@@ -104,7 +106,8 @@ class Customize extends Component {
       formdata.append("files[]", image);
     }
     console.log(formdata);
-    postFilePublic(uri, formdata).then(response => {
+    let header = {'Content-Type':'application/json'};
+    postPublic(uri, formdata, header).then(response => {
       console.log(response);
       if (response.status == 200) {
         setTimeout(() => {
@@ -123,6 +126,9 @@ class Customize extends Component {
           
           this.state.session.cartAdd(item);
           this.props.onAddCart(item);
+
+          this.countQty();
+
           showMessage({
             message: 'Your Customize Product was successfully inserted to shopping cart',
             type: 'success'
@@ -139,7 +145,6 @@ class Customize extends Component {
             note: '',
             id: '',
           });
-          
           showMessage({
             message: 'Your Customize Product was successfully inserted to shopping cart',
             type: 'success'
@@ -152,6 +157,31 @@ class Customize extends Component {
       }
     });
   }
+
+  // Kalkulasi QTY Cart
+  countQty() {
+    this.props.onRemoveQtyCart();
+    let countDataQty = 0
+    let i = 0
+
+    do {
+      console.log("test")
+      console.log(this.props.carts.cart.length)
+      let cartResponse = this.props.carts.cart[i];
+      console.log(cartResponse)
+      console.log("jng jng")
+      countDataQty += this.props.carts.cart[i].qty
+      console.log(countDataQty)
+    i++
+    } while(i < this.props.carts.cart.length)
+
+    let qtyCart = {
+      qtyCart: countDataQty
+    }
+
+    this.props.onCountQtyCart(qtyCart);
+  }
+  // Kalkulasi QTY Cart End
 
   onFocus() {
     let { errors = {} } = this.state;
@@ -448,13 +478,17 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => {
   return {
     user: state.user.user,
-    isLoggedIn: state.user.isLoggedIn
+    isLoggedIn: state.user.isLoggedIn,
+    carts: state.carts,
+    qtyCart: state.qtyCart
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onAddCart: cart => dispatch(addCart(cart))
+    onAddCart: cart => dispatch(addCart(cart)),
+    onCountQtyCart: (qtyCart) => dispatch(totalCartQty(qtyCart)),
+    onRemoveQtyCart: ()=> dispatch(removeCartQty())
   };
 };
 

@@ -2,7 +2,7 @@ import {
   ADD_CART, 
   UPDATE_CART,
   REMOVE_CART,
-  REMOVE_ALL_CART
+  REMOVE_ALL_CART,
 } from './actionTypes';
 
 export const addCart = (cart) => {
@@ -22,6 +22,7 @@ export const updateCart = (cart) => {
     payload: cart
   };
 };
+
 
 export const removeCart = (cartId) => {
   return {
