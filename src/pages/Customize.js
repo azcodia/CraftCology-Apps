@@ -106,6 +106,21 @@ class Customize extends Component {
       formdata.append("files[]", image);
     }
     console.log(formdata);
+
+    // Set Time
+    let current_datetime = new Date()
+    let StatusHours;
+
+    if(current_datetime.getHours() > 12) {
+      StatusHours= "PM"
+    }else {
+      StatusHours= "AM"
+    }
+
+    let setTime = current_datetime.getFullYear()+""+(current_datetime.getMonth().toString().length==1?"0":"")+(current_datetime.getMonth())+(current_datetime.getDate().toString().length==1?"0":"")+(current_datetime.getDate())+(current_datetime.getHours().toString().length<=1?"0":"")+(current_datetime.getHours())+(current_datetime.getMinutes().toString().length<=1?"0":"")+(current_datetime.getMinutes())+(current_datetime.getSeconds().toString().length<=1?"0":"")+(current_datetime.getSeconds())+StatusHours
+    console.log(setTime)
+    // Set Time End
+
     let header = {'Content-Type':'application/json'};
     postPublic(uri, formdata, header).then(response => {
       console.log(response);
@@ -114,6 +129,7 @@ class Customize extends Component {
           const item = {
             unique_number: Global.getUniqueNumber(),
             id: this.state.id,
+            id_cart: setTime,
             name: this.state.productname,
             qty: this.state.quantity,
             price: "0",

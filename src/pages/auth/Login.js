@@ -144,12 +144,36 @@ class Login extends Component {
           buttonIsLoading: true,
       });
 
+      // setCart
+      let i = 0;
+      let result = []
+
+      if(this.props.carts.cart.length == 0) {
+        result=[]
+      }else {
+        do {
+          let cart = this.props.carts.cart[i]
+
+          // let cartGet = {
+          //   cart
+          // }
+
+          result.push(cart)
+          i++;
+        } while(i < this.props.carts.cart.length)
+      }
+      console.log("Cek Result Data");
+      console.log(result);
+      // setCart End
+
       var uri = 'auth/login';
       var body = {
         email: this.state.email,
         password: this.state.password,
         firebase_token: 'xxx',
-        login_device_id: 'xxx'
+        login_device_id: 'xxx',
+        // cart: result,
+        cart: []
       };
       postPublic(uri, body).then(response => {
         this.setState({
@@ -175,7 +199,7 @@ class Login extends Component {
           });
         }
       }).catch(error => {
-        console.log(error);
+        console.log(error.message);
       });
     }
   }
@@ -185,12 +209,37 @@ class Login extends Component {
   }
 
   processSocialMediaSignIn(firebaseUserParams, social) {
+
+    // setCart
+    let i = 0;
+    let result = []
+
+    if(this.props.carts.cart.length == 0) {
+      result=[]
+    }else {
+      do {
+        let cart = this.props.carts.cart[i]
+
+        // let cartGet = {
+        //   cart
+        // }
+
+        result.push(cart)
+        i++;
+      } while(i < this.props.carts.cart.length)
+    }
+    console.log("Cek Result Data");
+    console.log(result);
+    // setCart End
+
     var uri = 'auth/social-media-login';
     var body = {
       email: firebaseUserParams.additionalUserInfo.profile.email,
       uid: firebaseUserParams.user.uid,
       fullname: firebaseUserParams.user.displayName,
-      social: social
+      social: social,
+      // cart: result
+      cart: []
     };
     postPublic(uri, body).then(response => {
       this.setState({

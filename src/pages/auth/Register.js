@@ -140,101 +140,149 @@ class Register extends Component {
     console.log(result)
 
 
-    // let errors = {};
+    let errors = {};
 
-    // if(this.state.email.includes("@gmail")) {
-    //   this.onPressGoogleSignIn()
-    // }
+    if(this.state.email.includes("@gmail")) {
+      this.onPressGoogleSignIn()
+    }
 
-    // this.state.listForms
-    //   .forEach((name) => {
-    //     let value = this[name].value();
+    this.state.listForms
+      .forEach((name) => {
+        let value = this[name].value();
 
-    //     if (!value) {
-    //       errors[name] = 'Should not be empty';
-    //     } else {
-    //       if ('password' === name && value.length < 6) {
-    //         errors[name] = 'Too short';
-    //       }
-    //     }
-    //   });
+        if (!value) {
+          errors[name] = 'Should not be empty';
+        } else {
+          if ('password' === name && value.length < 6) {
+            errors[name] = 'Too short';
+          }
+        }
+      });
     
-    // if (!this.state.password) {
-    //   errors['password'] = 'Should not be empty';
-    // } else if (this.state.password.length < 6) {
-    //   errors['password'] = 'Too short';
-    // }
+    if (!this.state.password) {
+      errors['password'] = 'Should not be empty';
+    } else if (this.state.password.length < 6) {
+      errors['password'] = 'Too short';
+    }
 
-    // var cekEmail = this.state.email;
+    var cekEmail = this.state.email;
 
-    // if(!cekEmail.includes("@")) {
-    //   errors['email'] = 'Please enter a valid email address';
-    // }else if(!cekEmail) {
-    //   errors['email'] = 'Should not be empty';
-    // }
+    if(!cekEmail.includes("@")) {
+      errors['email'] = 'Please enter a valid email address';
+    }else if(!cekEmail) {
+      errors['email'] = 'Should not be empty';
+    }
 
-    // if(this.state.phone.length < 10) {
-    //   errors['phone'] = 'Phone Number is Too Short';
-    // }else if(this.state.phone.length > 13) {
-    //   errors['phone'] = 'Phone Number is Too Long';
-    // }else if(this.state.phone == null) {
-    //   errors['phone'] = 'Should not be empty';
-    // }
+    if(this.state.phone.length < 10) {
+      errors['phone'] = 'Phone Number is Too Short';
+    }else if(this.state.phone.length > 13) {
+      errors['phone'] = 'Phone Number is Too Long';
+    }else if(this.state.phone == null) {
+      errors['phone'] = 'Should not be empty';
+    }
 
 
-    // if (Object.keys(errors).length > 0) {
-    //   this.setState({ errors });
-    //   return;
-    // }
+    if (Object.keys(errors).length > 0) {
+      this.setState({ errors });
+      return;
+    }
 
-    // Keyboard.dismiss();
+    Keyboard.dismiss();
 
-    // this.setState({
-    //     buttonIsLoading: true,
-    // }, function(){
+    this.setState({
+        buttonIsLoading: true,
+    }, function(){
 
-    //   fetch(Global.getBaseUrl() + 'api/v1/auth/register', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({
-    //       firstname: this.state.firstname,
-    //       lastname: this.state.lastname,
-    //       phone: this.state.phone,
-    //       email: this.state.email,
-    //       password: this.state.password,
-    //       confirm_password: this.state.password,
-    //       // firebase_token: 'xxx'
-    //     })
-    //   })
-    //   .then((response) => response.json())
-    //   .then((responseJson) => {
-    //   console.log(responseJson);
-    //   Global.presentToast(responseJson.message);
-    //   this.setState({
-    //     buttonIsLoading: false,
-    //   });
-    //   if (responseJson.status == 201) {
-    //     Global.presentToast(responseJson.message);
-    //     Actions.reset('maintab');
-    //   }
-    //   })
-    //   .catch((error) => {
-    //     console.log("Error: ");
-    //     console.log(error);
-    //   })
-    // });
+      // setCart
+    let i = 0;
+    let result = []
+
+    if(this.props.carts.cart.length == 0) {
+      result=[]
+    }else {
+      do {
+        let cart = this.props.carts.cart[i]
+
+        // let cartGet = {
+        //   cart
+        // }
+
+        result.push(cart)
+        i++;
+      } while(i < this.props.carts.cart.length)
+    }
+    console.log("Cek Result Data");
+    console.log(result);
+    // setCart End
+
+      fetch(Global.getBaseUrl() + 'api/v1/auth/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstname: this.state.firstname,
+          lastname: this.state.lastname,
+          phone: this.state.phone,
+          email: this.state.email,
+          password: this.state.password,
+          confirm_password: this.state.password,
+          // firebase_token: 'xxx',
+          // cart: result
+          cart: []
+        })
+      })
+      .then((response) => response.json())
+      .then((responseJson) => {
+      console.log(responseJson);
+      Global.presentToast(responseJson.message);
+      this.setState({
+        buttonIsLoading: false,
+      });
+      if (responseJson.status == 201) {
+        Global.presentToast(responseJson.message);
+        Actions.reset('maintab');
+      }
+      })
+      .catch((error) => {
+        console.log("Error: ");
+        console.log(error);
+      })
+    });
   }
 
   processSocialMediaSignIn(firebaseUserParams, social) {
+
+    // setCart
+    let i = 0;
+    let result = []
+
+    if(this.props.carts.cart.length == 0) {
+      result=[]
+    }else {
+      do {
+        let cart = this.props.carts.cart[i]
+
+        // let cartGet = {
+        //   cart
+        // }
+
+        result.push(cart)
+        i++;
+      } while(i < this.props.carts.cart.length)
+    }
+    console.log("Cek Result Data");
+    console.log(result);
+    // setCart End
 
     var uri = 'auth/social-media-login';
     var body = {
       email: firebaseUserParams.additionalUserInfo.profile.email,
       uid: firebaseUserParams.user.uid,
       fullname: firebaseUserParams.user.displayName,
-      social: social
+      social: social,
+      // cart: result,
+      cart: []
     };
     postPublic(uri, body).then(response => {
       this.setState({
