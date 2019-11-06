@@ -113,8 +113,15 @@ class CartEdit extends Component {
   }
 
   onUpdateSuccess() {
+    if(this.props.isLoggedIn == true) {
+      this.cartGoApi()
+    }else {
+      this.cartGoSession()
+    }
+  }
 
-    // Set Time
+  cartGoSession() {
+     // Set Time
     let current_datetime = new Date()
     let StatusHours;
 
@@ -157,6 +164,108 @@ class CartEdit extends Component {
       });
       Actions.pop({ refresh: { is_refresh: true } });
     }, 100);
+  }
+
+  cartGoApi() {
+    console.log("cartGoAPi")
+
+    
+    
+    // Set Time
+    let current_datetime = new Date()
+    let StatusHours;
+
+    if(current_datetime.getHours() > 12) {
+      StatusHours= "PM"
+    }else {
+      StatusHours= "AM"
+    }
+
+    let setTime = current_datetime.getFullYear()+""+(current_datetime.getMonth().toString().length==1?"0":"")+(current_datetime.getMonth())+(current_datetime.getDate().toString().length==1?"0":"")+(current_datetime.getDate())+(current_datetime.getHours().toString().length<=1?"0":"")+(current_datetime.getHours())+(current_datetime.getMinutes().toString().length<=1?"0":"")+(current_datetime.getMinutes())+(current_datetime.getSeconds().toString().length<=1?"0":"")+(current_datetime.getSeconds())+StatusHours
+    console.log(setTime)
+    // Set Time End
+    const item = {
+      unique_number: Global.getUniqueNumber(),
+      id: this.state.item.id,
+      id_cart: setTime,
+      name: this.state.item.name,
+      qty: this.state.quantity,
+      price: "" + this.state.item.price,
+      note: null,
+      image_name: this.state.item.image_name,
+      customize_image_name: null,
+      is_customize: false,
+      referances: []
+    }
+
+    var uri = "cart"
+    var body = {
+      email: this.props.user.email,
+      cart: [item]
+    }
+
+    console.log("Cek Cart Sebelum D lempar ke API")
+    console.log(body)
+
+    postPublic(uri, body).then(res => {
+      
+      if(res.status == 200)
+      {
+        console.log("Kembalian Api Cart")
+        console.log(res)
+        console.log(res.data.data)
+        console.log(res.data.data.id)
+        console.log(this.props.carts.cart)
+        if(this.props.carts.cart.length == 0) {
+          console.log("if pertama")
+          this.state.session.cartAdd(res.data.data);
+          this.props.onAddCart(res.data.data);
+        }else {
+          console.log("if Kedua")
+          let i = 0;
+          let exist = 0;
+          do {
+            let cartResponse = this.props.carts.cart[i];
+            console.log(cartResponse)
+            console.log("cartResponse")
+            if(cartResponse.id == res.data.data.id) {
+              console.log("id Sama")
+              console.log(res.data.data.id)
+              console.log(cartResponse.id)
+              this.state.session.cartUpdate(res.data.data);
+              this.props.onUpdateCart(res.data.data);
+              this.countQty()
+              exist = 1;
+            }
+          i++;
+          }while(i < this.props.carts.cart.length)
+
+          if(exist == 0) {
+            console.log("Cek data Akan Ke simpan Ke Session")
+            this.state.session.cartAdd(res.data.data);
+            this.props.onAddCart(res.data.data);
+          }
+        }
+        this.countQty()
+        showMessage({
+          message: 'Product Berhasil Di Update',
+          type: 'success',
+          duration: 1500
+        });
+        this.setState({loadingRequest: false});
+      } else
+      {
+        // console.log(res.status)
+        showMessage({
+          message: res.status,
+          type: 'danger',
+          duration: 1500
+        });
+      }
+      setTimeout(() => {
+        Actions.pop();
+      }, 500);
+    })
   }
 
   countQty() {

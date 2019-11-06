@@ -23,7 +23,15 @@ export default class ItemCard extends Component {
   }
 
   getProductImage() {
-    return Global.getBaseUrl() + 'backend/uploads/thumb_' + this.state.item.image_name;
+
+    if(this.props.kategory === "Product") {
+      image = 'thumb_'+this.state.item.image_name
+    }else if(this.props.kategory === "Materials") {
+      image = this.state.item.image
+    }else {
+      image = 'thumb_'+this.state.item.image_name
+    }
+    return Global.getBaseUrl() + 'backend/uploads/'+image;
   }
 
   onPressProductDetail() {
@@ -32,8 +40,17 @@ export default class ItemCard extends Component {
     });
     Actions.productDetail({
       item: this.state.item, 
-      title: this.state.item.name
+      short_name: this.state.item.name
     });
+  }
+
+  onPressMaterialDetail(name, short_name, image, description) {
+    Actions.materialDetailsPages({
+      name: name,
+      short_name: short_name,
+      image: image,
+      description: description,
+    })
   }
 
   render() {
@@ -41,16 +58,19 @@ export default class ItemCard extends Component {
 
     if (Platform.OS == 'android') {
       return (
-          <TouchableNativeFeedback onPress={() => this.onPressProductDetail()}>
+          <TouchableNativeFeedback
+            // onPress={() => this.onPressProductDetail()}>
+            onPress={() => this.props.kategory == "Product" ? this.onPressProductDetail() : this.onPressMaterialDetail(item.name, item.short_name, item.image, item.description)}>
             <Card
               containerStyle={{width: '50%', padding: 0, marginRight: 0, marginLeft: 0, marginTop: 0, marginBottom: 0}}
               image={{uri: this.getProductImage()}}
               imageStyle={styles.cardImageStyle}>
               <Text style={styles.cardTitleTextStyle} numberOfLines={1}>
-                {item.name}
+                {this.props.kategory == "Product" ? item.name : item.short_name}
               </Text>
               <Text numberOfLines={2}>
-                {item.category ? item.category.name : '-'}
+                {/* {item.category ? item.category.name : '-'} */}
+                {this.props.kategory == "Product" ? item.category.name : item.name}
               </Text>
             </Card>
           </TouchableNativeFeedback>
@@ -58,16 +78,20 @@ export default class ItemCard extends Component {
     }
 
     return (
-      <TouchableOpacity onPress={() => this.onPressProductDetail()} style={{ flex: 1 }}>
+      <TouchableOpacity
+        onPress={() => this.props.kategory == "Product" ? this.onPressProductDetail() : this.onPressMaterialDetail()}
+        style={{ flex: 1 }}>
         <Card style={styles.cardStyle}
           containerStyle={{ padding: 0, margin: 0}}
           image={{uri: this.getProductImage()}}
           imageStyle={styles.cardImageStyle}>
           <Text style={styles.cardTitleTextStyle} numberOfLines={1}>
-            {item.name}
+            {/* {item.name} */}
+            {this.props.kategory == "Product" ? item.name : item.short_name}
           </Text>
           <Text numberOfLines={2}>
-            {item.category ? item.category.name : '-'}
+            {/* {item.category ? item.category.name : '-'} */}
+            {this.props.kategory == "Product" ? item.category.name : item.name}
           </Text>
         </Card>
       </TouchableOpacity>

@@ -90,6 +90,7 @@ class OrderForm extends Component {
       refreshing: false,
       models: this.props.carts,
     });
+    console.log(this.state.models.length, "Cek Data Models")
   }
 
   _onRefresh() {
@@ -127,7 +128,11 @@ class OrderForm extends Component {
           errors[name] = 'Should not be empty';
         }
       });
-
+      console.log(this.state.phone.length, "Jumlah Number")
+      console.log(Object.keys(errors).length, "Jumlah key Error")
+      console.log(this.state.models, "Cek Data Models")
+      console.log(this.state.models.length, "Cek jumlah Data Models")
+      console.log(this.state.models.referances, "Cek referances Models")
     if(this.state.phone.length < 10) {
       errors['phone'] = 'Phone Number is Too Short';
     }else if(this.state.phone.length > 13) {
@@ -175,13 +180,17 @@ class OrderForm extends Component {
         formdata.append("details["+i+"][note]", model.note);
         formdata.append("details["+i+"][date]", model.date);
         formdata.append("details["+i+"][is_customize]", model.is_customize == 1 ? 1 : 0);
-        for (j=0;j<model.referances.length;j++) {
-          let image = [];
-          image['name'] = model.referances[j].name;
-          image['type'] = model.referances[j].type;
-          image['uri'] = model.referances[j].uri;
-          formdata.append("referances["+model.id+"][]", image);
-          formdata.append("notes["+model.id+"][]", model.referances[j].note);
+        if(this.state.models.referances == undefined) {
+          formdata.append("referances[]")
+        }else {
+          for (j=0;j<model.referances.length;j++) {
+            let image = [];
+            image['name'] = model.referances[j].name;
+            image['type'] = model.referances[j].type;
+            image['uri'] = model.referances[j].uri;
+            formdata.append("referances["+model.id+"][]", image);
+            formdata.append("notes["+model.id+"][]", model.referances[j].note);
+          }
         }
       }
 
@@ -189,6 +198,8 @@ class OrderForm extends Component {
         'Content-Type': 'multipart/form-data',
         'Authorization': 'Bearer ' + this.props.user.token
       };
+      console.log(formdata ,"Cek Form Data")
+      console.log(headers, "Cek Headers")
       postFilePublic('cart/checkout', formdata, headers).then(responseJson => {
         this.setState({
           buttonIsLoading: false,

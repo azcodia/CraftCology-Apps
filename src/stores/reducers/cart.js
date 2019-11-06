@@ -20,7 +20,7 @@ const cartReducers = (state = initialState, action) => {
     case UPDATE_CART:
       let cartTemps = [];
       state.cart.map(value => {
-        if (value.unique_number == action.payload.unique_number) {
+        if (value.id == action.payload.id) {
           cartTemps.push(action.payload);
         } else {
           cartTemps.push(value);

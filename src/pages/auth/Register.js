@@ -144,6 +144,9 @@ class Register extends Component {
 
     if(this.state.email.includes("@gmail")) {
       this.onPressGoogleSignIn()
+      this.setState({
+        password: ''
+      })
     }
 
     this.state.listForms
@@ -253,32 +256,12 @@ class Register extends Component {
 
   processSocialMediaSignIn(firebaseUserParams, social) {
 
-    // setCart
-    let i = 0;
-    let result = []
-
-    if(this.props.carts.cart.length == 0) {
-      result=[]
-    }else {
-      do {
-        let cart = this.props.carts.cart[i]
-
-        // let cartGet = {
-        //   cart
-        // }
-
-        result.push(cart)
-        i++;
-      } while(i < this.props.carts.cart.length)
-    }
-    console.log("Cek Result Data");
-    console.log(result);
-    // setCart End
-
+    console.log("Cek UID")
+    console.log(firebaseUserParams.user._user.uid, "CEK UID")
     var uri = 'auth/social-media-login';
     var body = {
       email: firebaseUserParams.additionalUserInfo.profile.email,
-      uid: firebaseUserParams.user.uid,
+      uid: firebaseUserParams.user._user.uid,
       fullname: firebaseUserParams.user.displayName,
       social: social,
       // cart: result,

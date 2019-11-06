@@ -112,27 +112,36 @@ class SetPassword extends Component {
     }, function(){
 
       let uri = 'auth/set-password';
+
       let params = {
         new_password: this.state.newpassword,
         confirm_password: this.state.confirmpassword
       };
 
-      let headers = {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + this.props.user.token
+      let config = {
+          headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + this.props.user.token
+        }
       };
 
-      postPublic(uri, params, headers).then(response => {
+      postPublic(uri, params, config).then(response => {
+        console.log(response.data.message, "cek Response")
+        
         this.setState({
           buttonIsLoading: false
         });
-        if (response.status == 200) {
+        if (response.data.data.status == 200) 
+        {
           showMessage({
             message: response.data.message,
             type: 'success'
           });
           this.props.onSetUser(response.data.data);
           Actions.reset('maintab');
+          setTimeout(() => {
+            Actions.pop();
+          }, 500);
           return;
         }
         showMessage({
@@ -140,7 +149,7 @@ class SetPassword extends Component {
           type: 'danger'
         });
         // unauthorized
-        if (response.status == 401) {
+        if (response.data.data.status == 401) {
           this.props.onUnsetUser();
           Actions.push('login');
         }

@@ -62,6 +62,8 @@ class Home extends Component {
         refreshing: false
       });
       if (response.status == 200) {
+        console.log("Cek API HOME PAGES")
+        console.log(response)
         this.setState({
           dataSource: response.data.data,
         });
@@ -115,7 +117,7 @@ class Home extends Component {
               refreshing={this.state.refreshing}
               onRefresh={this._onRefresh.bind(this)}/>
           }
-          renderItem={({item}) => <ItemCard item={item} />}
+          renderItem={({item}) => <ItemCard item={item} kategory="Product" />}
           ListEmptyComponent={this.renderDataEmpty()}
         />
       </View>

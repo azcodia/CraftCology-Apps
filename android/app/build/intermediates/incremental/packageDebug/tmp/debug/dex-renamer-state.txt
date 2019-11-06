@@ -1,10 +1,10 @@
-#Wed Oct 30 09:13:16 WIB 2019
+#Mon Nov 04 10:06:26 WIB 2019
 path.2=classes3.dex
 path.1=classes2.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/build/intermediates/transforms/dexMerger/debug/0
-base.1=/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/build/intermediates/transforms/dexMerger/debug/0
-base.0=/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/build/intermediates/transforms/dexMerger/debug/0
+base.2=/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/transforms/dexMerger/debug/0
+base.1=/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/transforms/dexMerger/debug/0
+base.0=/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/transforms/dexMerger/debug/0

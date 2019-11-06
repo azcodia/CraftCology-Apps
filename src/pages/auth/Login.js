@@ -27,7 +27,11 @@ import {
 import {
   setUser,
   unsetUser,
-  setListUserAddress
+  setListUserAddress,
+  totalCartQty,
+  addCart,
+  removeAllCart,
+  removeCartQty
 } from "./../../stores/actions/index";
 
 import firebase from 'react-native-firebase';
@@ -43,7 +47,8 @@ class Login extends Component {
   
   constructor(props){
     super(props);
-    this.state ={ 
+    this.state ={
+      session: new Session(), 
       buttonIsLoading: false,
       email: '',
       emailError: '',
@@ -61,7 +66,6 @@ class Login extends Component {
 
     this.emailRef = this.updateRef.bind(this, 'email');
     this.passwordRef = this.updateRef.bind(this, 'password');
-    console.log(this['email']);
   }
 
   onFocus() {
@@ -153,17 +157,12 @@ class Login extends Component {
       }else {
         do {
           let cart = this.props.carts.cart[i]
-
-          // let cartGet = {
-          //   cart
-          // }
-
           result.push(cart)
           i++;
         } while(i < this.props.carts.cart.length)
+        console.log("Cek Data Cart Sebelum Login")
+        console.log(result)
       }
-      console.log("Cek Result Data");
-      console.log(result);
       // setCart End
 
       var uri = 'auth/login';
@@ -172,8 +171,7 @@ class Login extends Component {
         password: this.state.password,
         firebase_token: 'xxx',
         login_device_id: 'xxx',
-        // cart: result,
-        cart: []
+        cart: result,
       };
       postPublic(uri, body).then(response => {
         this.setState({
@@ -181,15 +179,17 @@ class Login extends Component {
         });
         if (response.status == 200) {
           const session = new Session();
+          this.props.onRemoveAllCart();
+          this.props.onRemoveQtyCart();
           session.setUser(response.data.data);
           this.props.onSetUser(response.data.data);
           this.props.onSetListUserAddresses(response.data.data.customer_addresses);
-          console.log(response);
           showMessage({
             message: response.data.message,
             type: "success",
             icon: { icon: "success", position: "left" },
           });
+          this.setCart(response.data.data.cart)
           Actions.pop();
         } else {
           showMessage({
@@ -213,34 +213,33 @@ class Login extends Component {
     // setCart
     let i = 0;
     let result = []
+    console.log("Cek UID")
+    console.log(firebaseUserParams.user._user.uid)
 
     if(this.props.carts.cart.length == 0) {
       result=[]
     }else {
       do {
         let cart = this.props.carts.cart[i]
-
-        // let cartGet = {
-        //   cart
-        // }
-
         result.push(cart)
         i++;
       } while(i < this.props.carts.cart.length)
+      console.log("Cek Data Cart Sebelum Login")
+      console.log(result)
     }
-    console.log("Cek Result Data");
-    console.log(result);
     // setCart End
 
     var uri = 'auth/social-media-login';
     var body = {
       email: firebaseUserParams.additionalUserInfo.profile.email,
-      uid: firebaseUserParams.user.uid,
+      uid: firebaseUserParams.user._user.uid,
       fullname: firebaseUserParams.user.displayName,
       social: social,
-      // cart: result
-      cart: []
+      cart: result
+      // cart: null
     };
+    console.log("Cek Body Login SIgn In")
+    console.log(body)
     postPublic(uri, body).then(response => {
       this.setState({
         spinnerVisible: false
@@ -252,18 +251,18 @@ class Login extends Component {
           icon: { icon: "success", position: "left" },
         });
         const session = new Session();
+        this.props.onRemoveAllCart();
+        this.props.onRemoveQtyCart();
         session.setUser(response.data.data);
         this.props.onSetUser(response.data.data);
         this.props.onSetListUserAddresses(response.data.data.customer_addresses);
-        this.postCart()
+
+        console.log("Keluaran data setelah Login dengan Google sign in")
+        console.log(response.data.data)
+        console.log("Keluaran data cart setelah Login dengan Google sign in")
+        console.log(response.data.data.cart)
+        this.setCart(response.data.data.cart)
         Actions.pop();
-        console.log("Balikan API: ");
-        console.log(response);
-        console.log(this.props.userAddresses);
-        console.log("Cek Props User: ")
-        console.log(this.props.user.id)
-        console.log("Cek Props Cart")
-        console.log(this.props.carts.cart)
       } else {
         GoogleSignin.revokeAccess();
         GoogleSignin.signOut();
@@ -276,63 +275,63 @@ class Login extends Component {
     });
   }
 
-  // Post Cart Ke API
-  postCart() {
+  // SET CART
+  setCart(cart) {
+    // console.log("Cek Cart Lemparan Dari Parameter lain")
+    console.log(cart)
+    console.log(cart.length)
 
-    var uri = "cart/"+this.props.user.id
-    result = [];
-    console.log("Cek Props Keranjang: ")
-    console.log(this.props.carts.cart)
-      for(let i=0; i<this.props.carts.cart.length; i++) {
-        let cartResponse = this.props.carts.cart[i]
-        // let cartDataFilter = {
-        //   product_id: cartResponse.id,
-        //   qty: cartResponse.qty,
-        //   customize_image: cartResponse.customize_image_name == null ? null : cartResponse.customize_image_name.name,
-        //   // notes_image:   cartResponse.customize_image_name.note
-        //   notes_image: cartResponse.customize_image_name == null ? null : cartResponse.customize_image_name.note 
-        // }
-        // result.push(cartDataFilter)
-        var uri = "cart/"+this.props.user.id
-        var body = {
-          cart: {
-            product_id: cartResponse.id,
-            qty: cartResponse.qty,
-            customize_image: cartResponse.customize_image_name == null ? null : cartResponse.customize_image_name.name,
-            notes_image: cartResponse.customize_image_name == null ? null : cartResponse.customize_image_name.note
-          }
-        }
-        postPublic(uri, body).then(res => {
-          if(res.status == 200) {
-            console.log("Kembalian Api Cart")
-            console.log(res)
-          }else {
-    
-          }
-        })
-      }
-    // console.log("cek Result :")
-    // console.log(JSON.parse(result))
+    let i = 0;
+    do {
+    let cartResponse = cart[i];
+      // console.log("cek Looping Cart Api")
+      console.log(cartResponse)
+      this.state.session.cartAdd(cartResponse);
+      this.props.onAddCart(cartResponse);
 
-    // var uri = "cart/"+this.props.user.id
-    // var body = {
-    //   cart: result
-    // }
+    i++;
+    } while(i < cart.length)
+    this.countQty()
 
   }
-  // Post Cart Ke API END
+  // SET CART END
 
+  // COUNT CART
+  countQty() {
+    let countDataQty = 0
+    let i = 0
+
+    do {
+      // console.log("test")
+      console.log(this.props.carts.cart.length)
+      let cartResponse = this.props.carts.cart[i];
+      console.log(cartResponse)
+      // console.log("jng jng")
+      countDataQty += this.props.carts.cart[i].qty
+      console.log(countDataQty)
+    i++
+    } while(i < this.props.carts.cart.length)
+
+    let qtyCart = {
+      qtyCart: countDataQty
+    }
+
+    this.props.onCountQtyCart(qtyCart);
+  }
 
   async onPressGoogleSignIn() {
     try {
       this.setState({spinnerVisible:true});
       let data = await GoogleSignin.signIn();
       let credential = firebase.auth.GoogleAuthProvider.credential(data.idToken, data.accessToken);
+      console.log("cek Token Google")
+      console.log(credential)
       const currentUser = await firebase.auth().signInAndRetrieveDataWithCredential(credential);
+      console.log("cek currentUser")
+      console.log(currentUser)
       if (currentUser) {
         // access to api login with social media
         this.processSocialMediaSignIn(currentUser, 'google');
-        console.log(currentUser);
       }
     } catch (error) {
       console.log(error);
@@ -369,7 +368,6 @@ class Login extends Component {
       if (currentUser) {
         // access to api login with social media
         this.processSocialMediaSignIn(currentUser, 'facebook');
-        console.log(currentUser);
       }
     } catch (error) {
       Global.presentToast(error.message);
@@ -539,6 +537,7 @@ const mapStateToProps = state => {
   return {
     user: state.user.user,
     carts: state.carts,
+    qtyCart: state.qtyCart,
     isLoggedIn: state.user.isLoggedIn,
     userAddresses: state.userAddresses
   };
@@ -548,7 +547,11 @@ const mapDispatchToProps = dispatch => {
   return {
     onSetUser: user => dispatch(setUser(user)),
     onUnsetUser: () => dispatch(unsetUser()),
-    onSetListUserAddresses: (listUserAddresses) => dispatch(setListUserAddress(listUserAddresses))
+    onSetListUserAddresses: (listUserAddresses) => dispatch(setListUserAddress(listUserAddresses)),
+    onAddCart: cart => dispatch(addCart(cart)),
+    onCountQtyCart: (qtyCart) => dispatch(totalCartQty(qtyCart)),
+    onRemoveAllCart: () => dispatch(removeAllCart()),
+    onRemoveQtyCart: ()=> dispatch(removeCartQty())
   };
 };
 

@@ -18,7 +18,9 @@ import {
   ListItem 
 } from'react-native-elements';
 import {
-  unsetUser
+  unsetUser,
+  removeAllCart,
+  removeCartQty,
 } from "./../stores/actions/index";
 import { Actions } from 'react-native-router-flux';
 import { GoogleSignin } from 'react-native-google-signin';
@@ -61,6 +63,8 @@ class Account extends Component {
     this.setState({
       signOutButtonIsLoading: true,
     });
+    this.props.onRemoveAllCart();
+    this.props.onRemoveQtyCart();
     await GoogleSignin.configure(
       Global.getGoogleSigninParams()
     );
@@ -330,6 +334,18 @@ class Account extends Component {
             {this.renderProfile()}
             <Text style={{ marginBottom: 5, marginTop: 10 }}>Others</Text>
             <View style={{backgroundColor: '#fff'}}>
+            <ListItem
+                key={6}
+                title={"Spesial Offers"}
+                leftIcon={{ name: 'application', type: 'material-community' }}
+                onPress={() => Actions.spesialOfferPages()}
+              />
+              <ListItem
+                key={6}
+                title={"Materials"}
+                leftIcon={{ name: 'application', type: 'material-community' }}
+                onPress={() => Actions.materialPages()}
+              />
               <ListItem
                 key={6}
                 title={"About Us"}
@@ -381,7 +397,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onUnsetUser: () => dispatch(unsetUser())
+    onUnsetUser: () => dispatch(unsetUser()),
+    onRemoveAllCart: () => dispatch(removeAllCart()),
+    onRemoveQtyCart: ()=> dispatch(removeCartQty())
   };
 };
 

@@ -64,7 +64,7 @@ class FilterPage extends Component {
     console.log('public 1');
     var uri = 'product?search='+ this.props.search +'&category='+this.props.category+'&tag='+this.props.tag;
     getPublic(uri).then(response => {
-      console.log('public');
+      console.log(response ,'===== public =====');
       this.setState({
         refreshing: false
       });
@@ -108,7 +108,7 @@ class FilterPage extends Component {
               refreshing={this.state.refreshing}
               onRefresh={this._onRefresh.bind(this)}/>
           }
-          renderItem={({item}) => <ItemCard item={item} />}
+          renderItem={({item}) => <ItemCard item={item} kategory="Product" />}
           ListEmptyComponent={this.renderDataEmpty()}
         />
       </View>

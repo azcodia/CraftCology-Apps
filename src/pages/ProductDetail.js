@@ -22,7 +22,7 @@ import HTML from 'react-native-render-html';
 import RelatedItemCard from '../components/RelatedItemCard';
 import { showMessage } from 'react-native-flash-message';
 import { connect } from 'react-redux';
-import { getPublic } from '../providers/Api';
+import { getPublic, postPublic } from '../providers/Api';
 
 class ProductDetail extends Component {
 
@@ -49,6 +49,9 @@ class ProductDetail extends Component {
 
   componentWillMount(){
     this._getData();
+    console.log("this.props.user")
+    console.log(this.props.isLoggedIn)
+    console.log(this.props.user.email)
   }
 
   _getData() {
@@ -70,6 +73,18 @@ class ProductDetail extends Component {
   _requestQuote() {
     this.setState({loadingRequest: true});
 
+    setTimeout(() => {
+
+      if(this.props.isLoggedIn == true) {
+        this.cartGoApi()
+      }else {
+        this.cartGoSession()
+      }
+    }, 100);
+  }
+
+  // Cart Masuk Ke Dalam Session
+  cartGoSession() {
     // Set Time
     let current_datetime = new Date()
     let StatusHours;
@@ -83,75 +98,175 @@ class ProductDetail extends Component {
     let setTime = current_datetime.getFullYear()+""+(current_datetime.getMonth().toString().length==1?"0":"")+(current_datetime.getMonth())+(current_datetime.getDate().toString().length==1?"0":"")+(current_datetime.getDate())+(current_datetime.getHours().toString().length<=1?"0":"")+(current_datetime.getHours())+(current_datetime.getMinutes().toString().length<=1?"0":"")+(current_datetime.getMinutes())+(current_datetime.getSeconds().toString().length<=1?"0":"")+(current_datetime.getSeconds())+StatusHours
     console.log(setTime)
     // Set Time End
+    const item = {
+      unique_number: Global.getUniqueNumber(),
+      id: this.state.item.id,
+      id_cart: setTime,
+      name: this.state.item.name,
+      qty: this.state.quantity,
+      price: "" + this.state.item.price,
+      note: null,
+      image_name: this.state.item.image_name,
+      customize_image_name: null,
+      is_customize: false,
+      referances: []
+    }
+    if(this.props.carts.cart.length == 0) {
+      this.state.session.cartAdd(item);
+      this.props.onAddCart(item);
+    }else {
+      console.log("Ceck Props Carts: ");
+      console.log(this.props.carts.cart);
+      let i = 0;
+      let exist = 0;
+      do {
+        let cartResponse = this.props.carts.cart[i];
+        
+        if(cartResponse.id == this.state.item.id) {
+          console.log("id Sama: " + cartResponse.id)
+          // Update
+          let itemUpdate = {
+            unique_number: cartResponse.unique_number,
+            id: cartResponse.id,
+            id_cart: setTime,
+            name: cartResponse.name,
+            qty: cartResponse.qty+this.state.quantity,
+            price: "0",
+            image_name: this.state.item.image_name,
+            customize_image_name: null,
+            note: null,
+            is_customize: false,
+            referances: []
+          }
+          console.log("Cek data Akan Ke simpan Ke Session")
+          this.state.session.cartUpdate(itemUpdate);
+          this.props.onUpdateCart(itemUpdate);
+          exist = 1;
+        }
+        i++;
+      } while(i < this.props.carts.cart.length);
 
-    setTimeout(() => {
-      const item = {
-        unique_number: Global.getUniqueNumber(),
-        id: this.state.item.id,
-        id_cart: setTime,
-        name: this.state.item.name,
-        qty: this.state.quantity,
-        price: "" + this.state.item.price,
-        note: null,
-        image_name: this.state.item.image_name,
-        customize_image_name: null,
-        is_customize: false,
-        referances: []
-      }
-      if(this.props.carts.cart.length == 0) {
+      if(exist == 0) {
+        console.log("Id Tidak Sama: ")
         this.state.session.cartAdd(item);
         this.props.onAddCart(item);
-      }else {
-        console.log("Ceck Props Carts: ");
-        console.log(this.props.carts.cart);
-        let i = 0;
-        let exist = 0;
-        do {
-          let cartResponse = this.props.carts.cart[i];
-          
-          if(cartResponse.id == this.state.item.id) {
-            console.log("id Sama: " + cartResponse.id)
-            // Update
-            let itemUpdate = {
-              unique_number: cartResponse.unique_number,
-              id: cartResponse.id,
-              id_cart: setTime,
-              name: cartResponse.name,
-              qty: cartResponse.qty+this.state.quantity,
-              price: "0",
-              image_name: this.state.item.image_name,
-              customize_image_name: null,
-              note: null,
-              is_customize: false,
-              referances: []
-            }
-            this.state.session.cartUpdate(itemUpdate);
-            this.props.onUpdateCart(itemUpdate);
-            exist = 1;
-          }
-          i++;
-        } while(i < this.props.carts.cart.length);
-
-        if(exist == 0) {
-          console.log("Id Tidak Sama: ")
-          this.state.session.cartAdd(item);
-          this.props.onAddCart(item);
-        }
       }
-      this.countQty()
-      showMessage({
-        message: 'The product was successfully inserted to shopping cart',
-        type: 'success',
-        duration: 1500
-      });
-      this.setState({loadingRequest: false});
+    }
+    this.countQty()
+    showMessage({
+      message: 'The product was successfully inserted to shopping cart',
+      type: 'success',
+      duration: 1500
+    });
+    this.setState({loadingRequest: false});
+    setTimeout(() => {
+      Actions.pop();
+    }, 500);
+  }
+  // Cart Masuk Ke Dalam Session End
+
+  // Cart Masuk Ke Dalam Session
+  cartGoApi() {
+    
+    
+    // Set Time
+    let current_datetime = new Date()
+    let StatusHours;
+
+    if(current_datetime.getHours() > 12) {
+      StatusHours= "PM"
+    }else {
+      StatusHours= "AM"
+    }
+
+    let setTime = current_datetime.getFullYear()+""+(current_datetime.getMonth().toString().length==1?"0":"")+(current_datetime.getMonth())+(current_datetime.getDate().toString().length==1?"0":"")+(current_datetime.getDate())+(current_datetime.getHours().toString().length<=1?"0":"")+(current_datetime.getHours())+(current_datetime.getMinutes().toString().length<=1?"0":"")+(current_datetime.getMinutes())+(current_datetime.getSeconds().toString().length<=1?"0":"")+(current_datetime.getSeconds())+StatusHours
+    console.log(setTime)
+    // Set Time End
+    const item = {
+      unique_number: Global.getUniqueNumber(),
+      id: this.state.item.id,
+      id_cart: setTime,
+      name: this.state.item.name,
+      qty: this.state.quantity,
+      price: "" + this.state.item.price,
+      note: null,
+      image_name: this.state.item.image_name,
+      customize_image_name: null,
+      is_customize: false,
+      referances: []
+    }
+
+    var uri = "cart"
+    var body = {
+      email: this.props.user.email,
+      cart: [item]
+    }
+
+    console.log("Cek Cart Sebelum D lempar ke API")
+    console.log(body)
+
+    postPublic(uri, body).then(res => {
+      
+      if(res.status == 200)
+      {
+        console.log("Kembalian Api Cart")
+        console.log(res)
+        console.log(res.data.data)
+        console.log(res.data.data.id)
+        console.log(this.props.carts.cart)
+        if(this.props.carts.cart.length == 0) {
+          console.log("if pertama")
+          this.state.session.cartAdd(res.data.data);
+          this.props.onAddCart(res.data.data);
+        }else {
+          console.log("if Kedua")
+          let i = 0;
+          let exist = 0;
+          do {
+            let cartResponse = this.props.carts.cart[i];
+            console.log(cartResponse)
+            console.log("cartResponse")
+            if(cartResponse.id == res.data.data.id) {
+              console.log("id Sama")
+              console.log(res.data.data.id)
+              console.log(cartResponse.id)
+              this.state.session.cartUpdate(res.data.data);
+              this.props.onUpdateCart(res.data.data);
+              this.countQty()
+              exist = 1;
+            }
+          i++;
+          }while(i < this.props.carts.cart.length)
+
+          if(exist == 0) {
+            console.log("Cek data Akan Ke simpan Ke Session")
+            this.state.session.cartAdd(res.data.data);
+            this.props.onAddCart(res.data.data);
+          }
+        }
+        this.countQty()
+        showMessage({
+          message: 'The product was successfully inserted to shopping cart',
+          type: 'success',
+          duration: 1500
+        });
+        this.setState({loadingRequest: false});
+      } else
+      {
+        // console.log(res.status)
+        showMessage({
+          message: res.status,
+          type: 'danger',
+          duration: 1500
+        });
+      }
       setTimeout(() => {
         Actions.pop();
       }, 500);
-    }, 100);
+    })
+
   }
-
-
+  // Cart Masuk Ke Dalam Session End
 
   // Check Jumlah Qty Cart
   countQty() {

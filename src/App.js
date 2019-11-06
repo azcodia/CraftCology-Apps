@@ -37,6 +37,9 @@ import TabIcon from './components/TabIcon';
 import Billing from './pages/billing/Billing';
 import BillingForm from './pages/billing/BillingForm';
 import OrderStatus from './pages/order/OrderStatus';
+import MaterialPages from './pages/materials/materials';
+import MaterialDetailsPages from './pages/materials/materialDetails';
+import SpesialOfferPages from './pages/spesialOffers/spesialOffers';
 import OrderStatusDetail from './pages/order/OrderStatusDetail';
 import ShippingAddress from './pages/shipping-address/ShippingAddress';
 import ShippingAddressForm from './pages/shipping-address/ShippingAddressForm';
@@ -124,6 +127,9 @@ export default class App extends Component {
             <Scene key="orderStatusDetail" component={OrderStatusDetail} />
             <Scene key="orderHistory" component={OrderHistory} />
 
+            <Scene key="materialPages" component={MaterialPages} />
+            <Scene key="materialDetailsPages" component={MaterialDetailsPages} />
+            <Scene key="spesialOfferPages" component={SpesialOfferPages} />
             <Scene key="shippingAddress" component={ShippingAddress} />
             <Scene key="shippingAddressForm" component={ShippingAddressForm} />
 

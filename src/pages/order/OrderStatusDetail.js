@@ -25,7 +25,7 @@ import { Icon, Button, ListItem, Header } from 'react-native-elements';
 import moment from "moment";
 import { DocumentPicker, DocumentPickerUtil } from 'react-native-document-picker';
 import { showMessage } from 'react-native-flash-message';
-import { postFilePublic, getPublic } from '../../providers/Api';
+import { getPublic, postFilePublic } from '../../providers/Api';
 import { connect } from 'react-redux';
 import {
   updateOrder, unsetUser
@@ -51,10 +51,12 @@ class OrderStatusDetail extends Component {
 
     // Cek File Pdf
     if(this.props.orderSelected.file_po_admin == null) {
+      console.log("Download PO File User")
       this.setState({
         cekFileValue: this.props.orderSelected.file_po
       })
     }else {
+      console.log("Download PO File Admin")
       this.setState({
         cekFileValue: this.props.orderSelected.file_po_admin
       })
@@ -86,6 +88,7 @@ class OrderStatusDetail extends Component {
   onRefresh() {
     // Cek File Pdf
     if(this.props.orderSelected.file_po_admin == null) {
+      
       this.setState({
         cekFileValue: this.props.orderSelected.file_po
       })
@@ -294,7 +297,8 @@ class OrderStatusDetail extends Component {
         <Text style={styles.contentLabelStyle}>Delivery Date</Text>
         <Text style={styles.contentTitleStyle}>{moment(item.delivery_date_c).format('DD MMM YYYY')}</Text>
         <Text style={styles.contentLabelStyle}>Delivery Address</Text>
-        <Text style={styles.contentTitleStyle}>{item.customer_address.full_address}</Text>
+        {/* <Text style={styles.contentTitleStyle}>{item.customer_address.full_address}</Text> */}
+        <Text style={styles.contentTitleStyle}>{item.full_address == null ? "Address is empty" : item.full_address}</Text>
         {viewDeliveryOrderButton}
         <View style={{ borderBottomWidth: 1, borderBottomColor: '#000', marginTop: 10 }} />
       </View>);

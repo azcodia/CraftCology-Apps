@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
                     "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/79856e4475dcd11898cdd2043c98f6ba/res/values-en-rAU/values-en-rAU.xml",
@@ -33,7 +33,7 @@
             ]
         },
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
                     "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/79856e4475dcd11898cdd2043c98f6ba/res/values-en-rAU/values-en-rAU.xml",

@@ -86,14 +86,15 @@ class Password extends Component {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + this.props.user.token
         },
-        data: {}
       };
 
       postPublic(uri, params, headers).then(response => {
+        console.log(response, "cek Response")
+        console.log(response.data.message, "Cek Error")
         this.setState({
           buttonIsLoading: false,
         });
-        if (response.status == 200) {
+        if (response.data.data.status == 200) {
           showMessage({
             message: response.data.message,
             type: 'success'
@@ -106,11 +107,21 @@ class Password extends Component {
           type: 'danger'
         });
         // unauthorized
-        if (response.status == 401) {
-          this.props.onUnsetUser();
-          Actions.push('login');
+        if (response.data.data.status == 401) {
+          // this.props.onUnsetUser();
+          // Actions.push('login');
+          showMessage({
+            message: "Your password is not the same as the system, Try Again",
+            type: 'danger'
+          });
+        }else if(response.data.data.status == 401) {
+          showMessage({
+            message: "Your password is not the same as the system, Try Again",
+            type: 'danger'
+          });
         }
       }).catch(error => {
+        console.log(error, "Cek Error")
         this.props.onUnsetUser();
         this.setState({
           buttonIsLoading: false,

@@ -165,8 +165,10 @@ class ConfirmPayment extends Component {
         bank_name: this.state.bankname
       };
       let headers = {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + this.props.user.token
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + this.props.user.token
+        }
       };
 
       postPublic(uri, params, headers).then(response => {
