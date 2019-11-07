@@ -9,8 +9,12 @@ import {
 } from 'react-native';
 import { 
   Session, 
-  Global 
+  Global ,
 } from '../helpers/Global';
+// import { getPublic, requestPublic } from '../../providers/Api';
+import {
+  getPublic
+} from '../providers/Api';
 import { 
   Button, 
   Avatar, 
@@ -35,8 +39,32 @@ class Account extends Component {
     this.state = { 
       session: new Session(),
       signOutButtonIsLoading: false,
+      statusSO: 0
     };
     console.log(this.props.user);
+  }
+
+  componentDidMount() {
+    this.getStatusSpesialOffers();  
+  }
+  getStatusSpesialOffers() {
+    var uri = 'menu-offer'
+    getPublic(uri).then(response => {
+      console.log(response.data.status, "Cek Status Spesial Offers")
+      console.log(response.data.data[0].is_active, "is Active Spesial Offers")
+      
+      if(response.data.status == 200) {
+        this.setState({
+          statusSO: response.data.data[0].is_active
+        })
+      }else {
+        this.setState({
+          statusSO: 0
+        })
+      }
+      console.log(this.state.statusSO, "Cek Hasil State")
+
+    })
   }
 
   _onPressSignIn() {
@@ -334,44 +362,50 @@ class Account extends Component {
             {this.renderProfile()}
             <Text style={{ marginBottom: 5, marginTop: 10 }}>Others</Text>
             <View style={{backgroundColor: '#fff'}}>
-            <ListItem
-                key={6}
-                title={"Spesial Offers"}
-                leftIcon={{ name: 'application', type: 'material-community' }}
-                onPress={() => Actions.spesialOfferPages()}
-              />
+              {
+                this.state.statusSO == 0
+                ?
+                  <View></View>
+                :
+                <ListItem
+                  key={7}
+                  title={"Spesial Offers"}
+                  leftIcon={{ name: 'leaf', type: 'font-awesome' }}
+                  onPress={() => Actions.spesialOfferPages()}
+                />
+              }
               <ListItem
-                key={6}
+                key={8}
                 title={"Materials"}
-                leftIcon={{ name: 'application', type: 'material-community' }}
+                leftIcon={{ name: 'archive', type: 'font-awesome' }}
                 onPress={() => Actions.materialPages()}
               />
               <ListItem
-                key={6}
+                key={9}
                 title={"About Us"}
                 leftIcon={{ name: 'application', type: 'material-community' }}
                 onPress={() => Actions.browserLoad({title: 'About Us', url: 'about-us-mobile'})}
               />
               <ListItem
-                key={7}
+                key={10}
                 title={"Contact Us"}
                 leftIcon={{ name: 'contact-mail', type: 'material-community' }}
                 onPress={() => Actions.contact()}
               />
               <ListItem
-                key={8}
+                key={11}
                 title={"How to Order"}
                 leftIcon={{ name: 'list-alt', type: 'font-awesome' }}
                 onPress={() => Actions.browserLoad({title: 'How to Order', url: 'how-to-order-mobile'})}
               />
               <ListItem
-                key={9}
+                key={12}
                 title={"Term and Condition"}
                 leftIcon={{ name: 'list', type: 'entypo' }}
                 onPress={() => Actions.browserLoad({title: 'Term and Condition', url: 'terms-and-conditions-mobile'})}
               />
               <ListItem
-                key={10}
+                key={13}
                 title={"Privacy Policy"}
                 leftIcon={{ name: 'list', type: 'entypo' }}
                 onPress={() => Actions.browserLoad({title: 'Privacy Policy', url: 'privacy-police-mobile'})}

@@ -88,13 +88,14 @@ class Password extends Component {
         },
       };
 
-      postPublic(uri, params, headers).then(response => {
+      postPublic(uri, params, headers)
+      .then(response => {
         console.log(response, "cek Response")
-        console.log(response.data.message, "Cek Error")
+        // console.log(response.data.message, "Cek Error")
         this.setState({
           buttonIsLoading: false,
         });
-        if (response.data.data.status == 200) {
+        if (response.data.status == 200) {
           showMessage({
             message: response.data.message,
             type: 'success'
@@ -102,26 +103,26 @@ class Password extends Component {
           Actions.pop();
           return;
         }
-        showMessage({
-          message: response.data.message,
-          type: 'danger'
-        });
+        // showMessage({
+        //   message: response.data.message,
+        //   type: 'danger'
+        // });
         // unauthorized
-        if (response.data.data.status == 401) {
+        else if (response.data.status == 401) {
           // this.props.onUnsetUser();
           // Actions.push('login');
           showMessage({
-            message: "Your password is not the same as the system, Try Again",
+            message: response.data.message,
             type: 'danger'
           });
-        }else if(response.data.data.status == 401) {
+        }else if(response.data.status == 400) {
           showMessage({
-            message: "Your password is not the same as the system, Try Again",
+            message: response.data.message,
             type: 'danger'
           });
         }
       }).catch(error => {
-        console.log(error, "Cek Error")
+        console.log(error.message, "Cek Error++")
         this.props.onUnsetUser();
         this.setState({
           buttonIsLoading: false,

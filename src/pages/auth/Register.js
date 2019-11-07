@@ -256,16 +256,31 @@ class Register extends Component {
 
   processSocialMediaSignIn(firebaseUserParams, social) {
 
+    // setCart
+    let i = 0;
+    let result = []
     console.log("Cek UID")
-    console.log(firebaseUserParams.user._user.uid, "CEK UID")
+    console.log(firebaseUserParams.user._user.uid)
+
+    if(this.props.carts.cart.length == 0) {
+      result=[]
+    }else {
+      do {
+        let cart = this.props.carts.cart[i]
+        result.push(cart)
+        i++;
+      } while(i < this.props.carts.cart.length)
+      console.log("Cek Data Cart Sebelum Login")
+      console.log(result)
+    }
+    // setCart End
     var uri = 'auth/social-media-login';
     var body = {
       email: firebaseUserParams.additionalUserInfo.profile.email,
       uid: firebaseUserParams.user._user.uid,
       fullname: firebaseUserParams.user.displayName,
       social: social,
-      // cart: result,
-      cart: []
+      cart: result,
     };
     postPublic(uri, body).then(response => {
       this.setState({

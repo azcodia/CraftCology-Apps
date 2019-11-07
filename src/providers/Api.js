@@ -83,11 +83,12 @@ export async function postPublic(uri, data=null, headers)
   return await axios.post(getBaseApiUrl() + '/v1/' + uri, data, config)
   .then(response => 
   {
+    // console.log(response, "response")
     return response;
   })
   .catch(err => 
   {
-    return err;
+    return err.response;
   });
 };
 
