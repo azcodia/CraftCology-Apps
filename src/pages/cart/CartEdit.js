@@ -113,11 +113,12 @@ class CartEdit extends Component {
   }
 
   onUpdateSuccess() {
-    if(this.props.isLoggedIn == true) {
-      this.cartGoApi()
-    }else {
-      this.cartGoSession()
-    }
+    // if(this.props.isLoggedIn == true) {
+    //   this.cartGoApi()
+    // }else {
+    //   this.cartGoSession()
+    // }
+    this.cartGoSession()
   }
 
   cartGoSession() {

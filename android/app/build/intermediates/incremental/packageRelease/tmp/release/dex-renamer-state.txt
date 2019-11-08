@@ -1,4 +1,4 @@
-#Thu Nov 07 16:54:15 WIB 2019
+#Fri Nov 08 10:55:46 WIB 2019
 base.0=/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/transforms/dexMerger/release/0
 path.1=classes2.dex
 renamed.1=classes2.dex

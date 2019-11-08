@@ -38,22 +38,23 @@ class SearchPage extends Component {
     }
 
     var autocompleteUri = 'product/autocomplete?search=' + query;
-    getPublic(autocompleteUri).then(response => {
-      console.log("Cek Query Serach API")
-      console.log(response)
-      if (response.status == 200) {
-        this.setState({
-          dataSource: response.data.data,
-        });
-        this.setState({
-          films: response.data.data,
-        }, function(){
-          const { films } = this.state;
-          return films;
-        });
-      }
-    });
-
+    setTimeout(() => {
+      getPublic(autocompleteUri).then(response => {
+        console.log("Cek Query Serach API")
+        console.log(response)
+        if (response.status == 200) {
+          // this.setState({
+          //   dataSource: response.data.data,
+          // });
+          this.setState({
+            films: response.data.data,
+          }, function(){
+            const { films } = this.state;
+            return films;
+          });
+        }
+      });
+    }, 500)
     return this.state.films;
   }
 
