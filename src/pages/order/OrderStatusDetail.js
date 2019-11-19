@@ -405,7 +405,7 @@ class OrderStatusDetail extends Component {
       :
       null;
 
-    let UploadPurchaseOrder = (this.props.orderSelected.status != 'ORDER' && this.props.orderSelected.status != 'QUOTATION' && this.props.orderSelected.file_po == '') ?
+    let UploadPurchaseOrder = (this.props.orderSelected.status != 'ORDER' && this.props.orderSelected.status != 'QUOTATION' && this.props.orderSelected.file_po == '' && this.props.orderSelected.file_po_admin == null) ?
       (<Button
         backgroundColor="#ff4545"
         title={this.state.uploadPo ? ' ' : 'Upload Purchase Order'}
@@ -419,7 +419,7 @@ class OrderStatusDetail extends Component {
       :
       null;
 
-    let DownloadPurchaseOrder = (this.props.orderSelected.status != 'ORDER' && this.props.orderSelected.status != 'QUOTATION' && this.props.orderSelected.file_po != '') ?
+    let DownloadPurchaseOrder = (this.props.orderSelected.status != 'ORDER' && this.props.orderSelected.status != 'QUOTATION' && this.props.orderSelected.file_po_admin != '') ?
       (<Button
         backgroundColor="#6bc3cd"
         loading={this.state.downloadPo}
@@ -458,7 +458,7 @@ class OrderStatusDetail extends Component {
       :
       null;
 
-    let DownloadInvoice1 = (this.props.orderSelected.status != 'ORDER' && this.props.orderSelected.status != 'QUOTATION' && this.props.orderSelected.status != 'PO' && this.props.orderSelected.status_file == 1) ?
+    let DownloadInvoice1 = (this.props.orderSelected.status != 'ORDER' && this.props.orderSelected.status != 'QUOTATION' || this.props.orderSelected.status != 'CONFIRM_PAYMENT_2' &&  this.props.orderSelected.status != 'PO' && this.props.orderSelected.status_file == 1) ?
       (<Button
         backgroundColor="#6bc3cd"
         loading={this.state.downloadInvoice}

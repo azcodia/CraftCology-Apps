@@ -62,6 +62,7 @@ class CartEdit extends Component {
   }
 
   _onUpdateCart() {
+    console.log(typeof this.state.quantity,"+_+")
     console.log("Update Cart:+++")
     Keyboard.dismiss();
     this.setState({
@@ -597,16 +598,21 @@ class CartEdit extends Component {
                 }}
               >
                 <TextInput
+                  
                   value={this.state.quantity.toString()}
                   keyboardType={"number-pad"}
                   style={{ minWidth: 50, textAlign: "center" }}
-                  onChangeText={value => this.setState({ quantity: value })}
+                  onChangeText={value => 
+                    this.setState({ quantity: Number(value) })
+                  }
                 />
               </View>
               <Button
                 title={"+"}
                 onPress={() =>
-                  this.setState({ quantity: this.state.quantity + 1 })
+                  this.setState({
+                    quantity: this.state.quantity + 1
+                  })
                 }
                 buttonStyle={{ borderRadius: 5 }}
               />

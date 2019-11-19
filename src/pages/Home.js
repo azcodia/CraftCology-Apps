@@ -139,6 +139,8 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => {
+  // console.log("All State")
+  // console.log(state)
   return {
     user: state.user.user,
     isLoggedIn: state.user.isLoggedIn,

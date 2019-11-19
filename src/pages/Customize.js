@@ -105,7 +105,7 @@ class Customize extends Component {
       image['uri'] = images[j].uri;
       formdata.append("files[]", image);
     }
-    console.log(formdata);
+    console.log(formdata, "formdata");
 
     // Set Time
     let current_datetime = new Date()
@@ -123,7 +123,7 @@ class Customize extends Component {
 
     let header = {'Content-Type':'application/json'};
     postPublic(uri, formdata, header).then(response => {
-      console.log(response);
+      console.log(response, "Customu");
       if (response.status == 200) {
         setTimeout(() => {
           const item = {

@@ -22,7 +22,11 @@ import {
   LoginManager
 } from 'react-native-fbsdk';
 import {
-  setUser
+  setUser,
+  addCart,
+  totalCartQty,
+  removeAllCart,
+  removeCartQty
 } from "./../../stores/actions/index";
 import firebase from 'react-native-firebase';
 import { Actions } from 'react-native-router-flux';
@@ -39,6 +43,7 @@ class Register extends Component {
   constructor(props){
     super(props);
     this.state ={ 
+      session: new Session(), 
       buttonIsLoading: false,
       firstname: '',
       lastname: '',
@@ -263,7 +268,7 @@ class Register extends Component {
     console.log(firebaseUserParams.user._user.uid)
 
     if(this.props.carts.cart.length == 0) {
-      result=[]
+
     }else {
       do {
         let cart = this.props.carts.cart[i]
@@ -287,14 +292,23 @@ class Register extends Component {
         spinnerVisible: false
       });
       if (response.status == 200) {
+        console.log(response.data.data.cart.length, "Jumlah Cart Yang Dikembalikan")
         showMessage({
           message: response.data.message,
           type: "success",
           icon: { icon: "success", position: "left" },
         });
         const session = new Session();
+        this.props.onRemoveAllCart();
+        this.props.onRemoveQtyCart();
         session.setUser(response.data.data);
         this.props.onSetUser(response.data.data);
+        if(response.data.data.cart.length == 0) {
+          console.log("tidak nambah cart state")
+        }else {
+          this.setCart(response.data.data.cart)
+          console.log("nambah cart state")
+        }
         Actions.pop();
       } else {
         GoogleSignin.revokeAccess();
@@ -306,6 +320,50 @@ class Register extends Component {
         });
       }
     });
+  }
+
+  // SET CART
+  setCart(cart) {
+    // console.log("Cek Cart Lemparan Dari Parameter lain")
+    console.log(cart)
+    console.log(cart.length)
+
+    let i = 0;
+    do {
+    let cartResponse = cart[i];
+      // console.log("cek Looping Cart Api")
+      console.log(cartResponse)
+      this.state.session.cartAdd(cartResponse);
+      this.props.onAddCart(cartResponse);
+
+    i++;
+    } while(i < cart.length)
+    this.countQty()
+
+  }
+  // SET CART END
+
+  // COUNT CART
+  countQty() {
+    let countDataQty = 0
+    let i = 0
+
+    do {
+      // console.log("test")
+      console.log(this.props.carts.cart.length)
+      let cartResponse = this.props.carts.cart[i];
+      console.log(cartResponse)
+      // console.log("jng jng")
+      countDataQty += this.props.carts.cart[i].qty
+      console.log(countDataQty)
+    i++
+    } while(i < this.props.carts.cart.length)
+
+    let qtyCart = {
+      qtyCart: countDataQty
+    }
+
+    this.props.onCountQtyCart(qtyCart);
   }
 
   async onPressGoogleSignIn() {
@@ -498,7 +556,7 @@ class Register extends Component {
                     title='Google'
                     style={{borderRadius: 5, margin: 0, marginRight: 5, backgroundColor: '#4285f4'}}
                     button
-                    onPress={() => this.onPressGoogleSignIn()()}
+                    onPress={() => this.onPressGoogleSignIn()}
                     type='google'
                   />
                 </View>
@@ -597,7 +655,11 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onSetUser: user => dispatch(setUser(user))
+    onSetUser: user => dispatch(setUser(user)),
+    onAddCart: cart => dispatch(addCart(cart)),
+    onCountQtyCart: (qtyCart) => dispatch(totalCartQty(qtyCart)),
+    onRemoveAllCart: () => dispatch(removeAllCart()),
+    onRemoveQtyCart: ()=> dispatch(removeCartQty())
   };
 };
 

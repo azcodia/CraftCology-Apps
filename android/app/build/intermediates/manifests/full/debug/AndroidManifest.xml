@@ -192,11 +192,6 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
-        <provider
-            android:name="com.facebook.marketing.internal.MarketingInitProvider"
-            android:authorities="com.cranium.craftcology.MarketingInitProvider"
-            android:exported="false" />
         <!--
          The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
          with the application context. This config is merged in with the host app's manifest,

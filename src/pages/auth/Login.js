@@ -153,15 +153,13 @@ class Login extends Component {
       let result = []
 
       if(this.props.carts.cart.length == 0) {
-        result=[]
+        // result
       }else {
         do {
           let cart = this.props.carts.cart[i]
           result.push(cart)
           i++;
         } while(i < this.props.carts.cart.length)
-        console.log("Cek Data Cart Sebelum Login")
-        console.log(result)
       }
       // setCart End
 
@@ -217,15 +215,13 @@ class Login extends Component {
     console.log(firebaseUserParams.user._user.uid)
 
     if(this.props.carts.cart.length == 0) {
-      result=[]
+      // result=[]
     }else {
       do {
         let cart = this.props.carts.cart[i]
         result.push(cart)
         i++;
       } while(i < this.props.carts.cart.length)
-      console.log("Cek Data Cart Sebelum Login")
-      console.log(result)
     }
     // setCart End
 
@@ -238,9 +234,9 @@ class Login extends Component {
       cart: result
       // cart: null
     };
-    console.log("Cek Body Login SIgn In")
-    console.log(body)
+    console.log(result ,"Cek Cart Yang Akan Di Lempar Ke API")
     postPublic(uri, body).then(response => {
+      console.log(response.data.data, "Cek Api Berhasil Login")
       this.setState({
         spinnerVisible: false
       });
@@ -256,14 +252,15 @@ class Login extends Component {
         session.setUser(response.data.data);
         this.props.onSetUser(response.data.data);
         this.props.onSetListUserAddresses(response.data.data.customer_addresses);
-
-        console.log("Keluaran data setelah Login dengan Google sign in")
-        console.log(response.data.data)
-        console.log("Keluaran data cart setelah Login dengan Google sign in")
-        console.log(response.data.data.cart)
-        this.setCart(response.data.data.cart)
+        if(response.data.data.cart.length == 0) {
+          console.log("tidak nambah cart state")
+        }else {
+          this.setCart(response.data.data.cart)
+          console.log("nambah cart state")
+        }
         Actions.pop();
       } else {
+        console.log(response, "Cek Api Gagal Login")
         GoogleSignin.revokeAccess();
         GoogleSignin.signOut();
         showMessage({

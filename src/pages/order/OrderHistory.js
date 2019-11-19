@@ -57,6 +57,7 @@ class OrderHistory extends Component {
     getPublic(url, headers).then(response => {
       this.setState({refreshing:false});
       if (response.status == 200) {
+        console.log(response.data.data, "API ORDER HISTORY")
         this.props.onSetListOrder(response.data.data);
         return;
       }
@@ -127,6 +128,7 @@ class OrderHistory extends Component {
 
 
 const mapStateToProps = state => {
+  console.log(state, "ORDER HISTORY")
   return {
     user: state.user.user,
     isLoggedIn: state.user.isLoggedIn,

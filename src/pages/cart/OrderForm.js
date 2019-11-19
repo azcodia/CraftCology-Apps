@@ -23,7 +23,10 @@ import AddressDropdown from '../../components/AddressDropdown';
 import { showMessage } from 'react-native-flash-message';
 import { connect } from 'react-redux';
 import { 
-  removeAllCart, setListUserAddress, unsetUser
+  removeAllCart,
+  setListUserAddress,
+  unsetUser,
+  removeCartQty
 } from '../../stores/actions/index';
 import { postFilePublic, getPublic } from '../../providers/Api';
 
@@ -210,6 +213,7 @@ class OrderForm extends Component {
             type: 'success'
           });
           this.props.onRemoveAllCart();
+          this.props.onRemoveQtyCart();
           Actions.reset("checkoutSuccess", {
             title: 'Thank you',
             user: this.props.user,
@@ -648,6 +652,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     onRemoveAllCart: () => dispatch(removeAllCart()),
+    onRemoveQtyCart: ()=> dispatch(removeCartQty()),
     onUnsetUser: () => dispatch(unsetUser()),
     onSetListUserAddresses: (listUserAddresses) => dispatch(setListUserAddress(listUserAddresses))
   };

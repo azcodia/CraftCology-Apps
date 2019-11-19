@@ -134,6 +134,7 @@ class OrderStatus extends Component {
 }
 
 const mapStateToProps = state => {
+  console.log(state, "ORDER STATUS")
   return {
     user: state.user.user,
     isLoggedIn: state.user.isLoggedIn,
