@@ -354,7 +354,7 @@ class OrderStatusDetail extends Component {
       );
     }
 
-    if (this.props.orderSelected.status == 'INVOICE_2' && this.props.orderSelected.amount_2 != '' && this.props.orderSelected.file_invoice_2 != '' && this.props.orderSelected.status_file == 1 && (this.props.orderSelected.customer_payments.length <= 0)) {
+    if (this.props.orderSelected.status == 'INVOICE_2' && this.props.orderSelected.amount_2 != '' && this.props.orderSelected.file_invoice_2 != '' && this.props.orderSelected.status_file == 1 &&  this.props.orderSelected.is_do_invoice_2 == 1 && (this.props.orderSelected.customer_payments.length <= 0)) {
       return (
         <Button
           backgroundColor="#f1c40f"
@@ -405,7 +405,7 @@ class OrderStatusDetail extends Component {
       :
       null;
 
-    let UploadPurchaseOrder = (this.props.orderSelected.status != 'ORDER' && this.props.orderSelected.status != 'QUOTATION' && this.props.orderSelected.file_po == '' && this.props.orderSelected.file_po_admin == null) ?
+    let UploadPurchaseOrder = (this.props.orderSelected.status != 'ORDER' && this.props.orderSelected.status != 'QUOTATION' && this.props.orderSelected.file_po_admin == null && this.props.orderSelected.file_po == '') ?
       (<Button
         backgroundColor="#ff4545"
         title={this.state.uploadPo ? ' ' : 'Upload Purchase Order'}
@@ -419,7 +419,7 @@ class OrderStatusDetail extends Component {
       :
       null;
 
-    let DownloadPurchaseOrder = (this.props.orderSelected.status != 'ORDER' && this.props.orderSelected.status != 'QUOTATION' && this.props.orderSelected.file_po_admin != '') ?
+    let DownloadPurchaseOrder = (this.props.orderSelected.status != 'ORDER' && this.props.orderSelected.status != 'QUOTATION' && this.props.orderSelected.file_po != '' || this.props.orderSelected.status != 'ORDER' && this.props.orderSelected.status != 'QUOTATION' && this.props.orderSelected.file_po_admin != null) ?
       (<Button
         backgroundColor="#6bc3cd"
         loading={this.state.downloadPo}
@@ -458,7 +458,7 @@ class OrderStatusDetail extends Component {
       :
       null;
 
-    let DownloadInvoice1 = (this.props.orderSelected.status != 'ORDER' && this.props.orderSelected.status != 'QUOTATION' || this.props.orderSelected.status != 'CONFIRM_PAYMENT_2' &&  this.props.orderSelected.status != 'PO' && this.props.orderSelected.status_file == 1) ?
+    let DownloadInvoice1 = (this.props.orderSelected.status != 'ORDER' && this.props.orderSelected.status != 'QUOTATION' && this.props.orderSelected.status != 'PO' && this.props.orderSelected.file_invoice != '') ?
       (<Button
         backgroundColor="#6bc3cd"
         loading={this.state.downloadInvoice}

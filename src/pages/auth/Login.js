@@ -303,8 +303,10 @@ class Login extends Component {
       console.log(this.props.carts.cart.length)
       let cartResponse = this.props.carts.cart[i];
       console.log(cartResponse)
-      // console.log("jng jng")
-      countDataQty += this.props.carts.cart[i].qty
+      console.log("jng jng")
+      console.log(this.props.carts.cart[i].qty)
+      console.log(typeof this.props.carts.cart[i].qty)
+      countDataQty += new Number(this.props.carts.cart[i].qty)
       console.log(countDataQty)
     i++
     } while(i < this.props.carts.cart.length)
