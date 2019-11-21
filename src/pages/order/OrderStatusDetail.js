@@ -129,6 +129,7 @@ class OrderStatusDetail extends Component {
   }
 
   _productImage(image) {
+    console.log(image, "cek image")
     if (image) {
       return Global.getProductImageUrl() + image;
     } else {

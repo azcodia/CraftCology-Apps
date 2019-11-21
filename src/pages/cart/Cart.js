@@ -64,8 +64,19 @@ class Cart extends Component {
   }
 
   renderSourceImage(item) {
+    console.log(item, "renderSourceImage")
+    // console.log(Global.getProductImageUrl() + item.image_name, "link Url Gambar")
     if (item.is_customize == true) {
-      return item.customize_image_name;
+      // return item.customize_image_name;
+      if(item.image_name == null) {
+        console.log("Gambar Kosong Di Api")
+        return item.customize_image_name;
+      }else {
+        console.log("Gambar Tidak Kosong Di Api")
+        return {
+          uri: Global.getProductImageUrl() + item.image_name
+        }
+      }
     }
 
     if (item.image_name) {

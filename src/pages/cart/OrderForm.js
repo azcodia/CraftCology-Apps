@@ -93,7 +93,7 @@ class OrderForm extends Component {
       refreshing: false,
       models: this.props.carts,
     });
-    console.log(this.state.models.length, "Cek Data Models")
+    console.log(this.state.models, "Cek Data Models")
   }
 
   _onRefresh() {
@@ -105,7 +105,11 @@ class OrderForm extends Component {
     if (item.is_customize == true) {
       if (item.customize_image_name) {
         return item.customize_image_name;
-      } else {
+      } else if(item.image_name) {
+        return {
+          uri: Global.getProductImageUrl() + item.image_name
+        }
+      }else {
         return {
           uri: Global.getBaseUrl() + 'assets/images/icon/cart.png'
         }

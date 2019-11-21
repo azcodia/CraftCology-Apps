@@ -65,6 +65,8 @@ class Customize extends Component {
   onRequestQuote() {
     let errors = {};
 
+    // console.log(this.state.images, "Cek Gambar Upload")
+
     Keyboard.dismiss();
 
     this.state.listForms
@@ -104,6 +106,7 @@ class Customize extends Component {
       image['type'] = images[j].type;
       image['uri'] = images[j].uri;
       formdata.append("files[]", image);
+      console.log(formdata, "formdata");
     }
     console.log(formdata, "formdata");
 
@@ -120,6 +123,7 @@ class Customize extends Component {
     let setTime = current_datetime.getFullYear()+""+(current_datetime.getMonth().toString().length==1?"0":"")+(current_datetime.getMonth())+(current_datetime.getDate().toString().length==1?"0":"")+(current_datetime.getDate())+(current_datetime.getHours().toString().length<=1?"0":"")+(current_datetime.getHours())+(current_datetime.getMinutes().toString().length<=1?"0":"")+(current_datetime.getMinutes())+(current_datetime.getSeconds().toString().length<=1?"0":"")+(current_datetime.getSeconds())+StatusHours
     console.log(setTime)
     // Set Time End
+    
 
     let header = {'Content-Type':'application/json'};
     postPublic(uri, formdata, header).then(response => {
@@ -140,10 +144,13 @@ class Customize extends Component {
             referances: this.state.images.length > 0 ? this.state.images : []
           }
           
-          this.state.session.cartAdd(item);
-          this.props.onAddCart(item);
-
-          this.countQty();
+          if(this.props.isLoggedIn == true) {
+            this.goToCartApi(setTime)
+          }else {
+            this.state.session.cartAdd(item);
+            this.props.onAddCart(item);
+            this.countQty();
+          }
 
           showMessage({
             message: 'Your Customize Product was successfully inserted to shopping cart',
@@ -174,6 +181,58 @@ class Customize extends Component {
     });
   }
 
+  // CUSTOME PUSH TO CART API
+  goToCartApi(setTime) {
+
+    console.log(this.state.images, "Cek Gambar Upload")
+    const item = {
+      id: this.state.id,
+      id_cart: setTime,
+      image_name: null,
+      is_customize: true,
+      name: this.state.productname,
+      note: this.state.note,
+      price: "0",
+      qty: this.state.quantity,
+      total: 0,
+      unique_number: Global.getUniqueNumber(),
+      referances: this.state.images
+    }
+
+    // console.log(item, "Ck Data API")
+    var uri = "cart"
+    var body = {
+      email: this.props.user.email,
+      cart: [item]
+    }
+    console.log(body, "Cek Body")
+    postPublic(uri, body).then(res => {
+      console.log(res, "Cek Kembalian Api")
+      console.log(res.data.data, "TO DATA")
+      this.state.session.cartAdd(res.data.data);
+      this.props.onAddCart(res.data.data);
+
+      this.countQty();
+      
+      // if(res.data.status == 200) {
+      //   showMessage({
+      //     message: res.data.status,
+      //     type: 'success',
+      //     duration: 1500
+      //   });
+      // }else {
+      //   showMessage({
+      //     message: res.data.status,
+      //     type: 'danger',
+      //     duration: 1500
+      //   });
+      // }
+
+    })
+
+  }
+  // CUSTOME PUSH TO CART API END
+
   // Kalkulasi QTY Cart
   countQty() {
     this.props.onRemoveQtyCart();
@@ -186,6 +245,7 @@ class Customize extends Component {
       let cartResponse = this.props.carts.cart[i];
       console.log(cartResponse)
       console.log("jng jng")
+      console.log(this.props.carts.cart[i].qty)
       countDataQty += new Number(this.props.carts.cart[i].qty)
       console.log(countDataQty)
     i++
@@ -329,8 +389,7 @@ class Customize extends Component {
         image: null,
         images: imagesTemp
       });
-      console.log('after');
-      console.log(this.state.images);
+      console.log(this.state.images, 'after');
     }).catch(e => {})//alert(e));
   }
 
