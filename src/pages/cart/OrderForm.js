@@ -187,7 +187,7 @@ class OrderForm extends Component {
         formdata.append("details["+i+"][note]", model.note);
         formdata.append("details["+i+"][date]", model.date);
         formdata.append("details["+i+"][is_customize]", model.is_customize == 1 ? 1 : 0);
-        if(this.state.models.referances == undefined) {
+        if(model.referances == undefined) {
           formdata.append("referances[]")
         }else {
           for (j=0;j<model.referances.length;j++) {

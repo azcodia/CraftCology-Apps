@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml",
+            "outputFile": "/Users/cranium/Documents/IQBAL/JANGAN DI HAPUS /CraftCology-Apps/android/app/build/intermediates/res/merged/debug/values-az/values-az.xml",
             "map": [
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6d295b9248fd0e2337328e7241adb947/res/values-az/values.xml",
+                    "source": "/Users/cranium/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/45bcf4b2fdc2b2ada1cd56cd71f1e844/res/values-az/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/79856e4475dcd11898cdd2043c98f6ba/res/values-az/values-az.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "38",
-                        "startColumns": "4",
-                        "startOffsets": "4693",
-                        "endColumns": "100",
-                        "endOffsets": "4789"
-                    }
-                },
-                {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/1f5606d61f689a027199826cdd5808d7/res/values-az/values.xml",
+                    "source": "/Users/cranium/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/141cc2bf735096802f00939a73ea1c28/res/values-az/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -55,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/values-az/values-az.xml",
+                    "source": "/Users/cranium/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/add113ecabb1d39e9b88bdbf49c2caed/res/values-az/values-az.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -69,15 +52,32 @@
                         "startOffsets": "105,213,312,424,512,619,733,814,893,978,1085,1192,1292,1401,1505,1615,1773,4610",
                         "endColumns": "107,98,111,87,106,113,80,78,84,106,106,99,108,103,109,157,101,82",
                         "endOffsets": "208,307,419,507,614,728,809,888,973,1080,1187,1287,1396,1500,1610,1768,1870,4688"
+                    }
+                },
+                {
+                    "source": "/Users/cranium/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/06f6630d35de2432e208bf0e9a91d884/res/values-az/values-az.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "38",
+                        "startColumns": "4",
+                        "startOffsets": "4693",
+                        "endColumns": "100",
+                        "endOffsets": "4789"
                     }
                 }
             ]
         },
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/values-az/values-az.xml",
+            "outputFile": "/Users/cranium/Documents/IQBAL/JANGAN DI HAPUS /CraftCology-Apps/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml",
             "map": [
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6d295b9248fd0e2337328e7241adb947/res/values-az/values.xml",
+                    "source": "/Users/cranium/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/45bcf4b2fdc2b2ada1cd56cd71f1e844/res/values-az/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -94,24 +94,7 @@
                     }
                 },
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/79856e4475dcd11898cdd2043c98f6ba/res/values-az/values-az.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "38",
-                        "startColumns": "4",
-                        "startOffsets": "4693",
-                        "endColumns": "100",
-                        "endOffsets": "4789"
-                    }
-                },
-                {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/1f5606d61f689a027199826cdd5808d7/res/values-az/values.xml",
+                    "source": "/Users/cranium/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/141cc2bf735096802f00939a73ea1c28/res/values-az/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -128,7 +111,7 @@
                     }
                 },
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/values-az/values-az.xml",
+                    "source": "/Users/cranium/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/add113ecabb1d39e9b88bdbf49c2caed/res/values-az/values-az.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -142,6 +125,23 @@
                         "startOffsets": "105,213,312,424,512,619,733,814,893,978,1085,1192,1292,1401,1505,1615,1773,4610",
                         "endColumns": "107,98,111,87,106,113,80,78,84,106,106,99,108,103,109,157,101,82",
                         "endOffsets": "208,307,419,507,614,728,809,888,973,1080,1187,1287,1396,1500,1610,1768,1870,4688"
+                    }
+                },
+                {
+                    "source": "/Users/cranium/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/06f6630d35de2432e208bf0e9a91d884/res/values-az/values-az.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "38",
+                        "startColumns": "4",
+                        "startOffsets": "4693",
+                        "endColumns": "100",
+                        "endOffsets": "4789"
                     }
                 }
             ]

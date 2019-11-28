@@ -313,18 +313,37 @@ class CartEdit extends Component {
   }
 
   renderSourceImage(item) {
-    if (item.is_customize == true) {
-      return item.customize_image_name;
-    }
+    console.log(item, "cek props image header")
 
-    if (item.image_name) {
+    if(this.props.isLoggedIn == true) {
       return {
         uri: Global.getProductImageUrl() + item.image_name
-      };
-    } else {
-      return Global.getBaseUrl() + "assets/images/icon/cart.png";
+      }
+    }else {
+      if(item.is_customize == true) {
+        return item.customize_image_name;
+      }else if(item.is_customize == false) {
+        return {
+          uri: Global.getProductImageUrl() + item.image_name
+        };
+      }else {
+        return Global.getBaseUrl() + "assets/images/icon/cart.png";
+      }
     }
   }
+
+  renderSourceImageList(item) {
+    if(this.props.isLoggedIn == true) {
+      return {
+        uri: Global.getProductImageUrl() + item.name
+      }
+    }else {
+      return {
+        uri: Global.getProductImageUrl() + item.name
+      }
+    }
+  }
+
 
   selectPhotoTapped() {
     const options = {
@@ -465,6 +484,7 @@ class CartEdit extends Component {
   }
 
   renderImage(image) {
+    console.log(image, "Cek Props List Product")
     return (
       <View
         style={{
@@ -497,7 +517,7 @@ class CartEdit extends Component {
               height: "100%",
               resizeMode: "cover"
             }}
-            source={image}
+            source={this.renderSourceImageList(image)}
           />
         </View>
         <View style={{ width: "65%" }}>

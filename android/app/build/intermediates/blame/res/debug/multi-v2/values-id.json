@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/values-id/values-id.xml",
+            "outputFile": "/Users/cranium/Documents/IQBAL/JANGAN DI HAPUS /CraftCology-Apps/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-id/values-id.xml",
             "map": [
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.11.0.aar/966d1874891592718d5ef875284ba750/res/values-id/values-id.xml",
+                    "source": "/Users/cranium/.gradle/caches/transforms-1/files-1.1/facebook-common-5.11.2.aar/0bc50df01d77337b878208cd5a4b71ea/res/values-id/values-id.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-id/values-id.xml",
+            "outputFile": "/Users/cranium/Documents/IQBAL/JANGAN DI HAPUS /CraftCology-Apps/android/app/build/intermediates/res/merged/debug/values-id/values-id.xml",
             "map": [
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-common-5.11.0.aar/966d1874891592718d5ef875284ba750/res/values-id/values-id.xml",
+                    "source": "/Users/cranium/.gradle/caches/transforms-1/files-1.1/facebook-common-5.11.2.aar/0bc50df01d77337b878208cd5a4b71ea/res/values-id/values-id.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

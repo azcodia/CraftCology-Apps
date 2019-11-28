@@ -299,7 +299,7 @@ class OrderStatusDetail extends Component {
         <Text style={styles.contentTitleStyle}>{moment(item.delivery_date_c).format('DD MMM YYYY')}</Text>
         <Text style={styles.contentLabelStyle}>Delivery Address</Text>
         {/* <Text style={styles.contentTitleStyle}>{item.customer_address.full_address}</Text> */}
-        <Text style={styles.contentTitleStyle}>{item.full_address == null ? "Address is empty" : item.full_address}</Text>
+        <Text style={styles.contentTitleStyle}>{item.customer_address.full_address == null ? "Address is empty" : item.customer_address.full_address}</Text>
         {viewDeliveryOrderButton}
         <View style={{ borderBottomWidth: 1, borderBottomColor: '#000', marginTop: 10 }} />
       </View>);

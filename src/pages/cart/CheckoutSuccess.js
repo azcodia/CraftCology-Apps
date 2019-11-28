@@ -60,6 +60,7 @@ export default class CheckoutSuccess extends Component {
   }
 
   renderProductItem(item) {
+    console.log(item, "Cek Props")
     const Header = ({ isOpen }) =>
       <View style={styles.accordionHeaderStyle}>
         <View style={{width: 200}}>
