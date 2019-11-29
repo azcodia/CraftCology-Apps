@@ -208,6 +208,9 @@ class OrderForm extends Component {
       console.log(formdata ,"Cek Form Data")
       console.log(headers, "Cek Headers")
       postFilePublic('cart/checkout', formdata, headers).then(responseJson => {
+
+        console.log(responseJson.data.data, "Balikan Data API")
+
         this.setState({
           buttonIsLoading: false,
         });

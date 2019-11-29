@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/cranium/Documents/IQBAL/JANGAN DI HAPUS /CraftCology-Apps/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rES/values-es-rES.xml",
+            "outputFile": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/values-es-rES/values-es-rES.xml",
             "map": [
                 {
-                    "source": "/Users/cranium/.gradle/caches/transforms-1/files-1.1/facebook-login-5.11.2.aar/afdbb42c71bf41c9614a6c12efcdab4f/res/values-es-rES/values-es-rES.xml",
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/facebook-login-5.11.2.aar/582e699e01049983d20b7de0d609dfe1/res/values-es-rES/values-es-rES.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "/Users/cranium/Documents/IQBAL/JANGAN DI HAPUS /CraftCology-Apps/android/app/build/intermediates/res/merged/debug/values-es-rES/values-es-rES.xml",
+            "outputFile": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rES/values-es-rES.xml",
             "map": [
                 {
-                    "source": "/Users/cranium/.gradle/caches/transforms-1/files-1.1/facebook-login-5.11.2.aar/afdbb42c71bf41c9614a6c12efcdab4f/res/values-es-rES/values-es-rES.xml",
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/facebook-login-5.11.2.aar/582e699e01049983d20b7de0d609dfe1/res/values-es-rES/values-es-rES.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

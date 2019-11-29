@@ -92,6 +92,36 @@ export async function postPublic(uri, data=null, headers)
   });
 };
 
+export async function deletePublic(uri, data=null, headers) 
+{
+  var config;
+  
+  if(headers != "" && headers != null) 
+  {
+    config = headers
+  }
+  else {
+    config = { 
+      headers: {
+        accept: 'application/json',
+      },
+      data: data,
+    };
+  }
+  console.log(getBaseApiUrl() + '/v1/' + uri, config , "Cek Url")
+
+  return await axios.delete(getBaseApiUrl() + '/v1/' + uri, config)
+  .then(response => 
+  {
+    // console.log(response, "response")
+    return response;
+  })
+  .catch(err => 
+  {
+    return err.response;
+  });
+};
+
 export async function patchPublic(uri, data=null, headers = {'Content-Type':'application/json'}) {
   var method = 'PATCH';
  

@@ -24,7 +24,9 @@ import {
   totalCartQty,
   removeCartQty
 } from "./../../stores/actions/index";
-
+import {
+  deletePublic
+} from '../../providers/Api';
 import { Actions } from 'react-native-router-flux';
 import Accordion from '@ercpereda/react-native-accordion';
 import CartEmpty from '../../components/CartEmpty';
@@ -122,6 +124,14 @@ class Cart extends Component {
   }
 
   _onPressRemoveCart(item) {
+    if(this.props.isLoggedIn == true) {
+      this.removeCartAPI(item)
+    }else {
+      this.removeCartSession(item)
+    }
+  }
+
+  removeCartSession(item) {
     console.log("remove cart")
     console.log(item.qty)
     let qtyCartKal = this.props.qtyCart.qtyCart - item.qty
@@ -140,6 +150,37 @@ class Cart extends Component {
         this._onRefresh();
       }, 1000);
     });
+  }
+
+  removeCartAPI(item) {
+    var uri = "delete-cart"
+    var body = {
+      email: this.props.user.email,
+      cart: [item]
+    }
+    console.log(body, "body")
+
+    deletePublic(uri, body, headers= null).then(res => {
+      console.log("remove cart")
+      console.log(item.qty)
+      let qtyCartKal = this.props.qtyCart.qtyCart - item.qty
+      console.log("Setelah Di Remove Cart")
+      console.log(qtyCartKal)
+      let qtyCart = {
+        qtyCart: qtyCartKal
+      }
+      this.props.onRemoveQtyCart();
+      this.props.onCountQtyCart(qtyCart);
+
+      this.setState({refreshing: true});
+      this.props.onRemoveCart(item.unique_number);
+      this.state.session.cartRemove(item).then(() => {
+        setTimeout(() => {
+          this._onRefresh();
+        }, 1000);
+      });
+    })
+
   }
 
   _renderFlatListItem(item) {

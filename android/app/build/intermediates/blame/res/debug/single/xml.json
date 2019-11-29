@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/cranium/Documents/IQBAL/JANGAN DI HAPUS /CraftCology-Apps/android/app/build/intermediates/res/merged/debug/xml/provider_paths.xml",
-        "source": "/Users/cranium/Documents/IQBAL/JANGAN DI HAPUS /CraftCology-Apps/node_modules/react-native-image-crop-picker/android/build/intermediates/packaged_res/debug/xml/provider_paths.xml"
+        "merged": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
+        "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/5acdc795d3081c835e16677a882cf1a7/res/xml/preferences.xml"
     },
     {
-        "merged": "/Users/cranium/Documents/IQBAL/JANGAN DI HAPUS /CraftCology-Apps/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
-        "source": "/Users/cranium/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/3e65a3c881870dbe7aecfd5b9a560091/res/xml/preferences.xml"
+        "merged": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/android/app/build/intermediates/res/merged/debug/xml/provider_paths.xml",
+        "source": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/node_modules/react-native-image-crop-picker/android/build/intermediates/packaged_res/debug/xml/provider_paths.xml"
     }
 ]

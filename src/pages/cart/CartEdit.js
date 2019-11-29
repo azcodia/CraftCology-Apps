@@ -75,6 +75,7 @@ class CartEdit extends Component {
     });
 
     if (this.state.images.length <= 0) {
+      console.log("Tidak Ada Image")
       this.onUpdateSuccess();
       return;
     }
@@ -89,11 +90,12 @@ class CartEdit extends Component {
       image["uri"] = images[j].uri;
       formdata.append("files[]", image);
     }
-    console.log(formdata);
+    console.log(formdata, "formdata");
     let header = {'Content-Type':'application/json'};
     postPublic(uri, formdata, header)
       .then(response => {
         if (response.status == 200) {
+          console.log("Data 200")
           this.onUpdateSuccess();
         }
         this.setState({
@@ -101,25 +103,18 @@ class CartEdit extends Component {
         });
       })
       .catch(error => {
-        console.log(error);
-        this.setState({
-          loadingRequest: false
-        });
-        showMessage({
-          message: "Update Cart Success",
-          type: "success"
-        });
-        Actions.pop({ refresh: { is_refresh: true } });
+          this.onUpdateSuccess()
+          console.log("Di Luar Upload Data API")
       });
   }
 
   onUpdateSuccess() {
-    // if(this.props.isLoggedIn == true) {
-    //   this.cartGoApi()
-    // }else {
-    //   this.cartGoSession()
-    // }
-    this.cartGoSession()
+    console.log("MASUK onUpdateSuccess")
+    if(this.props.isLoggedIn == true) {
+      this.cartGoApi()
+    }else {
+      this.cartGoSession()
+    }
   }
 
   cartGoSession() {
@@ -193,14 +188,14 @@ class CartEdit extends Component {
       name: this.state.item.name,
       qty: this.state.quantity,
       price: "" + this.state.item.price,
-      note: null,
+      note: this.state.note,
       image_name: this.state.item.image_name,
-      customize_image_name: null,
-      is_customize: false,
-      referances: []
+      customize_image_name: this.state.item.customize_image_name,
+      is_customize: this.state.item.is_customize,
+      referances: this.state.images
     }
 
-    var uri = "cart"
+    var uri = "update-cart-qty"
     var body = {
       email: this.props.user.email,
       cart: [item]
@@ -210,6 +205,8 @@ class CartEdit extends Component {
     console.log(body)
 
     postPublic(uri, body).then(res => {
+      console.log("Cek Cart BALIKAN DARI API")
+      console.log(body)
       
       if(res.status == 200)
       {
