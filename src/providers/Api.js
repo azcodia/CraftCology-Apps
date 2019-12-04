@@ -210,7 +210,7 @@ export async function postFilePublic(uri, data=null, headers = {'Content-Type': 
       timeout: REQUEST_TIMEOUT,
       onUploadProgress: function(progressEvent) {
         var percentCompleted = parseInt( Math.round( ( progressEvent.loaded * 100 ) / progressEvent.total ) );
-        console.log(percentCompleted);
+        console.log(percentCompleted, "PERSENTASE KIRIM DATA");
       }
     });
     return response

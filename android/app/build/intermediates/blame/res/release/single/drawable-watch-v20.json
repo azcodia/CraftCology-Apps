@@ -1,18 +1,18 @@
 [
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/res/merged/release/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/ba2b745bbfb55a19a0f6f97e8939f6af/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
+        "merged": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/android/app/build/intermediates/res/merged/release/drawable-watch-v20/abc_dialog_material_background.xml",
+        "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ec708a9961027dd0b1022d4578b1990a/res/drawable-watch-v20/abc_dialog_material_background.xml"
     },
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/res/merged/release/drawable-watch-v20/abc_dialog_material_background.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/drawable-watch-v20/abc_dialog_material_background.xml"
+        "merged": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/android/app/build/intermediates/res/merged/release/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/6b91c1a10e245f732d2a59ca666ff9bc/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
     },
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/res/merged/release/drawable-watch-v20/common_google_signin_btn_text_disabled.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/ba2b745bbfb55a19a0f6f97e8939f6af/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
+        "merged": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/android/app/build/intermediates/res/merged/release/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml",
+        "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/6b91c1a10e245f732d2a59ca666ff9bc/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
     },
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/res/merged/release/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/ba2b745bbfb55a19a0f6f97e8939f6af/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
+        "merged": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/android/app/build/intermediates/res/merged/release/drawable-watch-v20/common_google_signin_btn_text_disabled.xml",
+        "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/6b91c1a10e245f732d2a59ca666ff9bc/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
     }
 ]

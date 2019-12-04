@@ -206,6 +206,7 @@ class ProductDetail extends Component {
     console.log(body)
 
     postPublic(uri, body).then(res => {
+      console.log(res, "BALIKAN API")
       
       if(res.status == 200)
       {

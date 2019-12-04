@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/res/merged/release/xml/preferences.xml",
-        "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/3e417de8aafd846a92d9cf392ed41e74/res/xml/preferences.xml"
+        "merged": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/android/app/build/intermediates/res/merged/release/xml/provider_paths.xml",
+        "source": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/node_modules/react-native-image-crop-picker/android/build/intermediates/packaged_res/release/xml/provider_paths.xml"
     },
     {
-        "merged": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/res/merged/release/xml/provider_paths.xml",
-        "source": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/node_modules/react-native-image-crop-picker/android/build/intermediates/packaged_res/release/xml/provider_paths.xml"
+        "merged": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/android/app/build/intermediates/res/merged/release/xml/preferences.xml",
+        "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/5acdc795d3081c835e16677a882cf1a7/res/xml/preferences.xml"
     }
 ]

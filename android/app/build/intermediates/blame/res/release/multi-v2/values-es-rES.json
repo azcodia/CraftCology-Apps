@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/res/merged/release/values-es-rES/values-es-rES.xml",
+            "outputFile": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/android/app/build/intermediates/res/merged/release/values-es-rES/values-es-rES.xml",
             "map": [
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-5.11.0.aar/fc6794a0d108512b09e0c95a0eac7f62/res/values-es-rES/values-es-rES.xml",
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/facebook-login-5.11.2.aar/582e699e01049983d20b7de0d609dfe1/res/values-es-rES/values-es-rES.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-es-rES/values-es-rES.xml",
+            "outputFile": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-es-rES/values-es-rES.xml",
             "map": [
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-5.11.0.aar/fc6794a0d108512b09e0c95a0eac7f62/res/values-es-rES/values-es-rES.xml",
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/facebook-login-5.11.2.aar/582e699e01049983d20b7de0d609dfe1/res/values-es-rES/values-es-rES.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

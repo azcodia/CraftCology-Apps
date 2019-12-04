@@ -58,12 +58,9 @@ class CartEdit extends Component {
     if (this.state.item.note) {
       this.state.note = this.state.item.note;
     }
-    console.log(this.state.images);
   }
 
   _onUpdateCart() {
-    console.log(typeof this.state.quantity,"+_+")
-    console.log("Update Cart:+++")
     Keyboard.dismiss();
     this.setState({
       loadingRequest: true
@@ -83,14 +80,29 @@ class CartEdit extends Component {
     let uri = "upload-customizes";
     let formdata = new FormData();
     let images = this.state.images;
-    for (j = 0; j < images.length; j++) {
-      let image = [];
-      image["name"] = images[j].name;
-      image["type"] = images[j].type;
-      image["uri"] = images[j].uri;
-      formdata.append("files[]", image);
-    }
-    console.log(formdata, "formdata");
+    let j = 0;
+    let exist = 0;
+    do {
+      let imagesGet = images[j];
+      console.log(this.state.images[j].uri, "Cek Uri")
+      if(this.state.images[j].uri !== undefined) {
+        console.log("Uri Tidak Kosong")
+        let image = [];
+        image["name"] = images[j].name;
+        image["type"] = images[j].type;
+        image["uri"] = images[j].uri;
+        formdata.append("files[]", image); 
+        exist = 0
+      }else {
+        console.log("Uri Kosong")
+        exist = 1
+      }
+      j++;
+    } while(j < images.length)
+    console.log(exist, "EXIST")
+    if(exist == 0) {
+      console.log("Dilempar ke API")
+      console.log(formdata, "formdata");
     let header = {'Content-Type':'application/json'};
     postPublic(uri, formdata, header)
       .then(response => {
@@ -106,6 +118,11 @@ class CartEdit extends Component {
           this.onUpdateSuccess()
           console.log("Di Luar Upload Data API")
       });
+
+    }else {
+      console.log("GO TO => this.onUpdateSuccess()")
+      this.onUpdateSuccess()
+    }
   }
 
   onUpdateSuccess() {
@@ -212,9 +229,6 @@ class CartEdit extends Component {
       {
         console.log("Kembalian Api Cart")
         console.log(res)
-        console.log(res.data.data)
-        console.log(res.data.data.id)
-        console.log(this.props.carts.cart)
         if(this.props.carts.cart.length == 0) {
           console.log("if pertama")
           this.state.session.cartAdd(res.data.data);
@@ -225,12 +239,7 @@ class CartEdit extends Component {
           let exist = 0;
           do {
             let cartResponse = this.props.carts.cart[i];
-            console.log(cartResponse)
-            console.log("cartResponse")
             if(cartResponse.id == res.data.data.id) {
-              console.log("id Sama")
-              console.log(res.data.data.id)
-              console.log(cartResponse.id)
               this.state.session.cartUpdate(res.data.data);
               this.props.onUpdateCart(res.data.data);
               this.countQty()
@@ -240,7 +249,6 @@ class CartEdit extends Component {
           }while(i < this.props.carts.cart.length)
 
           if(exist == 0) {
-            console.log("Cek data Akan Ke simpan Ke Session")
             this.state.session.cartAdd(res.data.data);
             this.props.onAddCart(res.data.data);
           }
@@ -273,13 +281,8 @@ class CartEdit extends Component {
     let i = 0
 
     do {
-      console.log("test")
-      console.log(this.props.carts.cart.length)
       let cartResponse = this.props.carts.cart[i];
-      console.log(cartResponse)
-      console.log("jng jng")
       countDataQty += new Number(this.props.carts.cart[i].qty)
-      console.log(countDataQty)
     i++
     } while(i < this.props.carts.cart.length)
 
@@ -293,7 +296,6 @@ class CartEdit extends Component {
 
   componentWillMount() {
     this.props.navigation.setParams({ pressSave: this._onUpdateCart });
-    console.log(this.props.item.id);
   }
 
   _getData() {
@@ -310,8 +312,6 @@ class CartEdit extends Component {
   }
 
   renderSourceImage(item) {
-    console.log(item, "cek props image header")
-
     if(this.props.isLoggedIn == true) {
       return {
         uri: Global.getProductImageUrl() + item.image_name
@@ -335,6 +335,7 @@ class CartEdit extends Component {
         uri: Global.getProductImageUrl() + item.name
       }
     }else {
+      console.log(item, "+++++")
       return {
         uri: Global.getProductImageUrl() + item.name
       }
@@ -353,7 +354,6 @@ class CartEdit extends Component {
     };
 
     ImagePicker.showImagePicker(options, response => {
-      console.log("Response = ", response);
 
       if (response.didCancel) {
         console.log("User cancelled photo picker");
@@ -375,6 +375,7 @@ class CartEdit extends Component {
   }
 
   deleteImage(image) {
+    console.log(image, "deleteImage")
     let images = this.state.images.filter(
       el => el.increment !== image.increment
     );
@@ -388,8 +389,6 @@ class CartEdit extends Component {
     this.setState({
       images: tempImages
     });
-    console.log(this.state.images);
-    console.log(image);
   }
 
   pickActionsheet = () => {
@@ -444,6 +443,7 @@ class CartEdit extends Component {
       includeBase64: true
     })
       .then(images => {
+        console.log(image, "pickMultiple IMAGES")
         let imagesTemp = this.state.images;
         // let increment = 0;
         images.map(image => {
@@ -481,7 +481,7 @@ class CartEdit extends Component {
   }
 
   renderImage(image) {
-    console.log(image, "Cek Props List Product")
+    console.log(image, "renderImage")
     return (
       <View
         style={{

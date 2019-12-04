@@ -15,6 +15,7 @@ import {
   FormValidationMessage,
   Icon
 } from 'react-native-elements';
+import { Dropdown } from 'react-native-material-dropdown';
 import { Actions } from 'react-native-router-flux';
 import { Global, Session } from '../../helpers/Global';
 import { TextField } from 'react-native-material-textfield';
@@ -36,6 +37,8 @@ class Profile extends Component {
   constructor(props){
     super(props);
     this.state ={ 
+      type_customer: "",
+      company: "",
       buttonIsLoading: false,
       firstname: this.props.user ? this.props.user.firstname : '',
       lastname: this.props.user ? this.props.user.lastname : '',
@@ -61,6 +64,14 @@ class Profile extends Component {
     this.lastnameRef = this.updateRef.bind(this, 'lastname');
     this.phoneRef = this.updateRef.bind(this, 'phone');
     this.emailRef = this.updateRef.bind(this, 'email');
+  }
+
+  componentDidMount() {
+    console.log(this.props.user, "cek Props USER++")
+    this.setState({
+      type_customer: this.props.user.type_customer,
+      company: this.props.user.company
+    })
   }
 
   onChangeText(text) {
@@ -90,7 +101,28 @@ class Profile extends Component {
   }
 
   onSubmit() {
+
     let errors = {};
+
+    if(this.state.type_customer == "") {
+      showMessage({
+        message: "Please Select Your Member",
+        type: 'danger'
+      });
+      this.setState({
+        buttonIsLoading: false
+      })
+      return
+    }else if( this.state.type_customer == "corporate" && this.state.company == "" ) {
+      showMessage({
+        message: "Please Insert Your Company",
+        type: 'danger'
+      });
+      this.setState({
+        buttonIsLoading: false
+      })
+      return
+    }
 
     this.state.listForms
       .forEach((name) => {
@@ -123,6 +155,8 @@ class Profile extends Component {
 
       let uri = 'customer/update';
       let params = {
+        type_customer: this.state.type_customer,
+        company: this.state.company,
         firstname: this.state.firstname,
         lastname: this.state.lastname,
         phone: this.state.phone,
@@ -206,8 +240,29 @@ class Profile extends Component {
   _onPressFacebookLogin() {}
   _onPressGoogleLogin() {}
 
+  onSelectMember = (itemValue, itemIndex) => {
+    this.setState({
+      type_customer: itemValue
+    })
+  }
+
   render() {
     let { errors = {}, ...data } = this.state;
+
+    let OpsiMemberList = [
+      {
+        value: "personal",
+        label: "Private"
+      },
+      {
+        value: "reseller",
+        label: "Reseller"
+      },
+      {
+        value: "corporate",
+        label: "Company"
+      },
+    ]
 
     return(
       <View style={{flex: 1}}>
@@ -221,6 +276,36 @@ class Profile extends Component {
             Change your Profile Information
           </Text>
           <View style={{paddingLeft: 10, paddingRight: 10}}>
+
+            <Dropdown
+              label={"Opsi Member"}
+              data={OpsiMemberList}
+              value={this.state.type_customer}
+              onChangeText={(itemValue, itemIndex) => this.onSelectMember(itemValue, itemIndex)}
+            />
+            { this.state.type_customer == "corporate"
+            ?
+            // company
+            <TextField
+              ref={this.companyRef}
+              value={data.company}
+              keyboardType='default'
+              autoCapitalize='none'
+              autoCorrect={false}
+              enablesReturnKeyAutomatically={true}
+              onFocus={this.onFocus}
+              onChangeText={(value) => this.setState({company:value})}
+              onSubmitEditing={this.onSubmitcompany}
+              returnKeyType='next'
+              label='Company'
+              error={errors.company}
+              tintColor={'#000'}
+              lineWidth={1}
+            />
+            :
+            null
+            }
+
             <TextField
               ref={this.firstnameRef}
               value={data.firstname}

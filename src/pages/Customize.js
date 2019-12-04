@@ -100,6 +100,7 @@ class Customize extends Component {
     let uri = 'upload-customizes';
     let formdata = new FormData();
     let images = this.state.images;
+    console.log(images, "ISI IMAGES")
     for (j=0;j<images.length;j++) {
       let image = [];
       image['name'] = images[j].name;
@@ -184,7 +185,7 @@ class Customize extends Component {
   // CUSTOME PUSH TO CART API
   goToCartApi(setTime) {
 
-    console.log(this.state.images, "Cek Gambar Upload")
+    console.log(this.state.images.increment, "Cek Gambar Upload")
     const item = {
       id: this.state.id,
       id_cart: setTime,
@@ -370,6 +371,7 @@ class Customize extends Component {
       includeExif: true,
       includeBase64: true
     }).then(images => {
+      console.log(images, "pickMultiple IMAGES")
       let imagesTemp = this.state.images;
       images.map(image => {
         imagesTemp.push(

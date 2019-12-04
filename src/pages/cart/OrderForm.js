@@ -202,7 +202,7 @@ class OrderForm extends Component {
       }
 
       let headers = {
-        'Content-Type': 'multipart/form-data',
+        'Content-Type': 'application/x-www-form-urlencoded',
         'Authorization': 'Bearer ' + this.props.user.token
       };
       console.log(formdata ,"Cek Form Data")

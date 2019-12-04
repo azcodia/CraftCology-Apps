@@ -1,27 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/res/merged/release/values-de/values-de.xml",
+            "outputFile": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/android/app/build/intermediates/res/merged/release/values-de/values-de.xml",
             "map": [
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6d295b9248fd0e2337328e7241adb947/res/values-de/values.xml",
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/e16db27a8d7993519a7a75c0fe5ca30c/res/values-de/values.xml",
                     "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,352,548,674,784,1021,1150,1297,1441,1680,1790,1990,2119,2340,2542,2639,2728",
-                        "endColumns": "106,195,125,109,236,128,146,143,238,109,199,128,220,201,96,88,104",
-                        "endOffsets": "351,547,673,783,1020,1149,1296,1440,1679,1789,1989,2118,2339,2541,2638,2727,2832"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "203",
+                        "endOffsets": "450"
                     },
                     "to": {
-                        "startLines": "42,43,44,45,46,47,48,49,51,52,53,54,55,56,57,58,59",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4428,4539,4735,4865,4979,5216,5349,5500,5852,6091,6205,6405,6538,6759,6965,7066,7159",
-                        "endColumns": "110,195,129,113,236,132,150,147,238,113,199,132,220,205,100,92,108",
-                        "endOffsets": "4534,4730,4860,4974,5211,5344,5495,5643,6086,6200,6400,6533,6754,6960,7061,7154,7263"
+                        "startLines": "50",
+                        "startColumns": "4",
+                        "startOffsets": "5648",
+                        "endColumns": "203",
+                        "endOffsets": "5847"
                     }
                 },
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/79856e4475dcd11898cdd2043c98f6ba/res/values-de/values-de.xml",
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/f47fb0757b67ef609546f78db9124a1e/res/values-de/values-de.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,24 +38,7 @@
                     }
                 },
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.2-native.aar/024d275cc971e4aa4336398a0796a428/res/values-de/values-de.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,121,179",
-                        "endColumns": "65,57,55",
-                        "endOffsets": "116,174,230"
-                    },
-                    "to": {
-                        "startLines": "62,63,64",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "7451,7517,7575",
-                        "endColumns": "65,57,55",
-                        "endOffsets": "7512,7570,7626"
-                    }
-                },
-                {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-5.11.0.aar/fc6794a0d108512b09e0c95a0eac7f62/res/values-de/values-de.xml",
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/facebook-login-5.11.2.aar/582e699e01049983d20b7de0d609dfe1/res/values-de/values-de.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -72,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/values-de/values-de.xml",
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ec708a9961027dd0b1022d4578b1990a/res/values-de/values-de.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -89,46 +72,63 @@
                     }
                 },
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/1f5606d61f689a027199826cdd5808d7/res/values-de/values.xml",
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/1aaf0924febe534fa2da3a4e17ad0be6/res/values-de/values.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "203",
-                        "endOffsets": "450"
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,352,548,674,784,1021,1150,1297,1441,1680,1790,1990,2119,2340,2542,2639,2728",
+                        "endColumns": "106,195,125,109,236,128,146,143,238,109,199,128,220,201,96,88,104",
+                        "endOffsets": "351,547,673,783,1020,1149,1296,1440,1679,1789,1989,2118,2339,2541,2638,2727,2832"
                     },
                     "to": {
-                        "startLines": "50",
-                        "startColumns": "4",
-                        "startOffsets": "5648",
-                        "endColumns": "203",
-                        "endOffsets": "5847"
+                        "startLines": "42,43,44,45,46,47,48,49,51,52,53,54,55,56,57,58,59",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4428,4539,4735,4865,4979,5216,5349,5500,5852,6091,6205,6405,6538,6759,6965,7066,7159",
+                        "endColumns": "110,195,129,113,236,132,150,147,238,113,199,132,220,205,100,92,108",
+                        "endOffsets": "4534,4730,4860,4974,5211,5344,5495,5643,6086,6200,6400,6533,6754,6960,7061,7154,7263"
+                    }
+                },
+                {
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.2-native.aar/156b44af86e8247268cd251edf7d5546/res/values-de/values-de.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,121,179",
+                        "endColumns": "65,57,55",
+                        "endOffsets": "116,174,230"
+                    },
+                    "to": {
+                        "startLines": "62,63,64",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "7451,7517,7575",
+                        "endColumns": "65,57,55",
+                        "endOffsets": "7512,7570,7626"
                     }
                 }
             ]
         },
         {
-            "outputFile": "/home/cran/Documents/PROJEK IQBAL/React-Native/CrafCology-Apps/Again/SeetingCart/Maintenance/CraftCology-Apps/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-de/values-de.xml",
+            "outputFile": "/home/cranium/Documents/PROJECT/REACT-NATIVE/CRAFTCOLOGY/CraftCology-Apps/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-de/values-de.xml",
             "map": [
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6d295b9248fd0e2337328e7241adb947/res/values-de/values.xml",
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/e16db27a8d7993519a7a75c0fe5ca30c/res/values-de/values.xml",
                     "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,352,548,674,784,1021,1150,1297,1441,1680,1790,1990,2119,2340,2542,2639,2728",
-                        "endColumns": "106,195,125,109,236,128,146,143,238,109,199,128,220,201,96,88,104",
-                        "endOffsets": "351,547,673,783,1020,1149,1296,1440,1679,1789,1989,2118,2339,2541,2638,2727,2832"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "203",
+                        "endOffsets": "450"
                     },
                     "to": {
-                        "startLines": "42,43,44,45,46,47,48,49,51,52,53,54,55,56,57,58,59",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4428,4539,4735,4865,4979,5216,5349,5500,5852,6091,6205,6405,6538,6759,6965,7066,7159",
-                        "endColumns": "110,195,129,113,236,132,150,147,238,113,199,132,220,205,100,92,108",
-                        "endOffsets": "4534,4730,4860,4974,5211,5344,5495,5643,6086,6200,6400,6533,6754,6960,7061,7154,7263"
+                        "startLines": "50",
+                        "startColumns": "4",
+                        "startOffsets": "5648",
+                        "endColumns": "203",
+                        "endOffsets": "5847"
                     }
                 },
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/79856e4475dcd11898cdd2043c98f6ba/res/values-de/values-de.xml",
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/f47fb0757b67ef609546f78db9124a1e/res/values-de/values-de.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -145,24 +145,7 @@
                     }
                 },
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.2-native.aar/024d275cc971e4aa4336398a0796a428/res/values-de/values-de.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,121,179",
-                        "endColumns": "65,57,55",
-                        "endOffsets": "116,174,230"
-                    },
-                    "to": {
-                        "startLines": "62,63,64",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "7451,7517,7575",
-                        "endColumns": "65,57,55",
-                        "endOffsets": "7512,7570,7626"
-                    }
-                },
-                {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/facebook-login-5.11.0.aar/fc6794a0d108512b09e0c95a0eac7f62/res/values-de/values-de.xml",
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/facebook-login-5.11.2.aar/582e699e01049983d20b7de0d609dfe1/res/values-de/values-de.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -179,7 +162,7 @@
                     }
                 },
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb08660bc3ad325cbfc1d9be0bc8d574/res/values-de/values-de.xml",
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ec708a9961027dd0b1022d4578b1990a/res/values-de/values-de.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -196,20 +179,37 @@
                     }
                 },
                 {
-                    "source": "/home/cran/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/1f5606d61f689a027199826cdd5808d7/res/values-de/values.xml",
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/1aaf0924febe534fa2da3a4e17ad0be6/res/values-de/values.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "203",
-                        "endOffsets": "450"
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,352,548,674,784,1021,1150,1297,1441,1680,1790,1990,2119,2340,2542,2639,2728",
+                        "endColumns": "106,195,125,109,236,128,146,143,238,109,199,128,220,201,96,88,104",
+                        "endOffsets": "351,547,673,783,1020,1149,1296,1440,1679,1789,1989,2118,2339,2541,2638,2727,2832"
                     },
                     "to": {
-                        "startLines": "50",
-                        "startColumns": "4",
-                        "startOffsets": "5648",
-                        "endColumns": "203",
-                        "endOffsets": "5847"
+                        "startLines": "42,43,44,45,46,47,48,49,51,52,53,54,55,56,57,58,59",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4428,4539,4735,4865,4979,5216,5349,5500,5852,6091,6205,6405,6538,6759,6965,7066,7159",
+                        "endColumns": "110,195,129,113,236,132,150,147,238,113,199,132,220,205,100,92,108",
+                        "endOffsets": "4534,4730,4860,4974,5211,5344,5495,5643,6086,6200,6400,6533,6754,6960,7061,7154,7263"
+                    }
+                },
+                {
+                    "source": "/home/cranium/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.2-native.aar/156b44af86e8247268cd251edf7d5546/res/values-de/values-de.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,121,179",
+                        "endColumns": "65,57,55",
+                        "endOffsets": "116,174,230"
+                    },
+                    "to": {
+                        "startLines": "62,63,64",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "7451,7517,7575",
+                        "endColumns": "65,57,55",
+                        "endOffsets": "7512,7570,7626"
                     }
                 }
             ]

@@ -28,6 +28,7 @@ import {
   removeAllCart,
   removeCartQty
 } from "./../../stores/actions/index";
+import { Dropdown } from 'react-native-material-dropdown';
 import firebase from 'react-native-firebase';
 import { Actions } from 'react-native-router-flux';
 import { Global, Session } from '../../helpers/Global';
@@ -43,6 +44,8 @@ class Register extends Component {
   constructor(props){
     super(props);
     this.state ={ 
+      type_customer: "",
+      company: "",
       session: new Session(), 
       buttonIsLoading: false,
       firstname: '',
@@ -62,12 +65,14 @@ class Register extends Component {
     this.onFocus = this.onFocus.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.onChangeText = this.onChangeText.bind(this);
+    this.onSubmitcompany = this.onSubmitcompany.bind(this);
     this.onSubmitFirstname = this.onSubmitFirstname.bind(this);
     this.onSubmitLastname = this.onSubmitLastname.bind(this);
     this.onSubmitPhone = this.onSubmitPhone.bind(this);
     this.onSubmitEmail = this.onSubmitEmail.bind(this);
     this.onSubmitPassword = this.onSubmitPassword.bind(this);
 
+    this.companyRef = this.updateRef.bind(this, 'companyRef');
     this.firstnameRef = this.updateRef.bind(this, 'firstname');
     this.lastnameRef = this.updateRef.bind(this, 'lastname');
     this.phoneRef = this.updateRef.bind(this, 'phone');
@@ -105,6 +110,10 @@ class Register extends Component {
       });
   }
 
+  onSubmitcompany() {
+    this.company.focus();
+  }
+
   onSubmitFirstname() {
     this.firstname.focus();
   }
@@ -127,25 +136,30 @@ class Register extends Component {
 
   onSubmit() {
 
-    result = [];
-    console.log("Cek Props Keranjang: ")
-    console.log(this.props.carts.cart)
-      for(let i=0; i<this.props.carts.cart.length; i++) {
-        let cartResponse = this.props.carts.cart[i]
-        let cartDataFilter = {
-          product_id: cartResponse.id,
-          qty: cartResponse.qty,
-          customize_image: cartResponse.customize_image_name == null ? null : cartResponse.customize_image_name.name,
-          // notes_image:   cartResponse.customize_image_name.note
-          notes_image: cartResponse.customize_image_name == null ? null : cartResponse.customize_image_name.note 
-        }
-        result.push(cartDataFilter)
-      }
-    console.log("cek Result :")
-    console.log(result)
-
+    console.log(this.state.type_customer, "Cek Data Type Customer")
+    console.log(this.state.company, "Cek Data Company")
 
     let errors = {};
+
+    if(this.state.type_customer == "") {
+      showMessage({
+        message: "Please Select Your Member",
+        type: 'danger'
+      });
+      this.setState({
+        buttonIsLoading: false
+      })
+      return
+    }else if( this.state.type_customer == "corporate" && this.state.company == "" ) {
+      showMessage({
+        message: "Please Insert Your Company",
+        type: 'danger'
+      });
+      this.setState({
+        buttonIsLoading: false
+      })
+      return
+    }
 
     if(this.state.email.includes("@gmail")) {
       this.onPressGoogleSignIn()
@@ -201,27 +215,6 @@ class Register extends Component {
         buttonIsLoading: true,
     }, function(){
 
-      // setCart
-    let i = 0;
-    let result = []
-
-    if(this.props.carts.cart.length == 0) {
-      result=[]
-    }else {
-      do {
-        let cart = this.props.carts.cart[i]
-
-        // let cartGet = {
-        //   cart
-        // }
-
-        result.push(cart)
-        i++;
-      } while(i < this.props.carts.cart.length)
-    }
-    console.log("Cek Result Data");
-    console.log(result);
-    // setCart End
 
       fetch(Global.getBaseUrl() + 'api/v1/auth/register', {
         method: 'POST',
@@ -229,6 +222,8 @@ class Register extends Component {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          type_customer: this.state.type_customer,
+          company: this.state.company,
           firstname: this.state.firstname,
           lastname: this.state.lastname,
           phone: this.state.phone,
@@ -242,7 +237,7 @@ class Register extends Component {
       })
       .then((response) => response.json())
       .then((responseJson) => {
-      console.log(responseJson);
+      console.log(responseJson, "Balikan API");
       Global.presentToast(responseJson.message);
       this.setState({
         buttonIsLoading: false,
@@ -253,8 +248,7 @@ class Register extends Component {
       }
       })
       .catch((error) => {
-        console.log("Error: ");
-        console.log(error);
+        console.log("Error: ", error);
       })
     });
   }
@@ -443,8 +437,29 @@ class Register extends Component {
     this[name] = ref;
   }
 
+  onSelectMember = (itemValue, itemIndex) => {
+    this.setState({
+      type_customer: itemValue
+    })
+  }
+
   render() {
     let { errors = {}, ...data } = this.state;
+
+    let OpsiMemberList = [
+      {
+        value: "personal",
+        label: "Private"
+      },
+      {
+        value: "reseller",
+        label: "Reseller"
+      },
+      {
+        value: "corporate",
+        label: "Company"
+      },
+    ]
 
     return(
       <KeyboardAwareScrollView>
@@ -455,6 +470,36 @@ class Register extends Component {
             style={styles.logo}
           />
           <View style={{paddingLeft: 10, paddingRight: 10}}>
+
+            <Dropdown
+              label={"Opsi Member"}
+              data={OpsiMemberList}
+              value={this.state.type_customer}
+              onChangeText={(itemValue, itemIndex) => this.onSelectMember(itemValue, itemIndex)}
+            />
+            { this.state.type_customer == "corporate"
+            ?
+            // company
+            <TextField
+              ref={this.companyRef}
+              value={data.company}
+              keyboardType='default'
+              autoCapitalize='none'
+              autoCorrect={false}
+              enablesReturnKeyAutomatically={true}
+              onFocus={this.onFocus}
+              onChangeText={(value) => this.setState({company:value})}
+              onSubmitEditing={this.onSubmitcompany}
+              returnKeyType='next'
+              label='Company'
+              error={errors.company}
+              tintColor={'#000'}
+              lineWidth={1}
+            />
+            :
+            null
+            }
+
             <TextField
               ref={this.firstnameRef}
               value={data.firstname}
