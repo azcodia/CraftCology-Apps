@@ -11,7 +11,7 @@
     "@babel/core": "^7.1.2",
     "@ercpereda/react-native-accordion": "^2.0.6",
     "axios": "^0.18.0",
-    "moment": "^2.23.0",
+    "moment": "^2.29.4",
     "prop-types": "^15.6.2",
     "react": "16.4.1",
     "react-native": "^0.56.0",
